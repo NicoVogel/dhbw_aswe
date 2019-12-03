@@ -1,0 +1,84 @@
+\documentclass[titlepage=false,12pt]{scrreprt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{tabto}
+\usepackage{capt-of}
+\usepackage{pgfplots} % loads tikz
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{intersections}
+
+\pgfdeclarelayer{bg}
+\pgfsetlayers{bg,main}
+
+\colorlet{shadecolor}{gray!15}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\newtheorem{definition}{Definition}[chapter]
+\AfterEndEnvironment{definition}{\noindent\ignorespaces}
+
+\newcommand{\listingsettings}{%
+	\lstset{%
+		language=C++,			% Standardsprache des Quellcodes
+		%numbers=left,			% Zeilennummern links
+		%stepnumber=1,			% Jede Zeile nummerieren.
+		%numbersep=5pt,			% 5pt Abstand zum Quellcode
+		%numberstyle=\tiny,		% Zeichengrösse 'tiny' für die Nummern.
+		breaklines=true,		% Zeilen umbrechen wenn notwendig.
+		breakautoindent=true,	% Nach dem Zeilenumbruch Zeile einrücken.
+		postbreak=\space,		% Bei Leerzeichen umbrechen.
+		tabsize=2,				% Tabulatorgrösse 2
+		basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein für den Quellcode
+		showspaces=false,		% Leerzeichen nicht anzeigen.
+		showstringspaces=false,	% Leerzeichen auch in Strings ('') nicht anzeigen.
+		extendedchars=true,		% Alle Zeichen vom Latin1 Zeichensatz anzeigen.
+		captionpos=b,			% sets the caption-position to bottom
+		%backgroundcolor=\color{ListingBackground}, % Hintergrundfarbe des Quellcodes setzen.
+		xleftmargin=0pt,		% Rand links
+		xrightmargin=0pt,		% Rand rechts
+		frame=single,			% Rahmen an
+		frameround=ffff,
+		rulecolor=\color{darkgray},	% Rahmenfarbe
+		%fillcolor=\color{ListingBackground},
+		keywordstyle=\color[rgb]{0.133,0.133,0.6},
+		commentstyle=\color[rgb]{0.133,0.545,0.133},
+		stringstyle=\color[rgb]{0.627,0.126,0.941},
+		aboveskip=1.5em,
+	}
+}
+
+\clubpenalty = 10000 % schließt Schusterjungen aus (Seitenumbruch nach der ersten Zeile eines neuen Absatzes)
+\widowpenalty = 10000 % schließt Hurenkinder aus (die letzte Zeile eines Absatzes steht auf einer neuen Seite)
+\displaywidowpenalty=10000
+
+\bibliography{bibliography}
+
+\title{Abstrakte Fabrik}
+\subtitle{Advanced Softwareengineering - DHBW Stuttgart}
+\author{Tanja Pienkny, Timo Schrader}
+\date{tbd}
+
+\begin{document}
+	\maketitle
+	{\renewcommand\clearpage\relax
+		\tableofcontents}
+	\newpage
+	\chapter{Allgemeines}
+\end{document}
