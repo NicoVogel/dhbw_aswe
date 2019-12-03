@@ -75,5 +75,11 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
+# install latex
+RUN apt-get install -y texlive-full
+    && apt-get autoclean 
+    && apt-get clean
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
