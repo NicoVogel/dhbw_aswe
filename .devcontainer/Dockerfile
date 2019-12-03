@@ -76,9 +76,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # install latex
-RUN apt-get install -y texlive-full
-    && apt-get autoclean 
-    && apt-get clean
+# source: https://github.com/schickling/dockerfiles/blob/master/latex/install.sh
+RUN apt-get update \
+    && apt-get install -y texlive-full \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Switch back to dialog for any ad-hoc use of apt-get
