@@ -38,6 +38,8 @@
     "extensions": [
         "ms-vscode.csharp",
         "james-yu.latex-workshop",
-        "marp-team.marp-vscode"
+        "marp-team.marp-vscode",
+        "yzhang.markdown-all-in-one",
+        "yzane.markdown-pdf"
     ]
 }
