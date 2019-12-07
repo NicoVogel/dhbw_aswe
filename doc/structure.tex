@@ -14,6 +14,8 @@
 \usepackage{tabto}
 \usepackage{capt-of}
 \usepackage{pgfplots} % loads tikz
+\pgfplotsset{compat=1.7}
+\usepackage{csquotes}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{intersections}
 
@@ -81,6 +83,7 @@
 		\tableofcontents}
 	\newpage
 
+
 	\chapter{Was ist das Problem das MVVM angeht?}
 	\begin{itemize}
 		\item ui fix couplled mit logik
@@ -91,7 +94,6 @@
 
 
 	\chapter{Beschreibung der Komponenten von MVVM}
-
 	\begin{itemize}
 		\item Komponenten
 		\begin{itemize}
@@ -110,6 +112,7 @@
 				\item stellt werte bereit für die ui
 				\item ließt werte ein aus der ui
 				\item leitet events weiter an die logik
+				\item kennt Model
 			\end{itemize}
 			\item View
 			\begin{itemize}
@@ -119,6 +122,8 @@
 			\end{itemize}
 			\item Übersicht komponenten
 			% bild wie die komponenten miteinander agieren
+			% Model gibt datenstruktur vor
+			% ViewModel gibt daten für eine view vor 
 			\item Übersicht einteilund in das Application Layered model
 			% soll zeigen das die ViewModel presentation und Business zugleich sind.
 		\end{itemize}
@@ -132,10 +137,8 @@
 		\end{itemize}
 	\end{itemize}
 
-	
 
-
-	\chapter{Zusammenspiel der MVVM Komponenten mit Beispiel}
+	\chapter{Beispiel des MVVM Patterns in C\# WPF}
 
 
 	\chapter{Vergleich zu dem MVC Pattern}
