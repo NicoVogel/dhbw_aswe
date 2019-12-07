@@ -4,10 +4,24 @@ using System.Text;
 
 namespace mvvm.Model
 {
-    class Student
+    public class Student
     {
-		private String m_Name;
+		private string m_Name;
 		private int m_Age;
+		private GenterType m_Gender;
+
+		public Student(string name, int age, GenterType gender)
+		{
+			m_Name = name;
+			m_Age = age;
+			m_Gender = gender;
+		}
+
+		public string Name
+		{
+			get { return m_Name; }
+			set { m_Name = value; }
+		}
 
 		public int Age
 		{
@@ -15,12 +29,10 @@ namespace mvvm.Model
 			set { m_Age = value; }
 		}
 
-
-		public String Name
+		public GenterType Gender
 		{
-			get { return m_Name; }
-			set { m_Name = value; }
+			get { return m_Gender; }
+			set { m_Gender = value; }
 		}
-
 	}
 }
