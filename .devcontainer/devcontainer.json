@@ -35,5 +35,11 @@
         "ASPNETCORE_Kestrel__Endpoints__Http__Url=http://*:5000"
     ],
     // Add the IDs of extensions you want installed when the container is created in the array below.
-    "extensions": ["ms-vscode.csharp", "james-yu.latex-workshop"]
+    "extensions": [
+        "ms-vscode.csharp",
+        "james-yu.latex-workshop",
+        "marp-team.marp-vscode",
+        "yzhang.markdown-all-in-one",
+        "yzane.markdown-pdf"
+    ]
 }
