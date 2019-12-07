@@ -89,18 +89,50 @@
 		\item wiederverwendung der logik nicht möglich
 	\end{itemize}
 
-	
+
 	\chapter{Beschreibung der Komponenten von MVVM}
+
 	\begin{itemize}
-		\item View
+		\item Komponenten
 		\begin{itemize}
-			\item nur design
-			\item eigenständig
-			\item kennt ViewModel 
+			\item Model
+			\begin{itemize}
+				\item Enitiät
+				\item enthält nur daten oder logik für sich selbst
+				% beispiel einbringen "CollectionManager"
+				% daten: irgendwelche objekte
+				% logik: filter um nur bestimmte objekte der collection zurückzugeben
+			\end{itemize}
+			\item ViewModel
+			\begin{itemize}
+				\item business logik
+				\item verwendet beliegig viele models
+				\item stellt werte bereit für die ui
+				\item ließt werte ein aus der ui
+				\item leitet events weiter an die logik
+			\end{itemize}
+			\item View
+			\begin{itemize}
+				\item nur design
+				\item eigenständig
+				\item kennt ViewModel 
+			\end{itemize}
+			\item Übersicht komponenten
+			% bild wie die komponenten miteinander agieren
+			\item Übersicht einteilund in das Application Layered model
+			% soll zeigen das die ViewModel presentation und Business zugleich sind.
 		\end{itemize}
-		\item Model
-		\item ViewModel
+		\item Kommunikation
+		\begin{itemize}
+			\item OneWay Binding: von View zu ViewModel oder von ViewModel zu View
+			\item TwoWay Binding: Von der View zum ViewModel und gleichzeitig auch andersrum
+			% egal wers aktualisiert, der wert wird an den anderen weiter gegeben
+			\item Events: die view reicht ein event an das ViewModel weiter 
+			% methoden aufruf in dem ViewModel
+		\end{itemize}
 	\end{itemize}
+
+	
 
 
 	\chapter{Zusammenspiel der MVVM Komponenten mit Beispiel}
