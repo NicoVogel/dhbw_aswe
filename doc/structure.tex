@@ -70,15 +70,47 @@
 
 \bibliography{bibliography}
 
-\title{MVVN}
+\title{MVVM: Model-View-ViewModel}
 \subtitle{Advanced Softwareengineering - DHBW Stuttgart}
 \author{Nico Vogel, Lukas Sopora}
-\date{tbd}
+\date{31.12.2019}
 
 \begin{document}
 	\maketitle
 	{\renewcommand\clearpage\relax
 		\tableofcontents}
 	\newpage
-	\chapter{Allgemeines}
+
+	\chapter{Was ist das Problem das MVVM angeht?}
+	\begin{itemize}
+		\item ui fix couplled mit logik
+		\item schwierig einzelne komponenten oder ganze ui auszutauschen
+		\item cross platform nicht möglich
+		\item wiederverwendung der logik nicht möglich
+	\end{itemize}
+
+	
+	\chapter{Beschreibung der Komponenten von MVVM}
+	\begin{itemize}
+		\item View
+		\begin{itemize}
+			\item nur design
+			\item eigenständig
+			\item kennt ViewModel 
+		\end{itemize}
+		\item Model
+		\item ViewModel
+	\end{itemize}
+
+
+	\chapter{Zusammenspiel der MVVM Komponenten mit Beispiel}
+
+
+	\chapter{Vergleich zu dem MVC Pattern}
+
+
+	\chapter{Vergleich zu dem MVP Pattern}
+
+
+	\chapter{Kritische betrachtung des MVVM Patterns}
 \end{document}
