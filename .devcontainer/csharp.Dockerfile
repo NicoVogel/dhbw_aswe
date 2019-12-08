@@ -75,11 +75,5 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# install latex
-# source: https://github.com/schickling/dockerfiles/blob/master/latex/install.sh
-RUN apt-get update \
-    && apt-get install -y texlive-full \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
