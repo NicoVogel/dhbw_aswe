@@ -77,7 +77,6 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 - Events
 
 ---
-
 <!-- 
 _class: 
 - invert
@@ -110,6 +109,12 @@ public class StudentCollection
 
 
 ---
+<!-- 
+_class: 
+- invert
+- code
+-->
+<span>
 
 # 2.1. Was ist MVVM? - ViewModel
 
@@ -117,4 +122,28 @@ public class StudentCollection
 - Zusammenführung von Daten und Funktionen 
 - Verwendet beliebig viele **Model**'s
 
+</span>
+
+````C#
+// TODO code
+````
+
 ---
+<!-- 
+_class: 
+- invert
+- code
+-->
+<span>
+
+# 2.1. Was ist MVVM? - View
+
+- Nur Design
+- Kein Code
+- Kennt ViewModel
+
+</span>
+
+````C#
+// TODO code
+````
