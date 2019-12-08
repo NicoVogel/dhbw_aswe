@@ -2,34 +2,10 @@
 
 marp: true
 paginatie: true
-theme: 
+theme: upgrade
 class: 
 - invert
-style: |
-    section.lead {
-        text-align: center;
-        justify-content: center;
-    }
-    section {
-        justify-content: initial;
-    }
-    section.code {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    section .columnFlex {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        height: 100%;
-    }
-    section .columnFlex div {
-        background-color: #333;
-        margin: 20px;
-        padding: 10px 0px;
-        height: 100%;
-    }
+    
 
 
 ---
