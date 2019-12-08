@@ -140,10 +140,13 @@ _class:
 
 - Nur Design
 - Kein Code
-- Kennt ViewModel
+- Kennt genau ein ViewModel
+- "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
 </span>
 
 ````C#
 // TODO code
 ````
+
+---
