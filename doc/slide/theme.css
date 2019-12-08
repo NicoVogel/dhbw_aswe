@@ -30,7 +30,7 @@ section .columnFlex {
     height: 100%;
 }
 section .columnFlex div {
-    background-color: #DDD;
+    background-color: #BBB;
     margin: 20px;
     padding: 10px 0px;
     height: 100%;
