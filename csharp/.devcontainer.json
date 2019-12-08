@@ -2,7 +2,14 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/master/containers/dotnetcore-3.0
 {
     "name": "C# (.NET Core 3.1)",
-    "dockerFile": "Dockerfile",
+    "dockerFile": "../.devcontainer/csharp.Dockerfile",
+
+    // source: https://code.visualstudio.com/docs/remote/containers-advanced#_connecting-to-multiple-containers-at-once
+    "service": "container-csharp",
+    "shutdownAction": "none",
+    // [Optional] Copy the contents to the correct location and set permissions
+    "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
+
     // Use 'settings' to set *default* container specific settings.json values on container create.
     // You can edit these settings after create using File > Preferences > Settings > Remote.
     "settings": {
@@ -35,11 +42,5 @@
         "ASPNETCORE_Kestrel__Endpoints__Http__Url=http://*:5000"
     ],
     // Add the IDs of extensions you want installed when the container is created in the array below.
-    "extensions": [
-        "ms-vscode.csharp",
-        "james-yu.latex-workshop",
-        "marp-team.marp-vscode",
-        "yzhang.markdown-all-in-one",
-        "yzane.markdown-pdf"
-    ]
+    "extensions": ["ms-vscode.csharp"]
 }
