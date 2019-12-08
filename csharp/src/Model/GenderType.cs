@@ -4,7 +4,7 @@ using System.Text;
 
 namespace mvvm.Model
 {
-    public enum GenterType
+    public enum GenderType
     {
         Male,
         Female,
