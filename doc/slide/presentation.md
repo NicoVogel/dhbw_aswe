@@ -137,8 +137,7 @@ _class:
 
 # 2.1. Was ist MVVM? - View
 
-- Nur Design
-- Kein Programmcode
+- Kein Programmcode, lediglich Rendering
 - Kennt genau ein ViewModel
 - "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
