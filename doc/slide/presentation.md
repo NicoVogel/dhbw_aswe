@@ -13,6 +13,11 @@ style: |
     section {
         justify-content: initial;
     }
+    section.code {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
 
 ---
@@ -73,10 +78,19 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 
 ---
 
+<!-- 
+_class: 
+- invert
+- code
+-->
+<span>
+
 # 2.1. Was ist MVVM? - Model
 
 - POCO (aka POJO)
 - Nur Daten und Daten Logik
+
+</span>
 
 ```` C#
 public class StudentCollection
@@ -89,6 +103,7 @@ public class StudentCollection
     }
 }
 ````
+
 
 
 <!-- 
