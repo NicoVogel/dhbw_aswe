@@ -78,8 +78,21 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 - POCO (aka POJO)
 - Nur Daten und Daten Logik
 
+```` C#
+public class StudentCollection
+{
+    public Student[] Students { get; }
+    public Student[] FullAgeStudents { 
+        get {
+            return this.Students.where(x => x.Age >= 18).toList();
+        }
+    }
+}
+````
+
+
 <!-- 
-2. wenn das objekt eine collection beinhält und nur eine submenge zurückgeben soll. bsp. StudentCollection.getFullAgeStudents() 
+1. wenn das objekt eine collection beinhält und nur eine submenge zurückgeben soll. bsp. StudentCollection.getFullAgeStudents() 
 -->
 
 ---
