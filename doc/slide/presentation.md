@@ -10,4 +10,5 @@ class:
 # MVVM Pattern
 Nico Vogel und Lukas Supora
 
+some more information
 
