@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/debian-9-git
+{
+    "name": "Latex and Marp",
+    // "dockerComposeFile": ["../docker-compose.yml"],
+    "dockerFile": "../.devcontainer/doc.Dockerfile",
+    // source: https://code.visualstudio.com/docs/remote/containers-advanced#_connecting-to-multiple-containers-at-once
+    "service": "container-doc",
+    "shutdownAction": "none",
+    // "workspaceFolder": "/workspace/doc",
+    // [Optional] Copy the contents to the correct location and set permissions
+    "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
+    // The optional 'runArgs' property can be used to specify additional runtime arguments.
+    "runArgs": [
+        // Uncomment the line if you will use a ptrace-based debugger like C++, Go, and Rust.
+        // "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined",
+        // Uncomment the next line to use a non-root user. On Linux, this will prevent
+        // new files getting created as root, but you may need to update the USER_UID
+        // and USER_GID in .devcontainer/Dockerfile to match your user if not 1000.
+        // "-u", "vscode"
+    ],
+    // Use 'settings' to set *default* container specific settings.json values on container create.
+    // You can edit these settings after create using File > Preferences > Settings > Remote.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    // Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+    // your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
+    // "appPort": [],
+    // Add the IDs of extensions you want installed when the container is created in the array below.
+    "extensions": [
+        "james-yu.latex-workshop",
+        "marp-team.marp-vscode",
+        "yzhang.markdown-all-in-one",
+        "bringout.pdf-view"
+    ]
+}
