@@ -115,7 +115,16 @@ _class:
 </span>
 
 ````C#
-// TODO code
+public class StudentViewModel
+{
+    public StudentCollection ClassBook { get; }
+
+    public StudentViewModel()
+    {
+        ClassBook = new StudentCollection();
+        ClassBook.Students.Add(new Student("Andi Theke", 19, GenderType.Male));
+    }
+}
 ````
 
 ---
@@ -135,8 +144,18 @@ _class:
 
 </span>
 
-````C#
-// TODO code
+````XML
+<ListView ItemsSource="{Binding ClassBook.Students}">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <DockPanel>
+                <TextBlock Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Age}"/>
+                <TextBlock Text="{Binding Gender}"/>
+            </DockPanel>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
 ````
 
 ---

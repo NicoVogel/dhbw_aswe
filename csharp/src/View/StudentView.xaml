@@ -10,17 +10,15 @@
     <Window.DataContext>
         <viewModel:StudentViewModel/>
     </Window.DataContext>
-    <Grid>
-        <ListView ItemsSource="{Binding ClassBook.Students}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <DockPanel>
-                        <TextBlock Text="{Binding Name}"/>
-                        <TextBlock Text="{Binding Age}"/>
-                        <TextBlock Text="{Binding Gender}"/>
-                    </DockPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+    <ListView ItemsSource="{Binding ClassBook.Students}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <DockPanel>
+                    <TextBlock Text="{Binding Name}"/>
+                    <TextBlock Text="{Binding Age}"/>
+                    <TextBlock Text="{Binding Gender}"/>
+                </DockPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </Window>
