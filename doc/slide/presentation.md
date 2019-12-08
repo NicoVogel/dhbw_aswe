@@ -1,19 +1,10 @@
 ---
-
 marp: true
 paginatie: true
 theme: upgrade
-class: 
-- invert
-    
-
-
 ---
 
-<!-- 
-_class: 
-- lead
-- invert-->
+<!-- _class: lead-->
 
 # MVVM Pattern
 Nico Vogel und Lukas Supora
@@ -65,11 +56,7 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 - Events
 
 ---
-<!-- 
-_class: 
-- invert
-- code
--->
+<!-- _class: code -->
 <span>
 
 # 2.1. Was ist MVVM? - Model
@@ -99,11 +86,7 @@ public class StudentCollection
 
 
 ---
-<!-- 
-_class: 
-- invert
-- code
--->
+<!-- _class: code -->
 <span>
 
 # 2.1. Was ist MVVM? - ViewModel
@@ -128,11 +111,7 @@ public class StudentViewModel
 ````
 
 ---
-<!-- 
-_class: 
-- invert
-- code
--->
+<!-- _class: code -->
 <span>
 
 # 2.1. Was ist MVVM? - View
