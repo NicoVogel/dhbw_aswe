@@ -86,9 +86,11 @@ _class:
 ```` C#
 public class StudentCollection
 {
-    public Student[] Students { get; }
-    public Student[] FullAgeStudents { 
-        get {
+    public IList<Student> Students { get; }
+    public IList<Student> FullAgeStudents 
+    { 
+        get 
+        {
             return this.Students.where(x => x.Age >= 18).toList();
         }
     }
