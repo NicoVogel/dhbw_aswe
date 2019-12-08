@@ -90,6 +90,10 @@ _class:
 - POCO (aka POJO)
 - Nur Daten und Daten Logik
 
+<!-- 
+1. wenn das objekt eine collection beinhält und nur eine submenge zurückgeben soll. bsp. StudentCollection.getFullAgeStudents() 
+-->
+
 </span>
 
 ```` C#
@@ -104,11 +108,6 @@ public class StudentCollection
 }
 ````
 
-
-
-<!-- 
-1. wenn das objekt eine collection beinhält und nur eine submenge zurückgeben soll. bsp. StudentCollection.getFullAgeStudents() 
--->
 
 ---
 
