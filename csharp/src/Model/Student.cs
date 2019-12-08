@@ -10,7 +10,7 @@ namespace mvvm.Model
 		public int Age { get; set; }
 		public GenderType Gender { get; set; }
 
-		public Student(string name, int age, GenterType gender)
+		public Student(string name, int age, GenderType gender)
 		{
 			this.Name = name;
 			this.Age = age;
