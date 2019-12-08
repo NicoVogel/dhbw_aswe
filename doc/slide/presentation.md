@@ -93,7 +93,7 @@ public class StudentCollection
 
 - Schnittstelle zwischen UI und Logik
 - Zusammenführung von Daten und Funktionen 
-- Verwendet beliebig viele **Model**'s
+- Verwendet beliebig viele Models
 
 </span>
 
