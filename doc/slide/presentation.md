@@ -18,6 +18,18 @@ style: |
         flex-direction: column;
         justify-content: space-between;
     }
+    section .columnFlex {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        height: 100%;
+    }
+    section .columnFlex div {
+        background-color: #333;
+        margin: 20px;
+        padding: 10px 0px;
+        height: 100%;
+    }
 
 
 ---
@@ -139,7 +151,7 @@ _class:
 # 2.1. Was ist MVVM? - View
 
 - Nur Design
-- Kein Code
+- Kein Programmcode
 - Kennt genau ein ViewModel
 - "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
@@ -150,3 +162,22 @@ _class:
 ````
 
 ---
+
+# 2.1. Was ist MVVM? - Binding
+
+<span class="columnFlex">
+<div>
+
+## OneWay Binding
+
+von View zu ViewModel oder von ViewModel zu View
+
+</div>
+<div>
+
+## TwoWay Binding
+
+Von der View zum ViewModel und gleichzeitig auch andersrum
+
+</div>
+</span>
