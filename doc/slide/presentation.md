@@ -263,6 +263,14 @@ unterschiede hervorheben
 # 5. Demo
 
 ---
+
+# 6. Kritische Würdigung
+
+Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
+
+- MVVM ist nur ein Prinzip und dies kann auf viele weißen realisiert werden
+
+---
 <!-- _class: split-->
 
 # 6. Kritische Würdigung
@@ -274,6 +282,14 @@ unterschiede hervorheben
 <span class="text-left">
 
 - flexibel
+- view komplett unabhängig von Logik
+- besonderer Fokus auf testbarkeit
+
+<!-- 
+1. view kann easy ausgetauscht werden
+2. saubere seperation of concernes
+3. logik der view ist komplett in dem viewmodel, wodurch es besser zu testen ist
+ -->
 
 </span>
 </div>
@@ -285,6 +301,7 @@ unterschiede hervorheben
 <span class="text-left">
 
 - viel code für wenig resultat
+- steile Lernkurfe (OOP, Binding, Testing)
 
 </span>
 </div>
