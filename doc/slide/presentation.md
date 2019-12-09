@@ -244,12 +244,31 @@ unterschiede hervorheben
 # 5. Demo
 
 ---
+<!-- _class: split-->
 
 # 6. Kritische Würdigung
 
-| pro       | con |
-| --------- | --- |
-| flexiebel |
+<div class="ldiv">
+
+## Pro
+
+<span class="text-left">
+
+- flexibel
+
+</span>
+</div>
+
+<div class="rdiv">
+
+## Con
+
+<span class="text-left">
+
+- viel code für wenig resultat
+
+</span>
+</div>
 
 ---
 <!-- _class: title -->
