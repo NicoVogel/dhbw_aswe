@@ -286,6 +286,7 @@ unterschiede hervorheben
 <span class="text-left">
 
 - viel code für wenig resultat
+- steile Lernkurfe (OOP, Binding, Testing)
 
 </span>
 </div>
