@@ -111,7 +111,6 @@ public class StudentCollection
 }
 ````
 
-
 ---
 <!-- _class: code -->
 <span>
