@@ -11,7 +11,7 @@
         <viewModel:StudentViewModel/>
     </Window.DataContext>
 
-    <ListView>
+    <!--<ListView>
         <ListViewItem>
             <DockPanel>
                 <TextBlock Text="Andi Theke"/>
@@ -19,9 +19,9 @@
                 <TextBlock Text="Male"/>
             </DockPanel>
         </ListViewItem>
-    </ListView>
+    </ListView>-->
         
-    <!--<ListView ItemsSource="{Binding ClassBook.Students}">
+    <ListView ItemsSource="{Binding ClassBook.Students}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <DockPanel>
@@ -31,5 +31,5 @@
                 </DockPanel>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>-->
+    </ListView>
 </Window>

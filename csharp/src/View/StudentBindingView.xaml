@@ -4,9 +4,76 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mvvm.View"
+        xmlns:models="clr-namespace:mvvm.Model"
+        xmlns:utility="clr-namespace:mvvm.Utility"
+        xmlns:viewModels="clr-namespace:mvvm.ViewModel"
         mc:Ignorable="d"
         Title="StudentBindingView" Height="450" Width="800">
+    <Window.DataContext>
+        <viewModels:StudentBindingViewModel/>
+    </Window.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            Text="Students" FontSize="14" FontWeight="Bold"
+            Grid.Row="0" Grid.Column="0"/>
+
+        <ListView
+            ItemsSource="{Binding ClassBook.Students}"
+            SelectedItem="{Binding SelectedStudent, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Age}"/>
+                        <TextBlock Text="{Binding Gender}"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBlock
+            Text="Selcted Student" FontSize="14" FontWeight="Bold"
+            Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <TextBlock
+            Text="Name:"
+            Grid.Row="1" Grid.Column="1"
+            HorizontalAlignment="Right"/>
         
+        <TextBlock
+            Text="Age:"
+            Grid.Row="2" Grid.Column="1"
+            HorizontalAlignment="Right"/>
+
+        <TextBlock
+            Text="Gender:"
+            Grid.Row="3" Grid.Column="1"
+            HorizontalAlignment="Right"/>
+
+        <TextBox
+            Text="{Binding SelectedStudent.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="1" Grid.Column="2"/>
+
+        <TextBox
+            Text="{Binding SelectedStudent.Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="2" Grid.Column="2"/>
+
+        <TextBox
+            Text="{Binding SelectedStudent.Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="3" Grid.Column="2"/>
     </Grid>
 </Window>
