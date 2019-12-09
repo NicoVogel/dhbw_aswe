@@ -236,22 +236,6 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 3. einordnung in Application Layered
 
 ---
-
-# 4. Vergleich mit MVC
-
-- MVC
-- vergleich MVC und MVVM
-<!-- mal schauen ob wir MVP nicht rausschmeißen wegen zeit -->
-- MVP
-- vergleich MVP und MVVM
-
----
-
-# 4. Vergleich MVC - MVC
-
-bild von MVC
-
----
 <!-- _class: split -->
 
 # 4. Vergleich MVC und MVVM
