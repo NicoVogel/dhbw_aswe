@@ -310,3 +310,9 @@ Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
 <!-- _class: title -->
 
 # Danke für Eure Aufmerksamkeit
+
+<!-- 
+Source:
+- [pro/con](https://softwareengineering.stackexchange.com/questions/116139/what-are-the-pros-and-cons-of-the-mvvm-architecture)
+
+ -->
