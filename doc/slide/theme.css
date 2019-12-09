@@ -11,32 +11,19 @@
 @import 'default';
 
 
-section.lead {
-    text-align: center;
-    justify-content: center;
-}
 section {
     justify-content: initial;
 }
+
+/*------------------------- Code Slide -------------------------*/
+
 section.code {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-section .columnFlex {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    height: 100%;
-}
-section .columnFlex div {
-    background-color: #DDD;
-    margin: 20px;
-    padding: 0 20px;
-    height: 100%;
-}
 
-/* Title Slide */
+/*------------------------- Title Slide -------------------------*/
 
 section.title {
 --title-height: 130px;
@@ -71,7 +58,7 @@ grid-area: subtitle;
 --area-height: var(--subtitle-height);
 }
 
-/* Split Slide */
+/*------------------------- Split Slide -------------------------*/
 
 section.split {
 overflow: visible;
@@ -82,7 +69,7 @@ grid-template-areas:
     "slideheading slideheading"
     "leftpanel rightpanel";
 }
-section.split h1 {
+section.split h1, section.split h2 {
 grid-area: slideheading;
 font-size: 50px;
 }
@@ -96,3 +83,8 @@ section.split .rdiv { grid-area: rightpanel; }
 /* section.split h1, 
 section.split .ldiv, 
 section.split .rdiv { border: 1.5pt dashed dimgray; } */
+
+section .text-left {
+    text-align: left;
+}
+
