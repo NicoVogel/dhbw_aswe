@@ -1,4 +1,5 @@
 ﻿using mvvm.Model;
+using mvvm.Utility;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,8 +12,7 @@ namespace mvvm.ViewModel
 
         public StudentViewModel()
         {
-            ClassBook = new StudentCollection();
-            ClassBook.Students.Add(new Student("Andi Theke", 19, GenderType.Male));
+            ClassBook = StudentTestDataUtility.GetStudentTestData();
         }
     }
 }
