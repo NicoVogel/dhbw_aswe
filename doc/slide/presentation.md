@@ -75,11 +75,11 @@ Im weiteren werden wir alles anhand von C# WPF erläutern
 
 # 3.1. Was ist MVVM - Bestandteile?
 
-<span>
+<br>
 
 ![MVVM Components](./../img/MVVM.png)
 
-</span>
+<br>
 
 - Informationsaustausch
   - Binding
@@ -236,6 +236,7 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 3. einordnung in Application Layered
 
 ---
+
 <!-- _class: split -->
 
 # 4. Vergleich MVC und MVVM
