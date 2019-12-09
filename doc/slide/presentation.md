@@ -237,7 +237,7 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 ---
 
-# 4. Vergleich mit MVC und MVP
+# 4. Vergleich mit MVC
 
 - MVC
 - vergleich MVC und MVVM
@@ -255,20 +255,26 @@ bild von MVC
 
 # 4. Vergleich MVC und MVVM
 
-unterschiede hervorheben
+<div class="ldiv">
+
+### Model View Controller
+
+![MVC img](./../img/MVC_User.png)
+
+</div>
+
+<div class="rdiv">
+
+### Mode View ViewModel
+
+![MVVM img](./../img/MVVM_User.png)
+
+</div>
 
 ---
 <!-- _class: title -->
 
 # 5. Demo
-
----
-
-# 6. Kritische Würdigung
-
-Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
-
-- MVVM ist nur ein Prinzip und dies kann auf viele weißen realisiert werden
 
 ---
 <!-- _class: split-->
@@ -282,14 +288,6 @@ Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
 <span class="text-left">
 
 - flexibel
-- view komplett unabhängig von Logik
-- besonderer Fokus auf testbarkeit
-
-<!-- 
-1. view kann easy ausgetauscht werden
-2. saubere seperation of concernes
-3. logik der view ist komplett in dem viewmodel, wodurch es besser zu testen ist
- -->
 
 </span>
 </div>
@@ -301,7 +299,6 @@ Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
 <span class="text-left">
 
 - viel code für wenig resultat
-- steile Lernkurfe (OOP, Binding, Testing)
 
 </span>
 </div>
