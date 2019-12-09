@@ -231,9 +231,17 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 # 3.2. Was ist MVVM? - Zusamenspiel
 
-1. wie agieren View, ViewModel und Model miteinander ("übersicht")
-2. extended version von 1, wo mehrere Views zu sehen sind ("relation")
-3. einordnung in Application Layered
+1. extended version von 1, wo mehrere Views zu sehen sind ("relation")
+
+Lukas: das bild das ich an der tafel gemalt habe (links)
+
+---
+
+# 3.2. Was ist MVVM? - Zusamenspiel
+
+1. einordnung in Application Layered
+
+Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
 
 ---
 
