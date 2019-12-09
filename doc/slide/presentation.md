@@ -19,7 +19,7 @@ theme: upgrade
 3. Was ist MVVM?
   3.1. Bestandteile
   3.2. Zusammenspiel
-4. Vergleich mit MVC und MVP
+4. Vergleich mit MVC
 5. Demo
 6. Kritische Würdigung
 
@@ -228,7 +228,7 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 ---
 
-# 4. Vergleich MVC und MVP - MVC
+# 4. Vergleich MVC - MVC
 
 bild von MVC
 
