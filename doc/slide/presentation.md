@@ -68,8 +68,7 @@ MVVM wird eingestzt von:
 
 <!-- 
 Im weiteren werden wir alles anhand von C# WPF erläutern
- -->
- 
+ --> 
 
 ---
 
