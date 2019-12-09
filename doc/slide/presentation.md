@@ -3,10 +3,10 @@ marp: true
 theme: upgrade
 ---
 
-<!-- _class: lead-->
+<!-- _class: title-->
 
 # MVVM Pattern
-Nico Vogel und Lukas Sopora
+## Nico Vogel und Lukas Sopora
 
 12.12.19
 
@@ -145,22 +145,25 @@ public class StudentViewModel
 - Kein Code, der View explizit updated nötig
 
 ---
+<!-- _class: split-->
 
 # 2.1. Was ist MVVM? - Binding
 
-<span class="columnFlex">
-<div>
+<div class="ldiv">
 
 ## OneWay Binding
 
-von View zu ViewModel oder von ViewModel zu View
+View → ViewModel
+
+oder
+
+View ← ViewModel
 
 </div>
-<div>
+<div class="rdiv">
 
 ## TwoWay Binding
 
-Von der View zum ViewModel und gleichzeitig auch andersrum
+View ⮀ ViewModel 
 
 </div>
-</span>
