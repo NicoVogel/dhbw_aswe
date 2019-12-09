@@ -19,7 +19,7 @@ theme: upgrade
 3. Was ist MVVM?
   3.1. Bestandteile
   3.2. Zusammenspiel
-4. Vergleich mit MVC
+4. Vergleich MVC und MVVM
 5. Demo
 6. Kritische Würdigung
 
