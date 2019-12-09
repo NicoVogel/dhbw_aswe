@@ -255,7 +255,7 @@ bild von MVC
 
 # 4. Vergleich MVC und MVVM
 
-<div class="ldiv">
+<div class="ldiv uglyfix">
 
 ### Model View Controller
 
@@ -263,7 +263,7 @@ bild von MVC
 
 </div>
 
-<div class="rdiv">
+<div class="rdiv uglyfix">
 
 ### Mode View ViewModel
 
