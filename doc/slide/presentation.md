@@ -271,6 +271,7 @@ unterschiede hervorheben
 <span class="text-left">
 
 - flexibel
+- view komplett unabhängig von Logik
 
 </span>
 </div>
