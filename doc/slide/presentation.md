@@ -263,6 +263,14 @@ unterschiede hervorheben
 # 5. Demo
 
 ---
+
+# 6. Kritische Würdigung
+
+Bevor wir vor und nachteile betrachten, hier noch ein paar Dinge:
+
+- MVVM ist nur ein Prinzip und dies kann auf viele weißen realisiert werden
+
+---
 <!-- _class: split-->
 
 # 6. Kritische Würdigung
