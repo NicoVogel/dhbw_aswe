@@ -277,6 +277,11 @@ unterschiede hervorheben
 - view komplett unabhängig von Logik
 - besonderer Fokus auf testbarkeit
 
+<!-- 
+1. view kann easy ausgetauscht werden
+2. saubere seperation of concernes
+3. logik der view ist komplett in dem viewmodel, wodurch es besser zu testen ist
+ -->
 
 </span>
 </div>
