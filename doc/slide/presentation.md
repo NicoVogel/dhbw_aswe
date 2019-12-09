@@ -96,7 +96,7 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 # 3.1. Was ist MVVM? - Model
 
 - POCO (aka POJO)
-- Nur Daten und Daten Logik
+- Nur Daten und Daten Logik (z.B. Validierung)
 
 </span>
 
@@ -122,7 +122,7 @@ public class StudentCollection
 
 - Schnittstelle zwischen UI und Logik
 - Zusammenführung von Daten und Funktionen 
-- Verwendet beliebig viele Models
+- Verwendung beliebig vieler Models
 
 </span>
 
@@ -145,7 +145,7 @@ public class StudentViewModel
 
 # 3.1. Was ist MVVM? - View
 
-- Kein Programmcode, lediglich Rendering
+- Keine Programmlogik, lediglich Rendering
 - Kennt genau ein ViewModel
 - "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
@@ -169,7 +169,7 @@ public class StudentViewModel
 
 # 3.1. Was ist MVVM? - Binding
 
-- In der View werden Bindings definiert
+- Definition von Bindings in der View
 - Informationsaustausch zwischen View und ViewModel 
 
 </span>
