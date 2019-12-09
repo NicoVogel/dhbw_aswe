@@ -1,13 +1,12 @@
 ---
 marp: true
-paginatie: true
 theme: upgrade
 ---
 
 <!-- _class: lead-->
 
 # MVVM Pattern
-Nico Vogel und Lukas Supora
+Nico Vogel und Lukas Sopora
 
 12.12.19
 
