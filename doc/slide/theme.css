@@ -79,7 +79,7 @@ section.split div {
 section.split .ldiv { grid-area: leftpanel; }
 section.split .rdiv { grid-area: rightpanel; }
 section.split .uglyfix img {
-    height: 400px;
+    max-height: 400px;
     width: auto;
 }
 
