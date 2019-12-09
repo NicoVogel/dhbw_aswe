@@ -72,6 +72,7 @@ Im weiteren werden wir alles anhand von C# WPF erläutern
 
 ---
 
+
 # 3.1. Was ist MVVM - Bestandteile?
 
 - Komponenten
