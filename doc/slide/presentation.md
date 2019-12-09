@@ -239,15 +239,12 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 # 4. Vergleich mit MVC
 
-- MVC
+- Kurzumriss MVC
 - vergleich MVC und MVVM
-<!-- mal schauen ob wir MVP nicht rausschmeißen wegen zeit -->
-- MVP
-- vergleich MVP und MVVM
 
 ---
 
-# 4. Vergleich MVC - MVC
+# 4. Vergleich MVC - Kurzumriss MVC
 
 bild von MVC
 
