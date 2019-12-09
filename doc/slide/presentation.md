@@ -282,6 +282,14 @@ Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
 <span class="text-left">
 
 - flexibel
+- seperation of concerns
+- gut testbar
+
+<!-- 
+1. die view kann einfach angepasst werden
+2. die view ist komplett von der logik gerennt
+3. in dem viewmodel ist die gesammte view logik, wodurch es einfach zu testen ist 
+ -->
 
 </span>
 </div>
