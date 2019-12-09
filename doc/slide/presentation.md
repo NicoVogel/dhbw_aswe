@@ -275,6 +275,8 @@ unterschiede hervorheben
 
 - flexibel
 - view komplett unabhängig von Logik
+- besonderer Fokus auf testbarkeit
+
 
 </span>
 </div>
