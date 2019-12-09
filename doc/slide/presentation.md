@@ -74,10 +74,12 @@ Im weiteren werden wir alles anhand von C# WPF erläutern
 
 # 3.1. Was ist MVVM - Bestandteile?
 
-- Komponenten
-  - Model
-  - ViewModel
-  - View
+<span>
+
+![MVVM Components](./../img/MVVM.png)
+
+</span>
+
 - Informationsaustausch
   - Binding
   - Command
