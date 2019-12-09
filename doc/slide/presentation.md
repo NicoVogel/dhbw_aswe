@@ -15,12 +15,13 @@ theme: upgrade
 # Agenda
 
 1. Welches Problem geht MVVM an?
-2. Was ist MVVM?
-  2.1. Bestandteile
-  2.2. Zusammenspiel
-3. Anwendungsbereiche
+2. Anwendungsbereiche
+3. Was ist MVVM?
+  3.1. Bestandteile
+  3.2. Zusammenspiel
 4. Vergleich mit MVC und MVP
-5. Kritische Würdigung
+5. Demo
+6. Kritische Würdigung
 
 ---
 
@@ -45,20 +46,33 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 
 ---
 
-# 2.1. Was ist MVVM - Bestandteile?
+# 2. Anwendungsbereiche
+
+MVVM wird eingestzt von:
+
+- C# WPF *(Uhrsprung)*
+- Silverlight
+- AngularJS *(nicht Angular...)*
+- Delphi
+
+---
+
+# 3.1. Was ist MVVM - Bestandteile?
 
 - Komponenten
   - Model
   - ViewModel
   - View
-- Binding
-- Events
+- Informationsaustausch
+  - Binding
+  - Command
+  - Events
 
 ---
 <!-- _class: code -->
 <span>
 
-# 2.1. Was ist MVVM? - Model
+# 3.1. Was ist MVVM? - Model
 
 - POCO (aka POJO)
 - Nur Daten und Daten Logik
@@ -88,7 +102,7 @@ public class StudentCollection
 <!-- _class: code -->
 <span>
 
-# 2.1. Was ist MVVM? - ViewModel
+# 3.1. Was ist MVVM? - ViewModel
 
 - Schnittstelle zwischen UI und Logik
 - Zusammenführung von Daten und Funktionen 
@@ -113,7 +127,7 @@ public class StudentViewModel
 <!-- _class: code -->
 <span>
 
-# 2.1. Was ist MVVM? - View
+# 3.1. Was ist MVVM? - View
 
 - Kein Programmcode, lediglich Rendering
 - Kennt genau ein ViewModel
@@ -137,7 +151,7 @@ public class StudentViewModel
 <!-- _class: code -->
 <span>
 
-# 2.1 Was ist MVVM? - Binding
+# 3.1. Was ist MVVM? - Binding
 
 - In der View werden Bindings definiert
 - Informationsaustausch zwischen View und ViewModel 
@@ -161,7 +175,7 @@ public class StudentViewModel
 ---
 <!-- _class: split-->
 
-# 2.1. Was ist MVVM? - Binding
+# 3.1. Was ist MVVM? - Binding
 
 <div class="ldiv">
 
@@ -181,3 +195,63 @@ View ← ViewModel
 View ⮀ ViewModel 
 
 </div>
+
+--- 
+
+# 3.1. Was ist MVVM? - Commands
+
+beschreiben was ein command ist und wie man den einsetzt
+
+---
+
+# 3.1. Was ist MVVM? - Events
+
+beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden muss, weil kein command zur verfügung steht. DAS ABER NUR ANREIßEN
+
+---
+
+# 3.2. Was ist MVVM? - Zusamenspiel
+
+1. wie agieren View, ViewModel und Model miteinander ("übersicht")
+2. extended version von 1, wo mehrere Views zu sehen sind ("relation")
+3. einordnung in Application Layered
+
+---
+
+# 4. Vergleich mit MVC und MVP
+
+- MVC
+- vergleich MVC und MVVM
+<!-- mal schauen ob wir MVP nicht rausschmeißen wegen zeit -->
+- MVP
+- vergleich MVP und MVVM
+
+---
+
+# 4. Vergleich MVC und MVP - MVC
+
+bild von MVC
+
+---
+
+# 4. Vergleich MVC und MVVM
+
+unterschiede hervorheben
+
+---
+<!-- _class: title -->
+
+# 5. Demo
+
+---
+
+# 6. Kritische Würdigung
+
+| pro       | con |
+| --------- | --- |
+| flexiebel |
+
+---
+<!-- _class: title -->
+
+# Danke für Eure Aufmerksamkeit
