@@ -78,6 +78,10 @@ section.split div {
 }
 section.split .ldiv { grid-area: leftpanel; }
 section.split .rdiv { grid-area: rightpanel; }
+section.split .uglyfix img {
+    height: 400px;
+    width: auto;
+}
 
 /* debug */
 /* section.split h1, 
