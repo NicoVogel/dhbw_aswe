@@ -38,7 +38,8 @@ theme: upgrade
 
 # 1. Welches Problem geht MVVM an?
 
-- Starke Abhängigkeit zwischen UI und Logik 
+- Starke Abhängigkeit zwischen UI und Logik
+- Fehlende Abstraktion der View
 - Redesign problematisch
 - Cross Platform
 - **TODO** weitere finden!!!
@@ -61,7 +62,7 @@ wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlic
 
 MVVM wird eingestzt von:
 
-- C# WPF *(Uhrsprung)*
+- C# WPF *(Ursprung)*
 - Silverlight
 - AngularJS *(nicht Angular...)*
 - Delphi
@@ -197,11 +198,12 @@ public class StudentViewModel
 
 ## OneWay Binding
 
-View → ViewModel
+View ← ViewModel
 
 oder
 
-View ← ViewModel
+View → ViewModel
+(OneWayToSource)
 
 </div>
 <div class="rdiv">
@@ -217,6 +219,7 @@ View ⮀ ViewModel
 # 3.1. Was ist MVVM? - Commands
 
 beschreiben was ein command ist und wie man den einsetzt
+- Event: Methode in CodeBehind der View
 
 ---
 
