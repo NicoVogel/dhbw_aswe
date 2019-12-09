@@ -23,6 +23,17 @@ theme: upgrade
 5. Demo
 6. Kritische Würdigung
 
+<!-- 
+1. was geht mvvm überhaupt an
+2. wo wird es eingesetzt
+3. was ist mvvm anhand von c# wpf
+3.1 dabei reden wir über die bestandteile
+3.2 und wie diese zusammenspielen
+4. danach vergleichen wir  mvc mit mvvn
+5. noch eine kleine demo
+6. und zuletzt heben wir die vor und nachteile von MVVM im c# bereich hervor
+-->
+
 ---
 
 # 1. Welches Problem geht MVVM an?
