@@ -301,6 +301,12 @@ Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
 <span class="text-left">
 
 - viel code für wenig resultat
+- steile lernkurve (OOP, Binding, Testing)
+
+<!-- 
+1. die xaml notation ist umfangreich
+2. um mvvm meistern zu können muss man OOP, Binding und Testing verstehen. Das ist viel für den anfang. Auch ist es wahrscheinlich, dass die ersten projekte nix werden 
+ -->
 
 </span>
 </div>
