@@ -19,7 +19,7 @@ Nico Vogel und Lukas Sopora
   2.1. Bestandteile
   2.2. Zusammenspiel
 3. Anwendungsbereiche
-4. Verglichen mit MVC und MVP
+4. Vergleich mit MVC und MVP
 5. Kritische Würdigung
 
 ---
@@ -122,6 +122,28 @@ public class StudentViewModel
 </span>
 
 ````XML
+<ListView>
+    <ListViewItem>
+        <DockPanel>
+            <TextBlock Text="Andi Theke"/>
+            <TextBlock Text="19"/>
+            <TextBlock Text="Male"/>
+        </DockPanel>
+    </ListViewItem>
+</ListView>
+````
+
+---
+
+<span>
+
+# 2.1 Was ist MVVM? - Binding
+
+- View bindet Eigenschaft an ViewModel
+- Bessere Entkopplung beider Komponenten
+- Kein Code, der View explizit updated nötig
+
+````XML
 <ListView ItemsSource="{Binding ClassBook.Students}">
     <ListView.ItemTemplate>
         <DataTemplate>
@@ -135,14 +157,7 @@ public class StudentViewModel
 </ListView>
 ````
 
----
-
-# 2.1 Was ist MVVM? - Binding
-
-- Eigenschaften einer View an ViewModel binden
-- Binding geht von View aus
-- Bessere Entkopplung beider Komponenten
-- Kein Code, der View explizit updated nötig
+</span>
 
 ---
 
