@@ -134,14 +134,15 @@ public class StudentViewModel
 ````
 
 ---
-
+<!-- _class: code -->
 <span>
 
 # 2.1 Was ist MVVM? - Binding
 
-- View bindet Eigenschaft an ViewModel
-- Bessere Entkopplung beider Komponenten
-- Kein Code, der View explizit updated nötig
+- In der View werden Bindings definiert
+- Informationsaustausch zwischen View und ViewModel 
+
+</span>
 
 ````XML
 <ListView ItemsSource="{Binding ClassBook.Students}">
@@ -156,8 +157,6 @@ public class StudentViewModel
     </ListView.ItemTemplate>
 </ListView>
 ````
-
-</span>
 
 ---
 <!-- _class: split-->
