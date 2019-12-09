@@ -137,6 +137,15 @@ public class StudentViewModel
 
 ---
 
+# 2.1 Was ist MVVM? - Binding
+
+- Eigenschaften einer View an ViewModel binden
+- Binding geht von View aus
+- Bessere Entkopplung beider Komponenten
+- Kein Code, der View explizit updated nötig
+
+---
+
 # 2.1. Was ist MVVM? - Binding
 
 <span class="columnFlex">
