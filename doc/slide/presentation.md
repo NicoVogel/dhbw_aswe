@@ -252,6 +252,7 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 bild von MVC
 
 ---
+<!-- _class: split -->
 
 # 4. Vergleich MVC und MVVM
 
