@@ -237,18 +237,6 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 ---
 
-# 4. Vergleich mit MVC
-
-- Kurzumriss MVC
-- vergleich MVC und MVVM
-
----
-
-# 4. Vergleich MVC - Kurzumriss MVC
-
-bild von MVC
-
----
 <!-- _class: split -->
 
 # 4. Vergleich MVC und MVVM
