@@ -226,22 +226,17 @@ beschreiben was ein command ist und wie man den einsetzt
 # 3.1. Was ist MVVM? - Events
 
 beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden muss, weil kein command zur verfügung steht. DAS ABER NUR ANREIßEN
+- Aufrufen von Funktionen in Code Behind der View bei bestimmten Aktionen
+    - Bsp.: Clicked, OnHover, LostFocus
+
 
 ---
 
-# 3.2. Was ist MVVM? - Zusamenspiel
+# 3.2. Was ist MVVM? - Zusammenspiel
 
-1. extended version von 1, wo mehrere Views zu sehen sind ("relation")
-
-Lukas: das bild das ich an der tafel gemalt habe (links)
-
----
-
-# 3.2. Was ist MVVM? - Zusamenspiel
-
-1. einordnung in Application Layered
-
-Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
+1. wie agieren View, ViewModel und Model miteinander ("übersicht")
+2. extended version von 1, wo mehrere Views zu sehen sind ("relation")
+3. einordnung in Application Layered
 
 ---
 
@@ -282,14 +277,7 @@ Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
 <span class="text-left">
 
 - flexibel
-- seperation of concerns
-- gut testbar
-
-<!-- 
-1. die view kann einfach angepasst werden
-2. die view ist komplett von der logik gerennt
-3. in dem viewmodel ist die gesammte view logik, wodurch es einfach zu testen ist 
- -->
+- DataBinding
 
 </span>
 </div>
@@ -301,12 +289,7 @@ Lukas: das andere bild das ich an der tafel gemalt habe (rechts)
 <span class="text-left">
 
 - viel code für wenig resultat
-- steile lernkurve (OOP, Binding, Testing)
-
-<!-- 
-1. die xaml notation ist umfangreich
-2. um mvvm meistern zu können muss man OOP, Binding und Testing verstehen. Das ist viel für den anfang. Auch ist es wahrscheinlich, dass die ersten projekte nix werden 
- -->
+- Binding eventuell laufzeitkritisch
 
 </span>
 </div>
