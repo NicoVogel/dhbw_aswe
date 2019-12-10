@@ -289,6 +289,7 @@ Interaktion der Komponenten:
 - flexibel
 - DataBinding
 - steile Lernkurve (OOP, Testing)
+- gut testbar
 
 </span>
 </div>
@@ -307,7 +308,13 @@ Interaktion der Komponenten:
 </span>
 </div>
 
-<!-- 
+<!--
+Pros: 
+1. die view kann einfach angepasst werden
+2. die view ist komplett von der logik gerennt
+3. in dem viewmodel ist die gesammte view logik, wodurch es einfach zu testen ist 
+
+Cons:
 1. die xaml notation ist umfangreich
 2. um mvvm meistern zu können muss man OOP, Binding und Testing verstehen. Das ist viel für den anfang. Auch ist es wahrscheinlich, dass die ersten projekte nix werden 
  -->
