@@ -31,12 +31,12 @@
             Grid.Row="0" Grid.Column="0"/>
 
         <DataGrid
-            ItemsSource="{Binding ClassBook.Students}" 
-            SelectedItem="{Binding SelectedStudent, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+            ItemsSource="{Binding Students}" 
+            SelectedItem="{Binding SelectedStudent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             SelectionMode="Single"
             Grid.Row="1" Grid.RowSpan="3">
         </DataGrid>
-
+        
         <TextBlock
             Text="Selcted Student" FontSize="14" FontWeight="Bold"
             Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
@@ -67,5 +67,11 @@
         <TextBox
             Text="{Binding SelectedStudent.Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             Grid.Row="3" Grid.Column="2"/>
+
+        <Button
+            Content="Delete"
+            Command="{Binding DeleteStudentCommand}"
+            Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" 
+            Width="100" Height="30"/>
     </Grid>
 </Window>

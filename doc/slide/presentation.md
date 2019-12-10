@@ -100,9 +100,15 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 
 # 3.1 Was ist MVVM? - Anwendungsfall
 
-klassenbuch für schülerdaten um schüler zu verwalten
+<br>
 
-todo uml klassendiagramm hinzufügen
+- Verwaltung von Studentendaten im Kurs
+    - "Klassenbuch"
+
+</br>
+
+![Student Model UML](./../img/StudentModel.png)
+
 
 ---
 <!-- _class: code -->
@@ -125,7 +131,7 @@ public class Student
 {
     public String Name { get; set; }
     public int Age { get; set; }
-    public String Gender { get; set; }
+    public GenderType Gender { get; set; }
 }
 ````
 
