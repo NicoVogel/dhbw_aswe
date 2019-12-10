@@ -234,9 +234,19 @@ beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden mus
 
 # 3.2. Was ist MVVM? - Zusammenspiel
 
-1. wie agieren View, ViewModel und Model miteinander ("übersicht")
-2. extended version von 1, wo mehrere Views zu sehen sind ("relation")
-3. einordnung in Application Layered
+<br>
+
+Interaktion der Komponenten:
+
+</br>
+
+![MVVM Interaction](./../img/MVVM_Interaction.png)
+
+---
+
+# 3.2 Was ist MVVM? Einordnung Application Layer
+
+![MVVM Layers](./../img/MVVM_Layer.png)
 
 ---
 
