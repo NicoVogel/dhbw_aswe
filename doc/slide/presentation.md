@@ -288,6 +288,7 @@ Interaktion der Komponenten:
 
 - flexibel
 - DataBinding
+- steile Lernkurve (OOP, Testing)
 
 </span>
 </div>
@@ -300,9 +301,16 @@ Interaktion der Komponenten:
 
 - viel code für wenig resultat
 - Binding eventuell laufzeitkritisch
+- XAML Notation umfangreich
+- OOP, Binding und Testing vorausgesetzt
 
 </span>
 </div>
+
+<!-- 
+1. die xaml notation ist umfangreich
+2. um mvvm meistern zu können muss man OOP, Binding und Testing verstehen. Das ist viel für den anfang. Auch ist es wahrscheinlich, dass die ersten projekte nix werden 
+ -->
 
 ---
 <!-- _class: title -->
