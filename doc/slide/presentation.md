@@ -38,11 +38,18 @@ theme: upgrade
 
 # 1. Welches Problem geht MVVM an?
 
+Anwendungsbereich: **Entwicklung UI**
+
+<br>
+<br>
+
+Was MVVM verbessert:
+
 - Starke Abhängigkeit zwischen UI und Logik
-- Fehlende Abstraktion der View
 - Redesign problematisch
 - Cross Platform
-- **TODO** weitere finden!!!
+- schwer zu testen
+
 
 <!--
 *Vorwort*: 
@@ -50,7 +57,6 @@ generell kommt es auf die ausgangassituation an, wie stark die folgenden punkte 
 
 1. UI und Logik ist ein code, was schwer zu warten ist
 2. da die UI und die logik viel miteinander zu tun haben kann man nicht einfach das design ändern. dabei zerstört man wahrscheinlich viele funktionen usw.
-3. Es muss viel logik neu für jede plattform geschrieben werden
 
 *schlusswort*:
 wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlich weniget schlimm, da man bereits eine saubere trennung zwsichen UI und Logik hat.
@@ -91,12 +97,20 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
  -->
 
 ---
+
+# 3.1 Was ist MVVM? - Anwendungsfall
+
+klassenbuch für schülerdaten um schüler zu verwalten
+
+todo uml klassendiagramm hinzufügen
+
+---
 <!-- _class: code -->
 <span>
 
 # 3.1. Was ist MVVM? - Model
 
-- POCO (aka POJO)
+- POJO
 - Nur Daten und Daten Logik (z.B. Validierung)
 
 </span>
@@ -105,13 +119,13 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 public class StudentCollection
 {
     public IList<Student> Students { get; }
-    public IList<Student> FullAgeStudents 
-    { 
-        get 
-        {
-            return this.Students.where(x => x.Age >= 18).toList();
-        }
-    }
+}
+
+public class Student
+{
+    public String Name { get; set; }
+    public int Age { get; set; }
+    public String Gender { get; set; }
 }
 ````
 
@@ -123,7 +137,6 @@ public class StudentCollection
 
 - Schnittstelle zwischen UI und Logik
 - Zusammenführung von Daten und Funktionen 
-- Verwendung beliebig vieler Models
 
 </span>
 
@@ -131,11 +144,11 @@ public class StudentCollection
 public class StudentViewModel
 {
     public StudentCollection ClassBook { get; }
+    public Student SelectedStudent { get; set; }
 
     public StudentViewModel()
     {
-        ClassBook = new StudentCollection();
-        ClassBook.Students.Add(new Student("Andi Theke", 19, GenderType.Male));
+        this.ClassBook = StudentTestDataUtility.GetStudentTestData();
     }
 }
 ````
@@ -147,7 +160,6 @@ public class StudentViewModel
 # 3.1. Was ist MVVM? - View
 
 - Keine Programmlogik, lediglich Rendering
-- Kennt genau ein ViewModel
 - "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
 </span>
@@ -189,6 +201,37 @@ public class StudentViewModel
 </ListView>
 ````
 
+<!-- _class: code ->
+<!-- 
+
+# 3.1 Was ist MVVM? - Bindung
+
+- Verwendung von DataGrids
+- Binding auf ausgewählten Eintrag
+
+<span>
+
+````XML
+<DataGrid
+    ItemsSource="{Binding ClassBook.Students}" 
+    SelectedItem="{Binding SelectedStudent, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}">
+</DataGrid>
+````
+
+</span>
+
+- Binding auf ausgewählten Eintrag aus anderem Kontrollelement aus
+
+<span>
+
+````XML
+<TextBox
+    Text="{Binding SelectedStudent.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+````
+
+</span> -->
+
+
 ---
 <!-- _class: split-->
 
@@ -216,19 +259,34 @@ View ⮀ ViewModel
 
 --- 
 
-# 3.1. Was ist MVVM? - Commands
+<!-- _class: split -->
 
-beschreiben was ein command ist und wie man den einsetzt
-- Event: Methode in CodeBehind der View
+# 3.1. Was ist MVVM? - Events und Commands
 
----
+<div class="ldiv">
 
-# 3.1. Was ist MVVM? - Events
+## Events
 
-beschreiben das es bestimmte ausnahmen gibt in denen man ein event verwenden muss, weil kein command zur verfügung steht. DAS ABER NUR ANREIßEN
+<span class="text-left">
+
 - Aufrufen von Funktionen in Code Behind der View bei bestimmten Aktionen
     - Bsp.: Clicked, OnHover, LostFocus
 
+</span>
+</div>
+
+<div class="rdiv">
+
+## Commands
+
+<span class="text-left">
+
+beschreiben was ein command ist und wie man den einsetzt
+
+- Event: Methode in CodeBehind der View
+
+</span>
+</div>
 
 ---
 
