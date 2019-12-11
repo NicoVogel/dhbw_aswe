@@ -35,13 +35,13 @@ theme: upgrade
 -->
 
 ---
+<!-- _class: code -->
 
 # 1. Welches Problem geht MVVM an?
 
 Anwendungsbereich: **Entwicklung UI**
 
-<br>
-<br>
+<span>
 
 Angegangene Probleme:
 
@@ -50,6 +50,7 @@ Angegangene Probleme:
 - Cross Platform
 - schwer zu testen
 
+</span>
 
 <!--
 *Vorwort*: 
@@ -75,8 +76,8 @@ wenn beispielweise Application Layer angewandt wird, ist punkt 1 schonmal deutli
 MVVM wird eingestzt von:
 
 - C# WPF *(Ursprung)*
-- Silverlight
 - Delphi
+- Silverlight
 - AngularJS *(nicht Angular...)*
 
 <!-- 
@@ -84,8 +85,8 @@ MVVM wird eingestzt von:
 
 1,2: MVVM ursprünglich als Erweiterung des Presentation-Model Pattern von Martin Fowler (2004; 2005)
      Dort wurde es in C# mit WPF und MS Silverlight eingesetzt.
-3.   In Delphi, was eigentlich schon ausgestorben ist, wurde MVVM verwendet
-4.   Aber auch im Web Bereich ist das Pattern anzutreffen. bspweise bei AngularJS
+1.   In Delphi, was eigentlich schon ausgestorben ist, wurde MVVM verwendet
+2.   Aber auch im Web Bereich ist das Pattern anzutreffen. bspweise bei AngularJS
 
 Im weiteren werden wir alles anhand von C# WPF erläutern
  --> 
@@ -179,7 +180,6 @@ public class StudentViewModel
 # 3.1. Was ist MVVM? - View
 
 - Keine Programmlogik, lediglich Rendering
-- "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
 </span>
 
@@ -201,8 +201,8 @@ public class StudentViewModel
 
 # 3.1. Was ist MVVM? - Binding
 
-- Definition von Bindings in der View
 - Informationsaustausch zwischen View und ViewModel 
+- View "Sucht" sich die notwendigen Informationen aus dem ViewModel
 
 </span>
 
@@ -220,37 +220,6 @@ public class StudentViewModel
 </ListView>
 ````
 
-<!-- _class: code ->
-<!-- 
-
-# 3.1 Was ist MVVM? - Bindung
-
-- Verwendung von DataGrids
-- Binding auf ausgewählten Eintrag
-
-<span>
-
-````XML
-<DataGrid
-    ItemsSource="{Binding ClassBook.Students}" 
-    SelectedItem="{Binding SelectedStudent, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}">
-</DataGrid>
-````
-
-</span>
-
-- Binding auf ausgewählten Eintrag aus anderem Kontrollelement aus
-
-<span>
-
-````XML
-<TextBox
-    Text="{Binding SelectedStudent.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-````
-
-</span> -->
-
-
 ---
 <!-- _class: split-->
 
@@ -265,7 +234,7 @@ View ← ViewModel
 oder
 
 View → ViewModel
-(OneWayToSource)
+*(OneWayToSource)*
 
 </div>
 <div class="rdiv">
@@ -306,7 +275,7 @@ View ⮀ ViewModel
 <span class="text-left">
 
 - Binding Aktion an Methode im ViewModel
-    - hpts. Button Events
+    - meist Button Events
 <br>
 ````XML
 <Button 
@@ -420,5 +389,7 @@ Cons:
 <!-- 
 Source:
 - [pro/con](https://softwareengineering.stackexchange.com/questions/116139/what-are-the-pros-and-cons-of-the-mvvm-architecture)
+- [nuter interaktion mit mvc](https://softwareengineering.stackexchange.com/questions/234116/model-view-controller-does-the-user-interact-with-the-view-or-with-the-controll/234117)
+- Pro C# 7: With .NET and .NET Core, 2017 978-1-4842-3017-6
 
  -->
