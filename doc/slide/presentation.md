@@ -267,7 +267,7 @@ View ⮀ ViewModel
 
 <!-- _class: split -->
 
-# 3.1. Was ist MVVM? - Events und Commands
+# 3.1. Was ist MVVM? - Events, Commands
 
 <div class="ldiv">
 
@@ -335,9 +335,16 @@ Interaktion der Komponenten:
 </div>
 
 ---
-<!-- _class: title -->
 
 # 5. Demo
+
+<br>
+
+Aufbau der Demo Applikation:
+
+</br>
+
+![MVVM Example](./../img/MVVM_Example.png)
 
 ---
 <!-- _class: split-->
