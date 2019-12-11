@@ -43,7 +43,7 @@ Anwendungsbereich: **Entwicklung UI**
 <br>
 <br>
 
-Was MVVM verbessert:
+Angegangene Probleme:
 
 - Starke Abhängigkeit zwischen UI und Logik
 - Redesign problematisch
@@ -53,13 +53,19 @@ Was MVVM verbessert:
 
 <!--
 *Vorwort*: 
-generell kommt es auf die ausgangassituation an, wie stark die folgenden punkte gewogen werden.
+MVVM wird bei der Entwicklung von Applikationen mit UI angewandt.
+Dabei werden einige Probleme angegangen:
+Generell kommt es auf die ausgangassituation an, wie stark die folgenden punkte gewogen werden.
 
 1. UI und Logik ist ein code, was schwer zu warten ist
-2. da die UI und die logik viel miteinander zu tun haben kann man nicht einfach das design ändern. dabei zerstört man wahrscheinlich viele funktionen usw.
+2. da die UI und die logik viel miteinander zu tun haben kann man nicht einfach das design ändern. dabei zerstört      man wahrscheinlich viele funktionen usw.
+   Auch ist eine Abstraktion der View in vielen Fällen nicht möglich
+3. Zudem gibt es Frameworks, wie CrossMVVM, die die Anwendung des Patterns auf Cross Platform ermöglichen
+4. Außerdem kann man durch die Trennung von UI und Logik die Logik automatisiert testen
+
 
 *schlusswort*:
-wenn beispielweise Application Layer angewand wird, ist punkt 3 schonmal deutlich weniget schlimm, da man bereits eine saubere trennung zwsichen UI und Logik hat.
+wenn beispielweise Application Layer angewandt wird, ist punkt 1 schonmal deutlich weniger schlimm, da man bereits eine saubere trennung zwsichen UI und Logik hat.
 -->
 
 ---
@@ -70,10 +76,17 @@ MVVM wird eingestzt von:
 
 - C# WPF *(Ursprung)*
 - Silverlight
-- AngularJS *(nicht Angular...)*
 - Delphi
+- AngularJS *(nicht Angular...)*
 
 <!-- 
+*Wo wird MVVM konkret angewandt?*
+
+1,2: MVVM ursprünglich als Erweiterung des Presentation-Model Pattern von Martin Fowler (2004; 2005)
+     Dort wurde es in C# mit WPF und MS Silverlight eingesetzt.
+3.   In Delphi, was eigentlich schon ausgestorben ist, wurde MVVM verwendet
+4.   Aber auch im Web Bereich ist das Pattern anzutreffen. bspweise bei AngularJS
+
 Im weiteren werden wir alles anhand von C# WPF erläutern
  --> 
 
@@ -269,27 +282,36 @@ View ⮀ ViewModel
 
 # 3.1. Was ist MVVM? - Events, Commands
 
-<div class="ldiv">
+<div class="uglyLeft">
 
 ## Events
 
 <span class="text-left">
 
-- Aufrufen von Funktionen in Code Behind der View bei bestimmten Aktionen
+- Aktion triggert Methode in Code Behind der View
     - Bsp.: Clicked, OnHover, LostFocus
+
+````XML
+<Button 
+    Click="btnClicked"/>              
+````
 
 </span>
 </div>
 
-<div class="rdiv">
+<div class="uglyRight">
 
 ## Commands
 
 <span class="text-left">
 
-beschreiben was ein command ist und wie man den einsetzt
-
-- Event: Methode in CodeBehind der View
+- Binding Aktion an Methode im ViewModel
+    - hpts. Button Events
+<br>
+````XML
+<Button 
+    Command="{Binding ClickCommand}"/>
+````
 
 </span>
 </div>

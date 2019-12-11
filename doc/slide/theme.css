@@ -82,7 +82,14 @@ section.split .uglyfix img {
     max-height: 400px;
     width: auto;
 }
-
+section.split .uglyLeft {
+    grid-area: leftpanel;
+    margin-right: 10px;
+}
+section.split .uglyRight {
+    grid-area: rightpanel;
+    margin-left: 10px;
+}
 /* debug */
 /* section.split h1, 
 section.split .ldiv, 
