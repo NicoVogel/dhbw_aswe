@@ -306,7 +306,7 @@ View ⮀ ViewModel
 <span class="text-left">
 
 - Binding Aktion an Methode im ViewModel
-    - hpts. Button Events
+    - meist Button Events
 <br>
 ````XML
 <Button 
