@@ -139,6 +139,9 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 public class StudentCollection
 {
     public IList<Student> Students { get; }
+    public IList<Student> StudentsFullAge { get {
+        return this.Students.where(x => x.Age >= 18).toList();
+    }}
 }
 
 public class Student
