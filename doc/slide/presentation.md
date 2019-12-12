@@ -207,16 +207,18 @@ public class StudentViewModel
 </span>
 
 ````XML
+<Window.DataContext>
+    <viewModels:StudentViewModel/>
+</Window.DataContext>
+
 <ListView ItemsSource="{Binding ClassBook.Students}">
-    <ListView.ItemTemplate>
-        <DataTemplate>
+    <ListView.ItemTemplate> <DataTemplate>
             <DockPanel>
                 <TextBlock Text="{Binding Name}"/>
                 <TextBlock Text="{Binding Age}"/>
                 <TextBlock Text="{Binding Gender}"/>
             </DockPanel>
-        </DataTemplate>
-    </ListView.ItemTemplate>
+    </DataTemplate> </ListView.ItemTemplate>
 </ListView>
 ````
 
