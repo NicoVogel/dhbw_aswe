@@ -112,7 +112,7 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 
 ---
 
-# 3.1 Was ist MVVM? - Anwendungsfall
+# 3.1. Was ist MVVM? - Anwendungsfall
 
 - Verwaltung von Studentendaten im Kurs
     - "Klassenbuch"
@@ -122,10 +122,11 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 
 
 ---
-<!-- _class: code -->
-<span>
 
 # 3.1. Was ist MVVM? - Model
+
+<span class="code">
+<span>
 
 - POJO
 - Nur Daten und Daten Logik (z.B. Validierung)
@@ -148,11 +149,15 @@ public class Student
 }
 ````
 
+</span>
+
 ---
-<!-- _class: code -->
-<span>
 
 # 3.1. Was ist MVVM? - ViewModel
+
+
+<span class="code">
+<span>
 
 - Schnittstelle zwischen UI und Logik
 - Zusammenführung von Daten und Funktionen 
@@ -173,15 +178,18 @@ public class StudentViewModel
 }
 ````
 
+</span>
+
 ---
-<!-- _class: code -->
-<span>
 
 # 3.1. Was ist MVVM? - View
 
+
+<span class="code">
+
+
 - Keine Programmlogik, lediglich Rendering
 
-</span>
 
 ````XML
 <ListView>
@@ -195,11 +203,15 @@ public class StudentViewModel
 </ListView>
 ````
 
+</span>
+
 ---
-<!-- _class: code -->
-<span>
 
 # 3.1. Was ist MVVM? - Binding
+
+
+<span class="code">
+<span>
 
 - Informationsaustausch zwischen View und ViewModel 
 - View "Sucht" sich die notwendigen Informationen aus dem ViewModel
@@ -221,6 +233,8 @@ public class StudentViewModel
     </DataTemplate> </ListView.ItemTemplate>
 </ListView>
 ````
+
+</span>
 
 ---
 <!-- _class: split-->
@@ -301,7 +315,7 @@ Interaktion der Komponenten:
 
 ---
 
-# 3.2 Was ist MVVM? Einordnung Application Layer
+# 3.2. Was ist MVVM? Einordnung Application Layer
 
 ![MVVM Layers](./../img/MVVM_Layer.png)
 
