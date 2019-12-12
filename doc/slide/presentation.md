@@ -329,8 +329,6 @@ Interaktion der Komponenten:
 
 # 5. Demo
 
-<br>
-
 Aufbau der Demo Applikation:
 
 </br>
