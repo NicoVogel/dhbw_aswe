@@ -114,12 +114,9 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 
 # 3.1 Was ist MVVM? - Anwendungsfall
 
-<br>
-
 - Verwaltung von Studentendaten im Kurs
     - "Klassenbuch"
 
-</br>
 
 ![Student Model UML](./../img/MVVM_Example.png)
 
