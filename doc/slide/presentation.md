@@ -349,8 +349,7 @@ Aufbau der Demo Applikation:
 <span class="text-left">
 
 - flexibel
-- DataBinding
-- steile Lernkurve (OOP, Testing)
+- steile Lernkurve (OOP, Testing, Binding)
 - gut testbar
 
 </span>
@@ -363,18 +362,16 @@ Aufbau der Demo Applikation:
 <span class="text-left">
 
 - viel code für wenig resultat
-- Binding eventuell laufzeitkritisch
 - XAML Notation umfangreich
-- OOP, Binding und Testing vorausgesetzt
+- Binding undurchsichtig
 
 </span>
 </div>
 
 <!--
 Pros: 
-1. die view kann einfach angepasst werden
-2. die view ist komplett von der logik gerennt
-3. in dem viewmodel ist die gesammte view logik, wodurch es einfach zu testen ist 
+1. die view kann einfach angepasst werden und ist komplett von der logik gerennt
+2. in dem viewmodel ist die gesammte view logik, wodurch es einfach zu testen ist 
 
 Cons:
 1. die xaml notation ist umfangreich
