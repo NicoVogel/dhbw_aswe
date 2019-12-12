@@ -121,7 +121,7 @@ generell lässt sich das MVVM patter in Komponenten und deren Informationsfluss 
 
 </br>
 
-![Student Model UML](./../img/StudentModel.png)
+![Student Model UML](./../img/MVVM_Example.png)
 
 
 ---
@@ -165,6 +165,7 @@ public class StudentViewModel
 {
     public StudentCollection ClassBook { get; }
     public Student SelectedStudent { get; set; }
+    public ICommand DeleteCommand { get; private set; }
 
     public StudentViewModel()
     {
