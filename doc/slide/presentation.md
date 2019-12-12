@@ -73,7 +73,7 @@ wenn beispielweise Application Layer angewandt wird, ist punkt 1 schonmal deutli
 
 # 2. Anwendungsbereiche
 
-MVVM wird eingestzt von:
+MVVM wird eingesetzt von:
 
 - C# WPF *(Ursprung)*
 - Delphi
