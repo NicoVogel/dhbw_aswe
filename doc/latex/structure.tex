@@ -93,6 +93,8 @@
 	\end{itemize}
 
 
+
+
 	\chapter{Beschreibung der Komponenten von MVVM}
 	\begin{itemize}
 		\item Komponenten
@@ -137,6 +139,37 @@
 		\end{itemize}
 	\end{itemize}
 
+	MVVM besteht aus mehreren Komponenten die ineinandergreifen. Die drei 
+	größten sind Model, View und ViewModel. Dabei wir das Zusammenspiel 
+	der Komponenten in der Abbildung X dargestellt. Die View und das ViewModel 
+	können Bidirektional kommunizieren, während das ViewModel nur das Model
+	aufruft beziehungsweise verwendet.
+
+	ABILUNG X
+
+	\section{Model}
+
+	Das Model umfasst nur Daten und maximal noch Logik für die Daten. 
+	Im C\# Umfeld spricht man auch von POCO (Plain old Control Object) 
+	oder in Java POJO (Plain old Java Object).
+	
+	Das folgende Beispiel beschreib eine Schülerklasse die der Definition 
+	eines Models entspricht.
+
+	CODE BEISPIEL SCHÜLER
+
+	\section{ViewModel}
+
+	Mithilfe des ViewModels werden Informationen und Funktionen zusammengefasst
+	in eine Klasse, damit eine View diese verwenden kann. Das ViewModel verwenden zur 
+	Inforamtionsbereitstellung die Models. Die bereitgestellten Funktionen sind
+	entweder in dem ViewModel selbst oder in seperaten Klassen implementiert.
+
+	\section{View}
+
+	Die View ist ausschließlich zur Darstellung der Inhalte und bereitstellen der
+	Funktionen über Schaltflächen oder ähnliches gedacht. Dabei wird in der View
+	Binding verwendet um Inhalte und Funktionen von dem ViewModel zu verwenden. 
 
 	\chapter{Beispiel des MVVM Patterns in C\# WPF}
 
