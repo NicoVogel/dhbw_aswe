@@ -23,7 +23,10 @@
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "markdown.marp.enableHtml": true,
-        "markdown.marp.themes": ["slide/theme.css"]
+        "markdown.marp.themes": [
+            "slide/theme.css"
+        ],
+        "cSpell.language": ",de"
     },
     // Use 'appPort' to create a container with published ports. If the port isn't working, be sure
     // your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
@@ -33,6 +36,7 @@
         "james-yu.latex-workshop",
         "marp-team.marp-vscode",
         "yzhang.markdown-all-in-one",
-        "bringout.pdf-view"
+        "bringout.pdf-view",
+        "streetsidesoftware.code-spell-checker-german"
     ]
 }
