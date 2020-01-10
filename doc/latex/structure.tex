@@ -84,8 +84,17 @@
 	\tableofcontents}
 \newpage
 
-\chapter{Was ist das Problem das MVVM angeht?}
+\chapter{Einleitung zu MVVM}
+
+\section{Anwendungsbereiche von MVVM}
+
+Das MVVM Pattern stammt von C\# WPF und wurde daraufhin no in Delphi, Silverlight und AngularJS
+integriert.
+
+\section{Was ist das Problem das MVVM angeht?}
 	
+ANMERKUNG: Das ist nur reinkopiert und muss noch umgeschrieben werden @Lukas
+
 Wird in der UI Entwicklung eingesetzt und soll folgende Probleme angehen:
 	
 \begin{itemize}
@@ -112,19 +121,7 @@ Generell kommt es auf die Ausgangessituation an, wie stark die folgenden punkte 
 \subparagraph{Schlusswort}
 wenn beispielweise Application Layer angewandt wird, ist punkt 1 schonmal deutlich weniger schlimm, da man bereits eine saubere trennung zwsichen UI und Logik hat.
 
-\chapter{Beschreibung der Komponenten von MVVM}
-
-
-\begin{itemize}
-	\item Kommunikation
-	      \begin{itemize}
-	      	\item OneWay Binding: von View zu ViewModel oder von ViewModel zu View
-	      	\item TwoWay Binding: Von der View zum ViewModel und gleichzeitig auch andersrum
-	      	      % egal wers aktualisiert, der wert wird an den anderen weiter gegeben
-	      	\item Events: die view reicht ein event an das ViewModel weiter 
-	      	      % methoden aufruf in dem ViewModel
-	      \end{itemize}
-\end{itemize}
+\chapter{Wie ist MVVM aufgebaut?}
 
 MVVM besteht aus mehreren Komponenten die ineinandergreifen. Die drei 
 größten sind Model, View und ViewModel. Dabei wir das Zusammenspiel 
@@ -174,7 +171,7 @@ Letzteres nennt man in C\# auch OneWayToSource. Die zweite Variante ist TwoWay B
 der View als auch dem ViewModel Informationen an den jeweils anderen zu senden.
 
 
-ABBILDUNG X
+ABBILDUNG X - Binding
 
 \paragraph{Event}
 
@@ -191,11 +188,81 @@ abdeckung gegeben, weshalb häufig auf Events zurückgegriffen werden muss. Ein 
 beinhält auch keine Informationen, sonder ist nur ein Trigger einer Methode. Ein Beispiel
 ist Button klick.
 
+\section{Wo ordnet sich MVVM in Application Layer ein?}
+
+Da in Anwendung in der Regel auch mit Strukturpattern realisiert wird, wird in der Abbildung X
+das MVVM Pattern in das Application Layer Model eingefügt. Hierbei ist wichtig, dass das
+ViewModel sowohl in der Presentation, als auch in der Business Layer vertreten ist. Das kommt
+daher, dass das ViewModel einerseits Methoden und Properties für die View aggregiert und andererseits
+Business Code ausführt.  
+
+ABBILDUNG X - Application layered
+
 \chapter{Beispiel des MVVM Patterns in C\# WPF}
 
-\chapter{Vergleich zu dem MVC Pattern}
+Das MVVM Pattern kommt aus C\# Windows Presentation Foundation (WPF) Applicationen, daher
+wird in dem folgenden Abschnitt ein Beispiel in C\# WPF zur Veranschaulichung von MVVM gezeigt.
 
-\chapter{Vergleich zu dem MVP Pattern}
+
+@Lukas: das darfst du schreiben
+
+\chapter{Verglich zwischen MVVM und MVC}
+
+In diesem Abschnitt wird beschrieben wie sich MVVM zu MCV (Model View Controller) unterscheidet. 
+Zu beginn wird das MVC Pattern erläutert um daraufhin die Unterschiede hervorzuheben. 
+
+\paragraph{Was ist MVC?}
+
+Das Model View Controller Pattern ist erstmals im Kontext der Programmiersprache SMART verwendet 
+worden. In diesem Fall sind Komponenten, wie Eingabefelder, mit dem MVC Pattern realisiert worden.
+Mit dem aufkommen von Komplexeren Sprachen ist auch der Scope von MVC gewachsen. Bei TODO(passende Sprache/Framework eingesetzen)
+entspricht die View einer Komponente oder Seite.
+
+Jede der drei Bestandteile von MVC hat seine eigene Aufgabe. Das Verhältnis unter den Komponenten
+ist in Abbildung X dargestellt. Die View ist für die Darstellung und
+Animation zuständig. Das Model stellt die Daten zur Verfügung, die in der View dargestellt werden.
+Der Controller verbindet View und Model, da diese sich nicht kennen. Somit steht der Controller 
+über der View und dem Model, wodurch Model und View entkoppelt sind, aber darfür eine starke Bindung
+zum Controller besteht. 
+
+ABBILDUNG X - MVC
+
+\paragraph{Vergleich der beiden Pattern}
+
+Während bei dem MVC Pattern der Controller das Verbinden der Komponenten übernimmt, wird das
+in dem MVVM Pattern über Binding realisiert und ein externes System löst das Binding am ende auf.
+Bei MVC kennt die View das Model nicht, aber bei MVVM ist der View das ViewModel bekannt.
+Das wird auch in der Abbildung X dargestellt durch die Verbindungen der Komponenten.
+
+TODO vielleicht noch bissel mehr dazu sagen
+
+ABBILDUNG X - MVC vs MVVM
 
 \chapter{Kritische betrachtung des MVVM Patterns}
+
+
+
+Pro
+
+<span class="text-left">
+
+- flexibel
+- steile Lernkurve (OOP, Testing, Binding)
+- gut testbar
+
+</span>
+</div>
+
+<div class="rdiv">
+
+Con
+
+<span class="text-left">
+
+- viel code für wenig resultat
+- XAML Notation umfangreich
+- Binding undurchsichtig
+
+</span>
+
 \end{document}
