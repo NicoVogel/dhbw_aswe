@@ -26,7 +26,8 @@
 
 /* border: 1px dashed gray; debug */}div#p>svg>foreignObject>section.title h1{grid-area:title;--area-height:var(--title-height)}div#p>svg>foreignObject>section.title h2{grid-area:subtitle;--area-height:var(--subtitle-height)}
 
-/*------------------------- Split Slide -------------------------*/div#p>svg>foreignObject>section.split{overflow:visible;display:grid;grid-template-columns:500px 500px;grid-template-rows:100px auto;grid-template-areas:"slideheading slideheading" "leftpanel rightpanel"}div#p>svg>foreignObject>section.split h1,div#p>svg>foreignObject>section.split h2{grid-area:slideheading;font-size:50px}div#p>svg>foreignObject>section.split div{text-align:center}div#p>svg>foreignObject>section.split .ldiv{grid-area:leftpanel}div#p>svg>foreignObject>section.split .rdiv{grid-area:rightpanel}div#p>svg>foreignObject>section.split .uglyfix img{max-height:400px;width:auto}div#p>svg>foreignObject>section.split .uglyLeft{grid-area:leftpanel;margin-right:10px}div#p>svg>foreignObject>section.split .uglyRight{grid-area:rightpanel;margin-left:10px}
+/*------------------------- Split Slide -------------------------*/div#p>svg>foreignObject>section.split{overflow:visible;display:grid;grid-template-columns:500px 500px;grid-template-rows:100px auto;grid-template-areas:"slideheading slideheading" "leftpanel rightpanel"}div#p>svg>foreignObject>section.split h1,div#p>svg>foreignObject>section.split h2{grid-area:slideheading
+/* font-size: 50px; */}div#p>svg>foreignObject>section.split div{text-align:center}div#p>svg>foreignObject>section.split .ldiv{grid-area:leftpanel}div#p>svg>foreignObject>section.split .rdiv{grid-area:rightpanel}div#p>svg>foreignObject>section.split .uglyfix img{max-height:400px;width:auto}div#p>svg>foreignObject>section.split .uglyLeft{grid-area:leftpanel;margin-right:10px}div#p>svg>foreignObject>section.split .uglyRight{grid-area:rightpanel;margin-left:10px}
 /* debug */
 /* section.split h1, 
 section.split .ldiv, 
@@ -87,7 +88,7 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="upgrade" style="--theme:upgrade;">
-<h1>3.1 Was ist MVVM? - Anwendungsfall</h1>
+<h1>3.1. Was ist MVVM? - Anwendungsfall</h1>
 <ul>
 <li>Verwaltung von Studentendaten im Kurs
 <ul>
@@ -97,8 +98,10 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
 </ul>
 <p><img src="./../img/MVVM_Example.png" alt="Student Model UML" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="code" data-theme="upgrade" class="code" style="--class:code;--theme:upgrade;"><span>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="upgrade" style="--theme:upgrade;">
 <h1>3.1. Was ist MVVM? - Model</h1>
+<span class="code">
+<span>
 <ul>
 <li>POJO</li>
 <li>Nur Daten und Daten Logik (z.B. Validierung)</li>
@@ -118,9 +121,12 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
     <span class="hljs-keyword">public</span> GenderType Gender { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
 }
 </span></span></foreignObject></svg></code></pre>
+</span>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="code" data-theme="upgrade" class="code" style="--class:code;--theme:upgrade;"><span>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="upgrade" style="--theme:upgrade;">
 <h1>3.1. Was ist MVVM? - ViewModel</h1>
+<span class="code">
+<span>
 <ul>
 <li>Schnittstelle zwischen UI und Logik</li>
 <li>Zusammenführung von Daten und Funktionen</li>
@@ -138,13 +144,14 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
     }
 }
 </span></span></foreignObject></svg></code></pre>
+</span>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="code" data-theme="upgrade" class="code" style="--class:code;--theme:upgrade;"><span>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="upgrade" style="--theme:upgrade;">
 <h1>3.1. Was ist MVVM? - View</h1>
+<span class="code">
 <ul>
 <li>Keine Programmlogik, lediglich Rendering</li>
 </ul>
-</span>
 <pre><code class="language-XML"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">ListView</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ListViewItem</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">DockPanel</span>&gt;</span>
@@ -155,9 +162,12 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ListViewItem</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ListView</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
+</span>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="code" data-theme="upgrade" class="code" style="--class:code;--theme:upgrade;"><span>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="upgrade" style="--theme:upgrade;">
 <h1>3.1. Was ist MVVM? - Binding</h1>
+<span class="code">
+<span>
 <ul>
 <li>Informationsaustausch zwischen View und ViewModel</li>
 <li>View &quot;Sucht&quot; sich die notwendigen Informationen aus dem ViewModel</li>
@@ -177,6 +187,7 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
     <span class="hljs-tag">&lt;/<span class="hljs-name">DataTemplate</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">ListView.ItemTemplate</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ListView</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
+</span>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="split" data-theme="upgrade" class="split" style="--class:split;--theme:upgrade;">
 <h1>3.1. Was ist MVVM? - Binding</h1>
@@ -234,7 +245,7 @@ section.split .rdiv { border: 1.5pt dashed dimgray; } */div#p>svg>foreignObject>
 <p><img src="./../img/MVVM_Interaction.png" alt="MVVM Interaction" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="upgrade" style="--theme:upgrade;">
-<h1>3.2 Was ist MVVM? Einordnung Application Layer</h1>
+<h1>3.2. Was ist MVVM? Einordnung Application Layer</h1>
 <p><img src="./../img/MVVM_Layer.png" alt="MVVM Layers" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="split" data-theme="upgrade" class="split" style="--class:split;--theme:upgrade;">

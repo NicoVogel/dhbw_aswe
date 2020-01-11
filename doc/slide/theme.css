@@ -71,7 +71,7 @@ grid-template-areas:
 }
 section.split h1, section.split h2 {
 grid-area: slideheading;
-font-size: 50px;
+/* font-size: 50px; */
 }
 section.split div {
     text-align: center;
