@@ -13,7 +13,7 @@ namespace mvvm.ViewModel
 {
     public class StudentBindingViewModel : INotifyPropertyChanged
     {
-        public StudentCollection ClassBook { get; }
+        public ClassBook ClassBook { get; }
         public ObservableCollection<Student> Students { get; private set; }
         private Student m_SelectedStudent = null;
         public Student SelectedStudent

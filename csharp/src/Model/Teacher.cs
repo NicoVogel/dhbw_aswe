@@ -7,12 +7,12 @@ namespace mvvm.Model
 {
     public class Teacher : Person
     {
-        public List<StudentCollection> Classes { get; set; }
+        public List<ClassBook> Classes { get; set; }
 
         [JsonConstructor]
         public Teacher(string name, string birthday, GenderType gender) : base(name, birthday, gender)
         {
-            this.Classes = new List<StudentCollection>();
+            this.Classes = new List<ClassBook>();
         }
     }
 }

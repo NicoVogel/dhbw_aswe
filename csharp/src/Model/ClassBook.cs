@@ -5,7 +5,7 @@ using System.Text;
 
 namespace mvvm.Model
 {
-    public class StudentCollection
+    public class ClassBook
     {
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
@@ -18,7 +18,7 @@ namespace mvvm.Model
             }
         }
 
-        public StudentCollection()
+        public ClassBook()
         {
             Students = new List<Student>();
         }

@@ -8,7 +8,7 @@ namespace mvvm.ViewModel
 {
     public class StudentViewModel
     {
-        public StudentCollection ClassBook { get; }
+        public ClassBook ClassBook { get; }
 
         public StudentViewModel()
         {

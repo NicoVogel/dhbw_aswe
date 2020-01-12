@@ -8,7 +8,7 @@ namespace mvvm.Model
 {
     public class Student : Person
     {
-		public StudentCollection ClassBook { get; set; }
+		public ClassBook ClassBook { get; set; }
 		public IList<double> Grades { get; set; }
 
 		[JsonConstructor]
@@ -17,7 +17,7 @@ namespace mvvm.Model
 			this.Grades = new List<double>();
 		}
 
-		public Student(string name, DateTime birthday, GenderType gender, StudentCollection classBook, List<double> grades) : base(name, birthday, gender)
+		public Student(string name, DateTime birthday, GenderType gender, ClassBook classBook, List<double> grades) : base(name, birthday, gender)
 		{
 			this.ClassBook = classBook;
 			this.Grades = new List<double>(grades);

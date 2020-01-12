@@ -9,9 +9,9 @@ namespace mvvm.Utility
 {
     public class StudentTestDataUtility
     {
-        public static StudentCollection GetStudentTestData()
+        public static ClassBook GetStudentTestData()
         {
-            StudentCollection result = new StudentCollection();
+            ClassBook result = new ClassBook();
             foreach (Student student in JsonConvert.DeserializeObject<Student[]>(Resources.JsonData))
             {
                 result.Students.Add(student);
@@ -19,7 +19,7 @@ namespace mvvm.Utility
             return result;
         }
 
-        public static void FillStudentTestData(StudentCollection studentCollection)
+        public static void FillStudentTestData(ClassBook studentCollection)
         {
             if (studentCollection is null)
             {
