@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,8 +11,12 @@ namespace mvvm.Model
         public DateTime Birthday { get; set; }
         public GenderType Gender { get; set; }
 
-        public Person()
+        [JsonConstructor]
+        public Person(string name, string birthday, GenderType gender)
         {
+            this.Name = name;
+            this.Birthday = DateTime.Parse(birthday);
+            this.Gender = gender;
         }
 
         public Person(string name, DateTime birthday, GenderType gender)

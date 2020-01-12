@@ -11,25 +11,20 @@ namespace mvvm.Model
 		public StudentCollection ClassBook { get; set; }
 		public IList<double> Grades { get; set; }
 
+		[JsonConstructor]
+		public Student(string name, string birthday, GenderType gender) : base(name, birthday, gender)
+		{
+			this.Grades = new List<double>();
+		}
+
 		public Student(string name, DateTime birthday, GenderType gender, StudentCollection classBook, List<double> grades) : base(name, birthday, gender)
 		{
 			this.ClassBook = classBook;
 			this.Grades = new List<double>(grades);
 		}
 
-		[JsonConstructor]
-		public Student(string name, String birthday, GenderType gender)
+		public Student(Student c_Student) : base(c_Student.Name, c_Student.Birthday, c_Student.Gender)
 		{
-			this.Name = name;
-			this.Birthday = DateTime.Parse(birthday);
-			this.Gender = gender;
-		}
-
-		public Student(Student c_Student)
-		{
-			this.Name = c_Student.Name;
-			this.Birthday = c_Student.Birthday;
-			this.Gender = c_Student.Gender;
 			this.ClassBook = c_Student.ClassBook;
 			this.Grades = new List<double>(c_Student.Grades);
 		}
