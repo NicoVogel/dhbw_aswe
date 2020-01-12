@@ -8,7 +8,6 @@ namespace mvvm.Model
 {
     public class Student : Person
     {
-		public int Age { get; set; }
 		public StudentCollection ClassBook { get; set; }
 		public IList<double> Grades { get; set; }
 
@@ -19,19 +18,17 @@ namespace mvvm.Model
 		}
 
 		[JsonConstructor]
-		public Student(string name, int age, GenderType gender)
+		public Student(string name, String birthday, GenderType gender)
 		{
 			this.Name = name;
-			this.Age = age;
+			this.Birthday = DateTime.Parse(birthday);
 			this.Gender = gender;
-			this.Grades = new List<double>();
 		}
 
 		public Student(Student c_Student)
 		{
 			this.Name = c_Student.Name;
 			this.Birthday = c_Student.Birthday;
-			this.Age = c_Student.Age;
 			this.Gender = c_Student.Gender;
 			this.ClassBook = c_Student.ClassBook;
 			this.Grades = new List<double>(c_Student.Grades);

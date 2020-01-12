@@ -62,11 +62,11 @@ namespace mvvm.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to [
-        ///{ &apos;name&apos;: &apos;Andi Theke&apos;, &apos;age&apos;: 19, &apos;gender&apos;: 0 },
-        ///{ &apos;name&apos;: &apos;Sören Hagen&apos;, &apos;age&apos;: 43, &apos;gender&apos;: 0 },
-        ///{ &apos;name&apos;: &apos;Hildegardt Schröder&apos;, &apos;age&apos;: 52, &apos;gender&apos;: 1 },
-        ///{ &apos;name&apos;: &apos;Gertrude Müller&apos;, &apos;age&apos;: 34, &apos;gender&apos;: 1 },
-        ///{ &apos;name&apos;: &apos;Apache Helicopter&apos;, &apos;age&apos;: 5, &apos;gender&apos;: 2 }
+        ///{ &apos;name&apos;: &apos;Andi Theke&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 0 },
+        ///{ &apos;name&apos;: &apos;Sören Hagen&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 0 },
+        ///{ &apos;name&apos;: &apos;Hildegardt Schröder&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 1 },
+        ///{ &apos;name&apos;: &apos;Gertrude Müller&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 1 },
+        ///{ &apos;name&apos;: &apos;Apache Helicopter&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 2 }
         ///].
         /// </summary>
         internal static string JsonData {

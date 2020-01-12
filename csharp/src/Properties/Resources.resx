@@ -119,11 +119,11 @@
   </resheader>
   <data name="JsonData" xml:space="preserve">
     <value>[
-{ 'name': 'Andi Theke', 'age': 19, 'gender': 0 },
-{ 'name': 'Sören Hagen', 'age': 43, 'gender': 0 },
-{ 'name': 'Hildegardt Schröder', 'age': 52, 'gender': 1 },
-{ 'name': 'Gertrude Müller', 'age': 34, 'gender': 1 },
-{ 'name': 'Apache Helicopter', 'age': 5, 'gender': 2 }
+{ 'name': 'Andi Theke', 'birthday': '15.08.1999', 'gender': 0 },
+{ 'name': 'Sören Hagen', 'birthday': '15.08.1999', 'gender': 0 },
+{ 'name': 'Hildegardt Schröder', 'birthday': '15.08.1999', 'gender': 1 },
+{ 'name': 'Gertrude Müller', 'birthday': '15.08.1999', 'gender': 1 },
+{ 'name': 'Apache Helicopter', 'birthday': '15.08.1999', 'gender': 2 }
 ]</value>
   </data>
 </root>

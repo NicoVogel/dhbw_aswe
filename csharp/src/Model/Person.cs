@@ -21,9 +21,12 @@ namespace mvvm.Model
             this.Gender = gender;
         }
 
-        public int GetAge()
+        public int Age
         {
-            return DateTime.Now.Year - this.Birthday.Year;
+            get
+            {
+                return DateTime.Now.Year - this.Birthday.Year;
+            }
         }
     }
 }
