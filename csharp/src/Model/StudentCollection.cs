@@ -7,6 +7,8 @@ namespace mvvm.Model
 {
     public class StudentCollection
     {
+        public string Name { get; set; }
+        public Teacher Teacher { get; set; }
         public IList<Student> Students { get; }
         public IList<Student> FullAgeStudents
         {
