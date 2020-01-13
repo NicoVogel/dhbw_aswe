@@ -9,8 +9,8 @@ namespace mvvm.Model
     public class ClassBook
     {
         public string Name { get; set; }
-        public Teacher Teacher { get; set; }
-        public IList<Student> Students { get; }
+        public Teacher Teacher { get; private set; }
+        public ISet<Student> Students { get; }
         public IList<Student> FullAgeStudents
         {
             get
@@ -23,12 +23,27 @@ namespace mvvm.Model
         public ClassBook(string name)
         {
             this.Name = name;
-            this.Students = new List<Student>();
+            this.Students = new HashSet<Student>();
         }
 
         public ClassBook()
         {
-            Students = new List<Student>();
+            Students = new HashSet<Student>();
+        }
+
+        internal void HireTeacher(Teacher teacher)
+        {
+            this.Teacher = teacher;
+            teacher.AssignClass(this);
+        }
+
+        internal void EnrollStudents(IList<Student> students)
+        {
+            foreach (Student student in students)
+            {
+                this.Students.Add(student);
+                student.ClassBook = this;
+            }
         }
     }
 }

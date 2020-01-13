@@ -4,8 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mvvm.View"
+             xmlns:viewModels="clr-namespace:mvvm.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModels:SchoolSummaryViewModel/>
+    </UserControl.DataContext>
     <Grid>
+        <DataGrid
+            ItemsSource="{Binding ClassBooks}"
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Class Name"
+                    Binding="{Binding Name}"/>
+                <DataGridTextColumn
+                    Header="Teacher"
+                    Binding="{Binding Teacher.Name}"/>
+                <DataGridTextColumn
+                    Header="Num Students"
+                    Binding="{Binding Students.Count}"/>
+                <DataGridTextColumn
+                    Header="Full Age Students"
+                    Binding="{Binding FullAgeStudents.Count}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
