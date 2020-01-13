@@ -117,13 +117,202 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="JsonData" xml:space="preserve">
+  <data name="Class_1" xml:space="preserve">
+    <value>{
+    "name": "12A"
+}</value>
+  </data>
+  <data name="Class_2" xml:space="preserve">
+    <value>{
+    "name": "12B"
+}</value>
+  </data>
+  <data name="Class_3" xml:space="preserve">
+    <value>{
+    "name": "11A"
+}</value>
+  </data>
+  <data name="Students_1" xml:space="preserve">
     <value>[
-{ 'name': 'Andi Theke', 'birthday': '15.08.1999', 'gender': 0 },
-{ 'name': 'Sören Hagen', 'birthday': '15.08.1999', 'gender': 0 },
-{ 'name': 'Hildegardt Schröder', 'birthday': '15.08.1999', 'gender': 1 },
-{ 'name': 'Gertrude Müller', 'birthday': '15.08.1999', 'gender': 1 },
-{ 'name': 'Apache Helicopter', 'birthday': '15.08.1999', 'gender': 2 }
+    {
+        "name": "Rene Kuester",
+        "birthday": "17.07.1998",
+        "gender": 0
+    },
+    {
+        "name": "Peter Gottschalk",
+        "birthday": "23.08.2001",
+        "gender": 0
+    },
+    {
+        "name": "Mike Lang",
+        "birthday": "01.03.1998",
+        "gender": 1
+    },
+    {
+        "name": "Janina Schwarz",
+        "birthday": "06.12.2002",
+        "gender": 1
+    },
+    {
+        "name": "Sandra Oster",
+        "birthday": "20.09.2000",
+        "gender": 1
+    },
+    {
+        "name": "Sarah Metzger",
+        "birthday": "25.01.2000",
+        "gender": 1
+    },
+    {
+        "name": "Lea Oster",
+        "birthday": "24.11.2000",
+        "gender": 1
+    },
+    {
+        "name": "Bernd Schultz",
+        "birthday": "14.01.2000",
+        "gender": 0
+    },
+    {
+        "name": "Phillipp Beyer",
+        "birthday": "12.06.2002",
+        "gender": 0
+    },
+    {
+        "name": "Erik Gruenewald",
+        "birthday": "28.08.2001",
+        "gender": 0
+    }
 ]</value>
+  </data>
+  <data name="Students_2" xml:space="preserve">
+    <value>[
+    {
+        "name": "Karin Klein",
+        "birthday": "17.07.1998",
+        "gender": 1
+    },
+    {
+        "name": "Jessika Weisz",
+        "birthday": "13.09.2001",
+        "gender": 1
+    },
+    {
+        "name": "Ralph Kaufmann",
+        "birthday": "24.12.1998",
+        "gender": 0
+    },
+    {
+        "name": "Michelle Fassbinder",
+        "birthday": "01.03.2002",
+        "gender": 1
+    },
+    {
+        "name": "Andrea Friedman",
+        "birthday": "30.06.2000",
+        "gender": 1
+    },
+    {
+        "name": "Matthias Gerste",
+        "birthday": "04.08.2000",
+        "gender": 0
+    },
+    {
+        "name": "Diana Weissmuller",
+        "birthday": "09.11.2000",
+        "gender": 1
+    },
+    {
+        "name": "Sven Krause",
+        "birthday": "12.06.2000",
+        "gender": 0
+    },
+    {
+        "name": "Ulrike Wolf",
+        "birthday": "17.04.2002",
+        "gender": 1
+    },
+    {
+        "name": "Christine Goldschmidt",
+        "birthday": "04.02.2001",
+        "gender": 1
+    }
+]</value>
+  </data>
+  <data name="Students_3" xml:space="preserve">
+    <value>[
+    {
+        "name": "Erik Durr",
+        "birthday": "24.03.1998",
+        "gender": 0
+    },
+    {
+        "name": "Mathias Burger",
+        "birthday": "29.01.2001",
+        "gender": 0
+    },
+    {
+        "name": "Tobias Zweig",
+        "birthday": "05.04.1998",
+        "gender": 0
+    },
+    {
+        "name": "Sandra Cole",
+        "birthday": "21.08.2002",
+        "gender": 1
+    },
+    {
+        "name": "Anna Sommer",
+        "birthday": "06.06.2000",
+        "gender": 1
+    },
+    {
+        "name": "Sara Frankfurter",
+        "birthday": "06.09.2000",
+        "gender": 1
+    },
+    {
+        "name": "Melanie Theissen",
+        "birthday": "30.06.2000",
+        "gender": 1
+    },
+    {
+        "name": "Torsten Gersten",
+        "birthday": "07.05.2000",
+        "gender": 0
+    },
+    {
+        "name": "Daniel Bumgarner",
+        "birthday": "29.05.2002",
+        "gender": 0
+    },
+    {
+        "name": "Sven Amsel",
+        "birthday": "22.02.2001",
+        "gender": 0
+    }
+]</value>
+  </data>
+  <data name="Teacher_1" xml:space="preserve">
+    <value>{
+    "name": "Tobias Bosch",
+    "birthday": "29.04.1974",
+    "gender": 0
+}</value>
+  </data>
+  <data name="Teacher_2" xml:space="preserve">
+    <value>{
+    "name": "Torsten Gersten",
+    "birthday": "18.10.1967",
+    "gender": 0
+}</value>
+  </data>
+  <data name="Teacher_3" xml:space="preserve">
+    <value>{
+    "name": "Martina Barth",
+    "birthday": "27.07.1981",
+    "gender": 0
+}</value>
   </data>
 </root>

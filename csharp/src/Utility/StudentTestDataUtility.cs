@@ -12,7 +12,7 @@ namespace mvvm.Utility
         public static ClassBook GetStudentTestData()
         {
             ClassBook result = new ClassBook();
-            foreach (Student student in JsonConvert.DeserializeObject<Student[]>(Resources.JsonData))
+            foreach (Student student in JsonConvert.DeserializeObject<Student[]>(Resources.Students_1))
             {
                 result.Students.Add(student);
             }
@@ -27,7 +27,7 @@ namespace mvvm.Utility
             }
 
             studentCollection.Students.Clear();
-            foreach(Student student in JsonConvert.DeserializeObject<Student[]>(Resources.JsonData))
+            foreach(Student student in JsonConvert.DeserializeObject<Student[]>(Resources.Students_1))
             {
                 studentCollection.Students.Add(student);
             }

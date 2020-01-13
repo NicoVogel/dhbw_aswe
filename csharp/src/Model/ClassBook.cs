@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,13 @@ namespace mvvm.Model
             {
                 return this.Students.Where(x => x.Age >= 18).ToList();
             }
+        }
+
+        [JsonConstructor]
+        public ClassBook(string name)
+        {
+            this.Name = name;
+            this.Students = new List<Student>();
         }
 
         public ClassBook()

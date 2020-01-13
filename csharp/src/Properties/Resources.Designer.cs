@@ -61,17 +61,174 @@ namespace mvvm.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [
-        ///{ &apos;name&apos;: &apos;Andi Theke&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 0 },
-        ///{ &apos;name&apos;: &apos;Sören Hagen&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 0 },
-        ///{ &apos;name&apos;: &apos;Hildegardt Schröder&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 1 },
-        ///{ &apos;name&apos;: &apos;Gertrude Müller&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 1 },
-        ///{ &apos;name&apos;: &apos;Apache Helicopter&apos;, &apos;birthday&apos;: &apos;15.08.1999&apos;, &apos;gender&apos;: 2 }
-        ///].
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;12A&quot;
+        ///}.
         /// </summary>
-        internal static string JsonData {
+        internal static string Class_1 {
             get {
-                return ResourceManager.GetString("JsonData", resourceCulture);
+                return ResourceManager.GetString("Class_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;12B&quot;
+        ///}.
+        /// </summary>
+        internal static string Class_2 {
+            get {
+                return ResourceManager.GetString("Class_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;11A&quot;
+        ///}.
+        /// </summary>
+        internal static string Class_3 {
+            get {
+                return ResourceManager.GetString("Class_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///    {
+        ///        &quot;name&quot;: &quot;Rene Kuester&quot;,
+        ///        &quot;birthday&quot;: &quot;17.07.1998&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Peter Gottschalk&quot;,
+        ///        &quot;birthday&quot;: &quot;23.08.2001&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Mike Lang&quot;,
+        ///        &quot;birthday&quot;: &quot;01.03.1998&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Janina Schwarz&quot;,
+        ///        &quot;birthday&quot;: &quot;06.12.2002&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Sandra Oster&quot;,
+        ///        &quot;birthday&quot;: &quot;20.09.2000&quot;,
+        ///        &quot;gender [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Students_1 {
+            get {
+                return ResourceManager.GetString("Students_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///    {
+        ///        &quot;name&quot;: &quot;Karin Klein&quot;,
+        ///        &quot;birthday&quot;: &quot;17.07.1998&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Jessika Weisz&quot;,
+        ///        &quot;birthday&quot;: &quot;13.09.2001&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Ralph Kaufmann&quot;,
+        ///        &quot;birthday&quot;: &quot;24.12.1998&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Michelle Fassbinder&quot;,
+        ///        &quot;birthday&quot;: &quot;01.03.2002&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Andrea Friedman&quot;,
+        ///        &quot;birthday&quot;: &quot;30.06.2000&quot;,
+        ///       [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Students_2 {
+            get {
+                return ResourceManager.GetString("Students_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///    {
+        ///        &quot;name&quot;: &quot;Erik Durr&quot;,
+        ///        &quot;birthday&quot;: &quot;24.03.1998&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Mathias Burger&quot;,
+        ///        &quot;birthday&quot;: &quot;29.01.2001&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Tobias Zweig&quot;,
+        ///        &quot;birthday&quot;: &quot;05.04.1998&quot;,
+        ///        &quot;gender&quot;: 0
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Sandra Cole&quot;,
+        ///        &quot;birthday&quot;: &quot;21.08.2002&quot;,
+        ///        &quot;gender&quot;: 1
+        ///    },
+        ///    {
+        ///        &quot;name&quot;: &quot;Anna Sommer&quot;,
+        ///        &quot;birthday&quot;: &quot;06.06.2000&quot;,
+        ///        &quot;gender&quot;: 1
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Students_3 {
+            get {
+                return ResourceManager.GetString("Students_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;Tobias Bosch&quot;,
+        ///    &quot;birthday&quot;: &quot;29.04.1974&quot;,
+        ///    &quot;gender&quot;: 0
+        ///}.
+        /// </summary>
+        internal static string Teacher_1 {
+            get {
+                return ResourceManager.GetString("Teacher_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;Torsten Gersten&quot;,
+        ///    &quot;birthday&quot;: &quot;18.10.1967&quot;,
+        ///    &quot;gender&quot;: 0
+        ///}.
+        /// </summary>
+        internal static string Teacher_2 {
+            get {
+                return ResourceManager.GetString("Teacher_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;name&quot;: &quot;Martina Barth&quot;,
+        ///    &quot;birthday&quot;: &quot;27.07.1981&quot;,
+        ///    &quot;gender&quot;: 0
+        ///}.
+        /// </summary>
+        internal static string Teacher_3 {
+            get {
+                return ResourceManager.GetString("Teacher_3", resourceCulture);
             }
         }
     }
