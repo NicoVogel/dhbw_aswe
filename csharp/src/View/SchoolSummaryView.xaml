@@ -10,10 +10,14 @@
     <UserControl.DataContext>
         <viewModels:SchoolSummaryViewModel/>
     </UserControl.DataContext>
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -47,17 +51,63 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <DockPanel 
+        <Grid
             Grid.Row="2"
+            Height="50" Width="400"
+            HorizontalAlignment="Left"
+            Visibility="{Binding NewClassDialogVisible, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource BoolToVisConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Text="Class Name:"
+                Grid.Row="0" Grid.Column="0"/>
+
+            <TextBox
+                Text="{Binding NewClass.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                Grid.Row="0" Grid.Column="1"/>
+
+            <TextBlock
+                Text="Teacher:"
+                Grid.Row="0" Grid.Column="2"/>
+
+            <ComboBox
+                ItemsSource="{Binding Teachers}"
+                SelectedItem="{Binding NewClass.Teacher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                Grid.Row="0" Grid.Column="3"/>
+
+            <Button
+                Content="Cancel"
+                Command="{Binding CancelAddClassCommand}"
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Button
+                Content="Submit"
+                Command="{Binding SubmitAddClassCommand}"
+                Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+        </Grid>
+        
+        <DockPanel 
+            Grid.Row="3"
             HorizontalAlignment="Left">
 
             <Button
                 Content="Add class"
-                Command="{Binding }"
+                Command="{Binding AddClassCommand}"
                 Margin="5"/>
 
             <Button
                 Content="Open class"
+                Command="{Binding OpenClassCommand}"
                 Margin="5"/>
 
             <Button

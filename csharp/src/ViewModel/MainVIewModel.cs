@@ -25,6 +25,8 @@ namespace mvvm.ViewModel
         private StudentViewModel StudentViewModel;
 
         public IList<ClassBook> ClassBooks { get; set; }
+        public IList<Teacher> Teachers { get; set; }
+        public IList<Student> Students { get; set; }
 
         public MainViewModel()
         {
@@ -38,14 +40,17 @@ namespace mvvm.ViewModel
             TeacherViewModel = (TeacherViewModel)TeacherView.DataContext;
             StudentViewModel = (StudentViewModel)StudentView.DataContext;
 
-            ClassBooks = StudentTestDataUtility.GetDummyClassBookData();
+            ClassBooks = StudentTestDataUtility.GetDummyClassBooks();
+            Teachers = StudentTestDataUtility.GetDummyTeachers();
+            Students = StudentTestDataUtility.GetDummyStudents();
 
             OnSchoolSummaryView();
         }
 
         private void OnSchoolSummaryView()
         {
-            SchoolSummaryViewModel.UpdateClassBooks(this.ClassBooks);
+            SchoolSummaryViewModel.UpdateClassBooks(ClassBooks);
+            SchoolSummaryViewModel.UpdateTeachers(Teachers);
             CurrentView = SchoolSummaryView;
             OnPropertyChanged(nameof(CurrentView));
         }

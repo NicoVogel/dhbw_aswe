@@ -13,10 +13,17 @@ namespace mvvm.ViewModel
     {
         public ObservableCollection<ClassBook> ClassBooks { get; set; }
         public ClassBook SelectedClass { get; set; }
+        public ClassBook NewClass { get; set; }
+
+        public bool NewClassDialogVisible { get; private set; } = false;
+
+        public ObservableCollection<Teacher> Teachers { get; set; }
 
         public ICommand AddClassCommand { get; private set; }
         public ICommand OpenClassCommand { get; private set; }
         public ICommand DeleteClassCommand { get; private set; }
+        public ICommand CancelAddClassCommand { get; private set; }
+        public ICommand SubmitAddClassCommand { get; private set; }
 
         public SchoolSummaryViewModel()
         {
@@ -29,6 +36,22 @@ namespace mvvm.ViewModel
             AddClassCommand = new DelegateCommand(OnAddClass);
             OpenClassCommand = new DelegateCommand(OnOpenClass);
             DeleteClassCommand = new DelegateCommand(OnDeleteClass);
+            CancelAddClassCommand = new DelegateCommand(OnCancelAddClass);
+            SubmitAddClassCommand = new DelegateCommand(OnSubmitAddClass);
+        }
+
+        private void OnSubmitAddClass(object obj)
+        {
+            ClassBooks.Add(NewClass);
+            OnPropertyChanged(nameof(ClassBooks));
+            NewClassDialogVisible = false;
+            OnPropertyChanged(nameof(NewClassDialogVisible));
+        }
+
+        private void OnCancelAddClass(object obj)
+        {
+            NewClassDialogVisible = false;
+            OnPropertyChanged(nameof(NewClassDialogVisible));
         }
 
         private void OnDeleteClass(object obj)
@@ -48,13 +71,21 @@ namespace mvvm.ViewModel
 
         private void OnAddClass(object obj)
         {
-            throw new NotImplementedException();
+            NewClass = new ClassBook();
+            NewClassDialogVisible = true;
+            OnPropertyChanged(nameof(NewClassDialogVisible));
         }
 
         public void UpdateClassBooks(IList<ClassBook> classBooks)
         {
             this.ClassBooks = new ObservableCollection<ClassBook>(classBooks);
             OnPropertyChanged(nameof(ClassBooks));
+        }
+
+        internal void UpdateTeachers(IList<Teacher> teachers)
+        {
+            this.Teachers = new ObservableCollection<Teacher>(teachers);
+            OnPropertyChanged(nameof(Teachers));
         }
     }
 }
