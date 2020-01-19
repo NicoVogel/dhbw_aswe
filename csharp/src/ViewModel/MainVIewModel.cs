@@ -70,6 +70,8 @@ namespace mvvm.ViewModel
 
         internal void OnClassView(ClassBook selectedClass)
         {
+            ClassViewModel.ClassBook = selectedClass;
+            ClassViewModel.Teachers = Teachers;
             CurrentView = ClassView;
             OnPropertyChanged(nameof(CurrentView));
         }
