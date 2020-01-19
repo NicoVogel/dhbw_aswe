@@ -1,4 +1,5 @@
 ﻿using mvvm.Model;
+using mvvm.Utility;
 using mvvm.View;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,13 @@ namespace mvvm.ViewModel
         private UserControl StudentView { get; }
         public UserControl CurrentView { get; set; }
 
+        private SchoolSummaryViewModel SchoolSummaryViewModel;
+        private ClassViewModel ClassViewModel;
+        private TeacherViewModel TeacherViewModel;
+        private StudentViewModel StudentViewModel;
+
+        public IList<ClassBook> ClassBooks { get; set; }
+
         public MainViewModel()
         {
             SchoolSummaryView = new SchoolSummaryView();
@@ -25,6 +33,19 @@ namespace mvvm.ViewModel
             TeacherView = new TeacherView();
             StudentView = new StudentView();
 
+            SchoolSummaryViewModel = (SchoolSummaryViewModel)SchoolSummaryView.DataContext;
+            ClassViewModel = (ClassViewModel)ClassView.DataContext;
+            TeacherViewModel = (TeacherViewModel)TeacherView.DataContext;
+            StudentViewModel = (StudentViewModel)StudentView.DataContext;
+
+            ClassBooks = StudentTestDataUtility.GetDummyClassBookData();
+
+            OnSchoolSummaryView();
+        }
+
+        private void OnSchoolSummaryView()
+        {
+            SchoolSummaryViewModel.UpdateClassBooks(this.ClassBooks);
             CurrentView = SchoolSummaryView;
             OnPropertyChanged(nameof(CurrentView));
         }

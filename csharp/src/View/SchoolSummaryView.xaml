@@ -15,9 +15,17 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <TextBlock
+            Text="Overview over all classes"
+            FontSize="18"
+            FontWeight="SemiBold"
+            Grid.Row="0"/>
+
         <DataGrid
             ItemsSource="{Binding ClassBooks}"
-            AutoGenerateColumns="False">
+            AutoGenerateColumns="False"
+            Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Header="Class Name"

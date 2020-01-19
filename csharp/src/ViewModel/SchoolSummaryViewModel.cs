@@ -9,12 +9,17 @@ namespace mvvm.ViewModel
 {
     class SchoolSummaryViewModel : ViewModelBase
     {
-        public ObservableCollection<ClassBook> ClassBooks { get; private set; }
+        public ObservableCollection<ClassBook> ClassBooks { get; set; }
 
         public SchoolSummaryViewModel()
         {
-            ClassBooks = new ObservableCollection<ClassBook>(
-                StudentTestDataUtility.GetDummyClassBookData());
+            ClassBooks = new ObservableCollection<ClassBook>();
+        }
+
+        public void UpdateClassBooks(IList<ClassBook> classBooks)
+        {
+            this.ClassBooks = new ObservableCollection<ClassBook>(classBooks);
+            OnPropertyChanged(nameof(ClassBooks));
         }
     }
 }
