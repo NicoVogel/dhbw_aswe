@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 namespace mvvm.ViewModel
 {
-    public class MainVIewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         private UserControl SchoolSummaryView { get; }
         private UserControl ClassView { get; }
@@ -18,7 +18,7 @@ namespace mvvm.ViewModel
         private UserControl StudentView { get; }
         public UserControl CurrentView { get; set; }
 
-        public MainVIewModel()
+        public MainViewModel()
         {
             SchoolSummaryView = new SchoolSummaryView();
             ClassView = new ClassView();

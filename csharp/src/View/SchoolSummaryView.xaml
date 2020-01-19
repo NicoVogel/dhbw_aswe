@@ -11,6 +11,10 @@
         <viewModels:SchoolSummaryViewModel/>
     </UserControl.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <DataGrid
             ItemsSource="{Binding ClassBooks}"
             AutoGenerateColumns="False">
