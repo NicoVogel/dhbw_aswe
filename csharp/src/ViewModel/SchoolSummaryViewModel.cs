@@ -11,6 +11,9 @@ namespace mvvm.ViewModel
 {
     class SchoolSummaryViewModel : ViewModelBase
     {
+        //Reference to MainViewModel
+        public MainViewModel MainViewModel { get; set; }
+
         private ObservableCollection<ClassBook> _classBooks;
         private ObservableCollection<Teacher> _teachers;
         private ClassBook _newClass;
@@ -109,7 +112,10 @@ namespace mvvm.ViewModel
 
         private void OnOpenClass(object obj)
         {
-            throw new NotImplementedException();
+            if(SelectedClass != null)
+            {
+                MainViewModel.OnClassView(SelectedClass);
+            }
         }
 
         public void UpdateClassBooks(IList<ClassBook> classBooks)

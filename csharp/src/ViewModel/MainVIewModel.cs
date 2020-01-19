@@ -1,4 +1,5 @@
-﻿using mvvm.Model;
+﻿using Microsoft.VisualStudio.PlatformUI;
+using mvvm.Model;
 using mvvm.Utility;
 using mvvm.View;
 using System;
@@ -8,6 +9,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace mvvm.ViewModel
 {
@@ -23,6 +25,8 @@ namespace mvvm.ViewModel
         private ClassViewModel ClassViewModel;
         private TeacherViewModel TeacherViewModel;
         private StudentViewModel StudentViewModel;
+
+        public ICommand HomeCommand { get; private set; }
 
         public ObservableCollection<ClassBook> ClassBooks { get; set; }
         public ObservableCollection<Teacher> Teachers { get; set; }
@@ -40,6 +44,10 @@ namespace mvvm.ViewModel
             TeacherViewModel = (TeacherViewModel)TeacherView.DataContext;
             StudentViewModel = (StudentViewModel)StudentView.DataContext;
 
+            InitializeCommands();
+
+            SchoolSummaryViewModel.MainViewModel = this;
+
             ClassBooks = new ObservableCollection<ClassBook>(StudentTestDataUtility.GetDummyClassBooks());
             Teachers = new ObservableCollection<Teacher>(StudentTestDataUtility.GetDummyTeachers());
             Students = new ObservableCollection<Student>(StudentTestDataUtility.GetDummyStudents());
@@ -47,11 +55,22 @@ namespace mvvm.ViewModel
             OnSchoolSummaryView();
         }
 
+        private void InitializeCommands()
+        {
+            HomeCommand = new DelegateCommand(OnSchoolSummaryView);
+        }
+
         private void OnSchoolSummaryView()
         {
             SchoolSummaryViewModel.ClassBooks = ClassBooks;
             SchoolSummaryViewModel.Teachers = Teachers;
             CurrentView = SchoolSummaryView;
+            OnPropertyChanged(nameof(CurrentView));
+        }
+
+        internal void OnClassView(ClassBook selectedClass)
+        {
+            CurrentView = ClassView;
             OnPropertyChanged(nameof(CurrentView));
         }
     }
