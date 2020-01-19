@@ -38,5 +38,10 @@ namespace mvvm.Model
         {
             Students = new HashSet<Student>();
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

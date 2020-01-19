@@ -33,5 +33,10 @@ namespace mvvm.Model
                 return DateTime.Now.Year - this.Birthday.Year;
             }
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
