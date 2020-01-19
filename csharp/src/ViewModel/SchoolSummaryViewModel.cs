@@ -11,13 +11,49 @@ namespace mvvm.ViewModel
 {
     class SchoolSummaryViewModel : ViewModelBase
     {
-        public ObservableCollection<ClassBook> ClassBooks { get; set; }
+        private ObservableCollection<ClassBook> _classBooks;
+        private ObservableCollection<Teacher> _teachers;
+        private ClassBook _newClass;
         public ClassBook SelectedClass { get; set; }
-        public ClassBook NewClass { get; set; }
 
         public bool NewClassDialogVisible { get; private set; } = false;
+        public ObservableCollection<ClassBook> ClassBooks
+        {
+            get
+            {
+                return _classBooks;
+            }
+            set
+            {
+                _classBooks = value;
+                OnPropertyChanged(nameof(ClassBooks));
+            }
+        }
+        public ClassBook NewClass
+        {
+            get
+            {
+                return _newClass;
+            }
+            set
+            {
+                _newClass = value;
+                OnPropertyChanged(nameof(NewClass));
+            }
+        }
 
-        public ObservableCollection<Teacher> Teachers { get; set; }
+        public ObservableCollection<Teacher> Teachers
+        {
+            get
+            {
+                return _teachers;
+            }
+            set
+            {
+                _teachers = value;
+                OnPropertyChanged(nameof(Teachers));
+            }
+        }
 
         public ICommand AddClassCommand { get; private set; }
         public ICommand OpenClassCommand { get; private set; }
@@ -38,6 +74,13 @@ namespace mvvm.ViewModel
             DeleteClassCommand = new DelegateCommand(OnDeleteClass);
             CancelAddClassCommand = new DelegateCommand(OnCancelAddClass);
             SubmitAddClassCommand = new DelegateCommand(OnSubmitAddClass);
+        }
+
+        private void OnAddClass(object obj)
+        {
+            NewClass = new ClassBook();
+            NewClassDialogVisible = true;
+            OnPropertyChanged(nameof(NewClassDialogVisible));
         }
 
         private void OnSubmitAddClass(object obj)
@@ -67,13 +110,6 @@ namespace mvvm.ViewModel
         private void OnOpenClass(object obj)
         {
             throw new NotImplementedException();
-        }
-
-        private void OnAddClass(object obj)
-        {
-            NewClass = new ClassBook();
-            NewClassDialogVisible = true;
-            OnPropertyChanged(nameof(NewClassDialogVisible));
         }
 
         public void UpdateClassBooks(IList<ClassBook> classBooks)

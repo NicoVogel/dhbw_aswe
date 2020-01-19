@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using mvvm.ViewModel;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace mvvm.Model
 {
-    public class ClassBook
+    public class ClassBook 
     {
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
