@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace mvvm.View
 {
     /// <summary>
-    /// Interaction logic for StudentView.xaml
+    /// Interaction logic for TeacherView.xaml
     /// </summary>
-    public partial class StudentView : UserControl
+    public partial class TeacherView : UserControl
     {
-        public StudentView()
+        public TeacherView()
         {
             InitializeComponent();
         }

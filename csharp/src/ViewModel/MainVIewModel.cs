@@ -1,66 +1,32 @@
 ﻿using mvvm.Model;
+using mvvm.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Controls;
 
 namespace mvvm.ViewModel
 {
-    public class MainVIewModel : INotifyPropertyChanged
+    public class MainVIewModel : ViewModelBase
     {
-		private int m_valTwoWay = 5;
-		private int m_valOneWay = 5;
-		private int m_valOneWayToSource = 5;
+        private UserControl SchoolSummaryView { get; }
+        private UserControl ClassView { get; }
+        private UserControl TeacherView { get; }
+        private UserControl StudentView { get; }
+        public UserControl CurrentView { get; set; }
 
-		public int ValOneWayToSource
-		{
-			get { return m_valOneWayToSource; }
-			set 
-			{
-				if(m_valOneWayToSource == value)
-				{
-					return;
-				}
-				m_valOneWayToSource = value;
-				OnPropertyChanged();
-			}
-		}
+        public MainVIewModel()
+        {
+            SchoolSummaryView = new SchoolSummaryView();
+            ClassView = new ClassView();
+            TeacherView = new TeacherView();
+            StudentView = new StudentView();
 
-		public int ValOneWay
-		{
-			get { return m_valOneWay; }
-			set 
-			{
-				if(m_valOneWay == value)
-				{
-					return;
-				}
-				m_valOneWay = value;
-				OnPropertyChanged();
-			}
-		}
-
-		public int ValTwoWay
-		{
-			get { return m_valTwoWay; }
-			set
-			{
-				if(m_valTwoWay == value)
-				{
-					return;
-				}
-				m_valTwoWay = value;
-				OnPropertyChanged();
-			}
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-		}
+            CurrentView = SchoolSummaryView;
+            OnPropertyChanged(nameof(CurrentView));
+        }
     }
 }

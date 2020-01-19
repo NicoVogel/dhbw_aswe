@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace mvvm.View
 {
     /// <summary>
-    /// Interaction logic for StudentBindingView.xaml
+    /// Interaction logic for ClassView.xaml
     /// </summary>
-    public partial class StudentBindingView : Window
+    public partial class ClassView : UserControl
     {
-        public StudentBindingView()
+        public ClassView()
         {
             InitializeComponent();
         }
