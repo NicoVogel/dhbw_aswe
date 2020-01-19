@@ -7,17 +7,17 @@ namespace mvvm.Model
 {
     public class Teacher : Person
     {
-        public ISet<ClassBook> Classes { get; private set; }
+        public ISet<ClassBook> ClassBooks { get; private set; }
+
+        public Teacher(string name, DateTime birthday, GenderType gender, ISet<ClassBook> classBooks) : base(name, birthday, gender)
+        {
+            this.ClassBooks = classBooks;
+        }
 
         [JsonConstructor]
         public Teacher(string name, string birthday, GenderType gender) : base(name, birthday, gender)
         {
-            this.Classes = new HashSet<ClassBook>();
-        }
-
-        internal void AssignClass(ClassBook classBook)
-        {
-            this.Classes.Add(classBook);
+            this.ClassBooks = new HashSet<ClassBook>();
         }
     }
 }

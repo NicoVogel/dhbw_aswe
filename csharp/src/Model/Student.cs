@@ -11,6 +11,12 @@ namespace mvvm.Model
 		public ClassBook ClassBook { get; set; }
 		public IList<double> Grades { get; set; }
 
+		public Student(string name, DateTime birthday, GenderType gender, ClassBook classBook, IList<double> grades) : base(name, birthday, gender)
+		{
+			this.ClassBook = classBook;
+			this.Grades = grades;
+		}
+
 		[JsonConstructor]
 		public Student(string name, string birthday, GenderType gender) : base(name, birthday, gender)
 		{

@@ -9,7 +9,7 @@ namespace mvvm.Model
     public class ClassBook
     {
         public string Name { get; set; }
-        public Teacher Teacher { get; private set; }
+        public Teacher Teacher { get; set; }
         public ISet<Student> Students { get; }
         public IList<Student> FullAgeStudents
         {
@@ -17,6 +17,13 @@ namespace mvvm.Model
             {
                 return this.Students.Where(x => x.Age >= 18).ToList();
             }
+        }
+
+        public ClassBook(String name, Teacher teacher, ISet<Student> students)
+        {
+            this.Name = name;
+            this.Teacher = teacher;
+            this.Students = students;
         }
 
         [JsonConstructor]
@@ -29,21 +36,6 @@ namespace mvvm.Model
         public ClassBook()
         {
             Students = new HashSet<Student>();
-        }
-
-        internal void HireTeacher(Teacher teacher)
-        {
-            this.Teacher = teacher;
-            teacher.AssignClass(this);
-        }
-
-        internal void EnrollStudents(IList<Student> students)
-        {
-            foreach (Student student in students)
-            {
-                this.Students.Add(student);
-                student.ClassBook = this;
-            }
         }
     }
 }

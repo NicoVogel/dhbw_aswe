@@ -23,13 +23,13 @@ namespace mvvm.Utility
             IList<Student> students_2 = JsonConvert.DeserializeObject<Student[]>(Resources.Students_2);
             IList<Student> students_3 = JsonConvert.DeserializeObject<Student[]>(Resources.Students_3);
 
-            classBook_1.HireTeacher(teacher_1);
-            classBook_2.HireTeacher(teacher_2);
-            classBook_3.HireTeacher(teacher_3);
+            SchoolUtil.HireTeacher(classBook_1, teacher_1);
+            SchoolUtil.HireTeacher(classBook_2, teacher_2);
+            SchoolUtil.HireTeacher(classBook_3, teacher_3);
 
-            classBook_1.EnrollStudents(students_1);
-            classBook_2.EnrollStudents(students_2);
-            classBook_3.EnrollStudents(students_3);
+            SchoolUtil.EnrollStudents(classBook_1, students_1);
+            SchoolUtil.EnrollStudents(classBook_2, students_2);
+            SchoolUtil.EnrollStudents(classBook_3, students_3);
 
             return new List<ClassBook> { classBook_1, classBook_2, classBook_3 };
         }
