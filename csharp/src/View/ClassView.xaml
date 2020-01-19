@@ -4,8 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mvvm.View"
+             xmlns:viewModel="clr-namespace:mvvm.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:ClassViewModel/>
+    </UserControl.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Text= "Overview over class"
+            FontSize="18"
+            FontWeight="SemiBold"
+            Grid.Row="0"/>
+
+        <DataGrid
+            ItemsSource="{Binding ClassBook.Students}"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            SelectionMode="Single"
+            IsReadOnly="True"
+            Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Name"
+                    Binding="{Binding Name}"/>
+                <DataGridTextColumn
+                    Header="Birthday"
+                    Binding="{Binding Birthday}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
