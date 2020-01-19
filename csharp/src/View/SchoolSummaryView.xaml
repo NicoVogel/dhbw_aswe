@@ -14,6 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock
@@ -24,7 +25,11 @@
 
         <DataGrid
             ItemsSource="{Binding ClassBooks}"
+            SelectedItem="{Binding SelectedClass, Mode=OneWayToSource}"
             AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            SelectionMode="Single"
+            IsReadOnly="True"
             Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn
@@ -41,5 +46,25 @@
                     Binding="{Binding FullAgeStudents.Count}"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <DockPanel 
+            Grid.Row="2"
+            HorizontalAlignment="Left">
+
+            <Button
+                Content="Add class"
+                Command="{Binding }"
+                Margin="5"/>
+
+            <Button
+                Content="Open class"
+                Margin="5"/>
+
+            <Button
+                Content="Delete class"
+                Command="{Binding DeleteClassCommand}"
+                Margin="5"/>
+
+        </DockPanel>
     </Grid>
 </UserControl>
