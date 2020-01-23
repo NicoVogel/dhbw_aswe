@@ -13,15 +13,41 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="60"/>
+            <ColumnDefinition Width="Auto" MinWidth="130"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         <TextBlock
             Text= "Overview over class"
             FontSize="18"
             FontWeight="SemiBold"
-            Grid.Row="0"/>
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+        <TextBlock
+            Text="Teacher:"
+            FontSize="12"
+            FontWeight="Bold"
+            Grid.Row="1" Grid.Column="0"/>
+
+        <ComboBox
+            x:Name="comboTeacher"
+            ItemsSource="{Binding Teachers}"
+            SelectedItem="{Binding ClassBook.Teacher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            IsHitTestVisible="{Binding IsChangeTeacher, UpdateSourceTrigger=PropertyChanged}"
+            Focusable="{Binding IsChangeTeacher, UpdateSourceTrigger=PropertyChanged}"
+            IsDropDownOpen="{Binding IsChangeTeacher, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="1" Grid.Column="1"/>
+
+        <Button
+            Content="{Binding ChangeCancelButtonText, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            Command="{Binding ChangeCancelCommand}"
+            Grid.Row="1" Grid.Column="2" Width="70" HorizontalAlignment="Left"/>
 
         <DataGrid
             ItemsSource="{Binding ClassBook.Students}"
@@ -29,7 +55,7 @@
             CanUserAddRows="False"
             SelectionMode="Single"
             IsReadOnly="True"
-            Grid.Row="1">
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Header="Name"
