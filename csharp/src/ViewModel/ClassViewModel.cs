@@ -12,6 +12,16 @@ namespace mvvm.ViewModel
         private ObservableCollection<Teacher> _teachers;
         private Student _selectedStudent;
 
+        private ObservableCollection<Student> _students;
+
+        public ObservableCollection<Student> Students
+        {
+            get 
+            { 
+                return _students; 
+            }
+        }
+
 
         public ICommand AddStudentCommand { get; private set; }
         public ICommand OpenStudentCommand { get; private set; }
@@ -35,8 +45,8 @@ namespace mvvm.ViewModel
             {
                 return;
             }
-
-            ClassBook.Students.Remove(SelectedStudent);
+            _classBook.Students.Remove(_selectedStudent);
+            _students.Remove(_selectedStudent);
         }
 
         private void OnOpenStudent()
@@ -70,7 +80,8 @@ namespace mvvm.ViewModel
             set
             {
                 _classBook = value;
-                OnPropertyChanged(nameof(ClassBook));
+                _students = new ObservableCollection<Student>(_classBook.Students);
+                OnPropertyChanged(nameof(Students));
             }
         }
 

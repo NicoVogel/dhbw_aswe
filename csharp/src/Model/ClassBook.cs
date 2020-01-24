@@ -11,7 +11,7 @@ namespace mvvm.Model
     {
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
-        public ISet<Student> Students { get; }
+        public IList<Student> Students { get; }
         public IList<Student> FullAgeStudents
         {
             get
@@ -20,7 +20,7 @@ namespace mvvm.Model
             }
         }
 
-        public ClassBook(String name, Teacher teacher, ISet<Student> students)
+        public ClassBook(String name, Teacher teacher, IList<Student> students)
         {
             this.Name = name;
             this.Teacher = teacher;
@@ -31,12 +31,12 @@ namespace mvvm.Model
         public ClassBook(string name)
         {
             this.Name = name;
-            this.Students = new HashSet<Student>();
+            this.Students = new List<Student>();
         }
 
         public ClassBook()
         {
-            Students = new HashSet<Student>();
+            Students = new List<Student>();
         }
 
         public override string ToString()
