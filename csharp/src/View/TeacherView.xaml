@@ -4,9 +4,74 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:mvvm.View"
+             xmlns:viewModel="clr-namespace:mvvm.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:TeacherViewModel/>
+    </UserControl.DataContext>
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            Text= "Teacher View"
+            FontSize="18"
+            FontWeight="SemiBold"
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+
+        <TextBlock
+            Text="Name:"
+            Grid.Row="1" Grid.Column="0"
+            HorizontalAlignment="Right" Margin="3"/>
+
+        <TextBox
+            Text="{Binding Teacher.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="1" Grid.Column="1" Margin="3"/>
+
+        <TextBlock
+            Text="Birthday:"
+            Grid.Row="2" Grid.Column="0"
+            HorizontalAlignment="Right" Margin="3"/>
+
+        <DatePicker
+            SelectedDate="{Binding Teacher.Birthday, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="2" Grid.Column="1" Margin="3"/>
+
+        <TextBlock
+            Text="Gender:"
+            Grid.Row="3" Grid.Column="0"
+            HorizontalAlignment="Right" Margin="3"/>
+
+        <TextBox
+            Text="{Binding Teacher.Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Grid.Row="3" Grid.Column="1" Margin="3"/>
+
+
+        <TextBlock
+            Text="Classes"
+            Grid.Row="1" Grid.Column="2" Margin="3"/>
+
+        <ItemsControl
+            ItemsSource="{Binding ClassBooks, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+
     </Grid>
 </UserControl>
