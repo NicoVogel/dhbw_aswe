@@ -47,6 +47,7 @@ namespace mvvm.ViewModel
             InitializeCommands();
 
             SchoolSummaryViewModel.MainViewModel = this;
+            ClassViewModel.MainViewModel = this;
 
             ClassBooks = new ObservableCollection<ClassBook>(StudentTestDataUtility.GetDummyClassBooks());
             Teachers = new ObservableCollection<Teacher>(StudentTestDataUtility.GetDummyTeachers());
@@ -65,6 +66,14 @@ namespace mvvm.ViewModel
             SchoolSummaryViewModel.ClassBooks = ClassBooks;
             SchoolSummaryViewModel.Teachers = Teachers;
             CurrentView = SchoolSummaryView;
+            OnPropertyChanged(nameof(CurrentView));
+        }
+
+        internal void OnStudentView(Student selectedStudent)
+        {
+            StudentViewModel.ClassBooks = ClassBooks;
+            StudentViewModel.Student = selectedStudent;
+            CurrentView = StudentView;
             OnPropertyChanged(nameof(CurrentView));
         }
 

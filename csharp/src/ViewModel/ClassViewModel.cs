@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.PlatformUI;
 using mvvm.Model;
+using mvvm.Utility;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -8,6 +9,9 @@ namespace mvvm.ViewModel
 {
     public class ClassViewModel : ViewModelBase
     {
+        //Reference to MainViewModel
+        public MainViewModel MainViewModel { get; set; }
+
         private ClassBook _classBook;
         private ObservableCollection<Teacher> _teachers;
         private Student _selectedStudent;
@@ -50,8 +54,8 @@ namespace mvvm.ViewModel
 
         private void OnSubmitNewStudent(object obj)
         {
-            ClassBook.Students.Add(NewStudent);
-            Students.Add(NewStudent);
+            Students.Add(NewStudent);   // add to observable collection
+            SchoolUtil.EnrollStudent(ClassBook, NewStudent); // create bidirectional connection class <--> student
             NewStudentDialogVisible = false;
             OnPropertyChanged(nameof(NewStudentDialogVisible));
         }
@@ -74,7 +78,10 @@ namespace mvvm.ViewModel
 
         private void OnOpenStudent()
         {
-            throw new NotImplementedException();
+            if(SelectedStudent != null)
+            {
+                MainViewModel.OnStudentView(SelectedStudent);
+            }
         }
 
         private void OnAddStudent()

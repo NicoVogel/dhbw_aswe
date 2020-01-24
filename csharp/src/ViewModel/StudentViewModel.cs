@@ -6,13 +6,27 @@ using System.Text;
 
 namespace mvvm.ViewModel
 {
-    public class StudentViewModel
+    public class StudentViewModel : ViewModelBase
     {
-        public ClassBook ClassBook { get; }
+		private Student _student;
+		private IList<ClassBook> _classBooks;
 
-        public StudentViewModel()
-        {
-            ClassBook = StudentTestDataUtility.GetStudentTestData();
-        }
-    }
+		public IList<ClassBook> ClassBooks
+		{
+			get { return _classBooks; }
+			set { _classBooks = value; }
+		}
+
+
+		public Student Student
+		{
+			get { return _student; }
+			set 
+			{ 
+				_student = value;
+				OnPropertyChanged(nameof(Student));
+			}
+		}
+
+	}
 }

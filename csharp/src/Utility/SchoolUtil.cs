@@ -26,5 +26,11 @@ namespace mvvm.Utility
                 student.ClassBook = classBook;
             }
         }
+
+        internal static void EnrollStudent(ClassBook classBook, Student student)
+        {
+            classBook.Students.Add(student);
+            student.ClassBook = classBook;
+        }
     }
 }
