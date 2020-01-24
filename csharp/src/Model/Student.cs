@@ -35,6 +35,10 @@ namespace mvvm.Model
 			this.Grades = new List<double>(c_Student.Grades);
 		}
 
+		public Student() : base()
+		{
+		}
+
 		public double GetAverageGrade()
 		{
 			return this.Grades.Average();

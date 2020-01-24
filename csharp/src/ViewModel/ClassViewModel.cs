@@ -11,6 +11,10 @@ namespace mvvm.ViewModel
         private ClassBook _classBook;
         private ObservableCollection<Teacher> _teachers;
         private Student _selectedStudent;
+        public bool NewStudentDialogVisible { get; private set; } = false;
+        private Student _newStudent;
+
+
 
         private ObservableCollection<Student> _students;
 
@@ -26,6 +30,9 @@ namespace mvvm.ViewModel
         public ICommand AddStudentCommand { get; private set; }
         public ICommand OpenStudentCommand { get; private set; }
         public ICommand DeleteStudentCommand { get; private set; }
+        public ICommand CancelNewStudentCommand { get; private set; }
+        public ICommand SubmitNewStudentCommand { get; private set; }
+
 
         public ClassViewModel()
         {
@@ -37,6 +44,22 @@ namespace mvvm.ViewModel
             AddStudentCommand = new DelegateCommand(OnAddStudent);
             OpenStudentCommand = new DelegateCommand(OnOpenStudent);
             DeleteStudentCommand = new DelegateCommand(OnDeleteStudent);
+            CancelNewStudentCommand = new DelegateCommand(OnCancelNewStudent);
+            SubmitNewStudentCommand = new DelegateCommand(OnSubmitNewStudent);
+        }
+
+        private void OnSubmitNewStudent(object obj)
+        {
+            ClassBook.Students.Add(NewStudent);
+            Students.Add(NewStudent);
+            NewStudentDialogVisible = false;
+            OnPropertyChanged(nameof(NewStudentDialogVisible));
+        }
+
+        private void OnCancelNewStudent(object obj)
+        {
+            NewStudentDialogVisible = false;
+            OnPropertyChanged(nameof(NewStudentDialogVisible));
         }
 
         private void OnDeleteStudent()
@@ -56,7 +79,9 @@ namespace mvvm.ViewModel
 
         private void OnAddStudent()
         {
-            throw new NotImplementedException();
+            NewStudent = new Student();
+            NewStudentDialogVisible = true;
+            OnPropertyChanged(nameof(NewStudentDialogVisible));
         }
 
         public Student SelectedStudent
@@ -95,6 +120,18 @@ namespace mvvm.ViewModel
             {
                 _teachers = value;
                 OnPropertyChanged(nameof(Teachers));
+            }
+        }
+        public Student NewStudent
+        {
+            get 
+            {
+                return _newStudent; 
+            }
+            set
+            {
+                _newStudent = value;
+                OnPropertyChanged(nameof(NewStudent));
             }
         }
     }

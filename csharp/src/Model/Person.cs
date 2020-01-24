@@ -26,6 +26,10 @@ namespace mvvm.Model
             this.Gender = gender;
         }
 
+        public Person()
+        {
+        }
+
         public int Age
         {
             get
