@@ -22,14 +22,17 @@ namespace mvvm.Utility
         {
             foreach (Student student in students)
             {
-                classBook.Students.Add(student);
-                student.ClassBook = classBook;
+                EnrollStudent(classBook, student);
             }
         }
 
         internal static void EnrollStudent(ClassBook classBook, Student student)
         {
-            classBook.Students.Add(student);
+            if (student.ClassBook != null)
+            {
+                student.ClassBook.Students.Remove(student);     // remove student from old class
+            }
+            classBook.Students.Add(student);                    // add student to new class
             student.ClassBook = classBook;
         }
     }
