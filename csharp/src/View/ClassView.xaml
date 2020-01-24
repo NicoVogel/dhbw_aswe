@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="60"/>
@@ -43,6 +44,7 @@
 
         <DataGrid
             ItemsSource="{Binding ClassBook.Students}"
+            SelectedItem="{Binding SelectedStudent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             AutoGenerateColumns="False"
             CanUserAddRows="False"
             SelectionMode="Single"
@@ -57,5 +59,26 @@
                     Binding="{Binding Birthday}"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <DockPanel
+            Grid.Row="4"
+            HorizontalAlignment="Left">
+
+            <Button
+                Content="Add Student"
+                Command="{Binding AddStudentCommand}"
+                Margin="5"/>
+            
+            <Button
+                Content="Open Student"
+                Command="{Binding OpenStudentCommand}"
+                Margin="5"/>
+            
+            <Button
+                Content="Delete Student"
+                Command="{Binding DeleteStudentCommand}"
+                Margin="5"/>
+    
+        </DockPanel>
     </Grid>
 </UserControl>
