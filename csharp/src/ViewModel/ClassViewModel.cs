@@ -10,63 +10,6 @@ namespace mvvm.ViewModel
     {
         private ClassBook _classBook;
         private ObservableCollection<Teacher> _teachers;
-        private string _ChangeCancelButtonText;
-        private bool _isChangeTeacher;
-
-        public ICommand ChangeCancelCommand { get; private set; }
-
-        public ClassViewModel()
-        {
-            ChangeCancelCommand = new DelegateCommand(OnChangeCancelTeacher);
-            IsChangeTeacher = false;
-            UpdateChangeCancelButtonText();
-        }
-
-        private void OnChangeCancelTeacher()
-        {
-            IsChangeTeacher = !IsChangeTeacher;
-            UpdateChangeCancelButtonText();
-        }
-
-        private void UpdateChangeCancelButtonText()
-        {
-            if(IsChangeTeacher)
-            {
-                ChangeCancelButtonText = "Cancel";
-            }
-            else
-            {
-                ChangeCancelButtonText = "Change";
-            }
-            OnPropertyChanged(nameof(ChangeCancelButtonText));
-
-        }
-
-        public bool IsChangeTeacher
-        {
-            get
-            {
-                return _isChangeTeacher; 
-            }
-            set
-            {
-                _isChangeTeacher = value;
-                OnPropertyChanged(nameof(IsChangeTeacher));
-            }
-        }
-
-        public string ChangeCancelButtonText
-        {
-            get 
-            { 
-                return _ChangeCancelButtonText; 
-            }
-            set 
-            {
-                _ChangeCancelButtonText = value;
-                OnPropertyChanged(nameof(ChangeCancelButtonText));
-            }
-        }
 
         public ClassBook ClassBook
         {
@@ -78,6 +21,7 @@ namespace mvvm.ViewModel
             {
                 _classBook = value;
                 OnPropertyChanged(nameof(ClassBook));
+                OnPropertyChanged(nameof(ClassBook.Teacher));
             }
         }
 
