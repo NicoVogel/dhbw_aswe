@@ -10,13 +10,28 @@ namespace mvvm.ViewModel
     {
 		private Student _student;
 		private IList<ClassBook> _classBooks;
+		private ClassBook _selectedClass;
+
+		public ClassBook SelectedClass
+		{
+			get { return _selectedClass; }
+			set
+			{
+				_selectedClass = value;
+				SchoolUtil.EnrollStudent(SelectedClass, Student);
+				OnPropertyChanged(nameof(SelectedClass));
+			}
+		}
 
 		public IList<ClassBook> ClassBooks
 		{
 			get { return _classBooks; }
-			set { _classBooks = value; }
+			set 
+			{ 
+				_classBooks = value;
+				OnPropertyChanged(nameof(ClassBooks));
+			}
 		}
-
 
 		public Student Student
 		{

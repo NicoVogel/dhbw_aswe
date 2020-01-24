@@ -71,7 +71,7 @@ namespace mvvm.ViewModel
 
         internal void OnStudentView(Student selectedStudent)
         {
-            StudentViewModel.ClassBooks = ClassBooks;
+            StudentViewModel.ClassBooks = new List<ClassBook>(ClassBooks);
             StudentViewModel.Student = selectedStudent;
             CurrentView = StudentView;
             OnPropertyChanged(nameof(CurrentView));
