@@ -42,8 +42,8 @@
 
         <ComboBox
             x:Name="comboTeacher"
-            ItemsSource="{Binding Teachers}"
-            SelectedItem="{Binding ClassBook.Teacher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            ItemsSource="{Binding Teachers, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedTeacher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             MinWidth="100" MaxWidth="150" HorizontalAlignment="Left"
             Grid.Row="1" Grid.Column="1"/>
 

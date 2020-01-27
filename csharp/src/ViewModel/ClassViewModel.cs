@@ -17,7 +17,18 @@ namespace mvvm.ViewModel
         private Student _selectedStudent;
         public bool NewStudentDialogVisible { get; private set; } = false;
         private Student _newStudent;
+        private Teacher _selectedTeacher;
 
+        public Teacher SelectedTeacher
+        {
+            get { return _selectedTeacher; }
+            set 
+            { 
+                _selectedTeacher = value;
+                SchoolUtil.HireTeacher(_classBook, _selectedTeacher);
+                OnPropertyChanged(nameof(SelectedTeacher));
+            }
+        }
 
 
         private ObservableCollection<Student> _students;
@@ -29,7 +40,6 @@ namespace mvvm.ViewModel
                 return _students; 
             }
         }
-
 
         public ICommand AddStudentCommand { get; private set; }
         public ICommand OpenStudentCommand { get; private set; }
@@ -113,7 +123,9 @@ namespace mvvm.ViewModel
             {
                 _classBook = value;
                 _students = new ObservableCollection<Student>(_classBook.Students);
+                SelectedTeacher = _classBook.Teacher;
                 OnPropertyChanged(nameof(Students));
+                OnPropertyChanged(nameof(ClassBook));
             }
         }
 

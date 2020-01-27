@@ -9,8 +9,14 @@ namespace mvvm.Utility
 {
     public class StudentTestDataUtility
     {
-        public static IList<ClassBook> GetDummyClassBooks()
+        public static DummySchoolData GetDummySchoolData()
         {
+            var result = new DummySchoolData();
+
+            IList<ClassBook> classBooks = new List<ClassBook>();
+            IList<Teacher> teachers = new List<Teacher>();
+            IList<Student> students = new List<Student>();
+
             ClassBook classBook_1 = JsonConvert.DeserializeObject<ClassBook>(Resources.Class_1);
             ClassBook classBook_2 = JsonConvert.DeserializeObject<ClassBook>(Resources.Class_2);
             ClassBook classBook_3 = JsonConvert.DeserializeObject<ClassBook>(Resources.Class_3);
@@ -31,66 +37,29 @@ namespace mvvm.Utility
             SchoolUtil.EnrollStudents(classBook_2, students_2);
             SchoolUtil.EnrollStudents(classBook_3, students_3);
 
-            return new List<ClassBook> { classBook_1, classBook_2, classBook_3 };
-        }
+            classBooks.Add(classBook_1);
+            classBooks.Add(classBook_2);
+            classBooks.Add(classBook_3);
 
-        internal static IList<Teacher> GetDummyTeachers()
-        {
-            IList<Teacher> result = new List<Teacher>();
+            teachers.Add(teacher_1);
+            teachers.Add(teacher_2);
+            teachers.Add(teacher_3);
 
-            result.Add(JsonConvert.DeserializeObject<Teacher>(Resources.Teacher_1));
-            result.Add(JsonConvert.DeserializeObject<Teacher>(Resources.Teacher_2));
-            result.Add(JsonConvert.DeserializeObject<Teacher>(Resources.Teacher_3));
+            foreach(var student in students_1) {
+                students.Add(student);
+            }
+            foreach(var student in students_2) {
+                students.Add(student);
+            }
+            foreach(var student in students_3) {
+                students.Add(student);
+            }
+
+            result.ClassBooks = classBooks;
+            result.Teachers = teachers;
+            result.Students = students;
 
             return result;
-        }
-
-        internal static IList<Student> GetDummyStudents()
-        {
-            IList<Student> result = new List<Student>();
-
-            IList<Student> students_1 = JsonConvert.DeserializeObject<Student[]>(Resources.Students_1);
-            IList<Student> students_2 = JsonConvert.DeserializeObject<Student[]>(Resources.Students_2);
-            IList<Student> students_3 = JsonConvert.DeserializeObject<Student[]>(Resources.Students_3);
-
-            foreach (var student in students_1)
-            {
-                result.Add(student);
-            }
-            foreach (var student in students_2)
-            {
-                result.Add(student);
-            }
-            foreach (var student in students_3)
-            {
-                result.Add(student);
-            }
-
-            return result;
-        }
-
-        public static ClassBook GetStudentTestData()
-        {
-            ClassBook result = new ClassBook();
-            foreach (Student student in JsonConvert.DeserializeObject<Student[]>(Resources.Students_1))
-            {
-                result.Students.Add(student);
-            }
-            return result;
-        }
-
-        public static void FillStudentTestData(ClassBook studentCollection)
-        {
-            if (studentCollection is null)
-            {
-                return;
-            }
-
-            studentCollection.Students.Clear();
-            foreach(Student student in JsonConvert.DeserializeObject<Student[]>(Resources.Students_1))
-            {
-                studentCollection.Students.Add(student);
-            }
         }
     }
 }

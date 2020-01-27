@@ -37,7 +37,7 @@ namespace mvvm.ViewModel
 
         public StudentBindingViewModel()
         {
-            ClassBook = StudentTestDataUtility.GetStudentTestData();
+            ClassBook = StudentTestDataUtility.GetDummySchoolData().ClassBooks[0];
             DeleteStudentCommand = new DelegateCommand(OnDeleteStudent);
             Students = new ObservableCollection<Student>(ClassBook.Students);
         }

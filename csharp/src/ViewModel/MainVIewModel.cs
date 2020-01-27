@@ -49,9 +49,11 @@ namespace mvvm.ViewModel
             SchoolSummaryViewModel.MainViewModel = this;
             ClassViewModel.MainViewModel = this;
 
-            ClassBooks = new ObservableCollection<ClassBook>(StudentTestDataUtility.GetDummyClassBooks());
-            Teachers = new ObservableCollection<Teacher>(StudentTestDataUtility.GetDummyTeachers());
-            Students = new ObservableCollection<Student>(StudentTestDataUtility.GetDummyStudents());
+            var dummyData = StudentTestDataUtility.GetDummySchoolData();
+
+            ClassBooks = new ObservableCollection<ClassBook>(dummyData.ClassBooks);
+            Teachers = new ObservableCollection<Teacher>(dummyData.Teachers);
+            Students = new ObservableCollection<Student>(dummyData.Students);
 
             OnSchoolSummaryView();
         }
