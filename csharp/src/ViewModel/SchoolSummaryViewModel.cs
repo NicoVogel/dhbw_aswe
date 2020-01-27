@@ -86,6 +86,11 @@ namespace mvvm.ViewModel
             OnPropertyChanged(nameof(NewClassDialogVisible));
         }
 
+        internal void Update()
+        {
+            OnPropertyChanged(nameof(ClassBooks));
+        }
+
         private void OnSubmitAddClass(object obj)
         {
             ClassBooks.Add(NewClass);
@@ -116,18 +121,6 @@ namespace mvvm.ViewModel
             {
                 MainViewModel.OnClassView(SelectedClass);
             }
-        }
-
-        public void UpdateClassBooks(IList<ClassBook> classBooks)
-        {
-            this.ClassBooks = new ObservableCollection<ClassBook>(classBooks);
-            OnPropertyChanged(nameof(ClassBooks));
-        }
-
-        internal void UpdateTeachers(IList<Teacher> teachers)
-        {
-            this.Teachers = new ObservableCollection<Teacher>(teachers);
-            OnPropertyChanged(nameof(Teachers));
         }
     }
 }

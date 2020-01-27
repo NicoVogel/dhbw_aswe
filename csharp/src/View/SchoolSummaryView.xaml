@@ -38,16 +38,16 @@
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Header="Class Name"
-                    Binding="{Binding Name}"/>
+                    Binding="{Binding Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn
                     Header="Teacher"
-                    Binding="{Binding Teacher.Name}"/>
+                    Binding="{Binding Teacher.Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn
                     Header="Num Students"
-                    Binding="{Binding Students.Count}"/>
+                    Binding="{Binding Students.Count, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn
                     Header="Full Age Students"
-                    Binding="{Binding FullAgeStudents.Count}"/>
+                    Binding="{Binding FullAgeStudents.Count, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
             </DataGrid.Columns>
         </DataGrid>
 

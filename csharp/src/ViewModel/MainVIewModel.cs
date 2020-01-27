@@ -65,6 +65,7 @@ namespace mvvm.ViewModel
         {
             SchoolSummaryViewModel.ClassBooks = ClassBooks;
             SchoolSummaryViewModel.Teachers = Teachers;
+            SchoolSummaryViewModel.Update();
             CurrentView = SchoolSummaryView;
             OnPropertyChanged(nameof(CurrentView));
         }
