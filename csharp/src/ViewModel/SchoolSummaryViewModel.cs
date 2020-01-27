@@ -88,6 +88,8 @@ namespace mvvm.ViewModel
 
         internal void Update()
         {
+            //Workaround for forcing datagrid to update
+            ClassBooks = new ObservableCollection<ClassBook>(ClassBooks);
             OnPropertyChanged(nameof(ClassBooks));
         }
 
