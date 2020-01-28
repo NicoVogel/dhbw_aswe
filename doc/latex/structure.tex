@@ -18,6 +18,8 @@
 \usepackage{csquotes}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{intersections}
+\usepackage{graphicx}
+\graphicspath{{./../img/}}
 
 \pgfdeclarelayer{bg}
 \pgfsetlayers{bg,main}
@@ -106,7 +108,7 @@ Das MVVM Pattern geht Probleme der klassichen UI Programmierung an und bringt zu
 \\\\
 \\noindent
 In erster Linie nimmt das Pattern das Problem an, dass UI und Logik stark voneinander abhängig sind, wenn keine klare Trennung vorgenommen wird.
-Dadurch wird die Wartbarkeit des Programmcodes erheblich beschwert, 
+Dadurch wird die Wartbarkeit des Programmcodes erheblich beschwert,  
 
 ANMERKUNG: Das ist nur reinkopiert und muss noch umgeschrieben werden @Lukas
 
@@ -180,13 +182,19 @@ Dieser Austausch wird über Binding, Events und Commands realisiert.
 
 \paragraph{Binding}
 
-Binding gibt es in zwei Variationen, diese sind in Abbildung X dargestellt. OneWay Binding
+Binding gibt es grundsätzlich in zwei Variationen. Diese sind in Abbildung 2.1 dargestellt. OneWay Binding
 lässt Kommunikation nur in eine Richtung zu, somit von dem ViewModel zur View und umgekehrt.
 Letzteres nennt man in C\# auch OneWayToSource. Die zweite Variante ist TwoWay Binding ermöglicht
-der View als auch dem ViewModel Informationen an den jeweils anderen zu senden.
+der View als auch dem ViewModel Informationen an den jeweils anderen zu senden. Zusätzlich ist 
+bei WPF das OneTime Binding vertreten, wobei die Zieleigenschaft nur beim Start der Applikation 
+oder, wenn sich die DataContext Eigenschaft ändert, also wenn der View Komponente ein neues 
+ViewModel zugewiesen wird.
 
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Wpf_Binding.png}
+	\caption[]{DataBinding}
+\end{figure}
 
-ABBILDUNG X - Binding
 
 \paragraph{Event}
 
