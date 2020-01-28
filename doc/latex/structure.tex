@@ -200,9 +200,13 @@ ViewModel zugewiesen wird.
 
 Events sind Ereignisse von UI Komponenten auf die andere Komponenten sich registrieren 
 können um so zusätzlichen Code auszuführen. Es gibt eine breite Menge an Events die
-von Komponenten zur Verfügung gestellt wird. Diese können wiederum nicht mit Binding 
-kombiniert werden und daher ist es notwendig in C\# in der Code-Behind Datei
-die verlinkung zum ViewModel herzustellen.
+von Komponenten zur Verfügung gestellt wird. Beispiele für Events können Hover-Ereignisse
+oder ein Doppelklick auf eine Komponente sein.
+Diese können standardmäßig nicht and das ViewModel
+gebunden werden, sondern rufen eine Funktion in der Code-Behind Datei auf.
+Soll ein Event eine Funktionalität im ViewModel aufrufen, kann dafür in C\# eine Verlinkung in der
+Code-Behind Datei erstellt werden. Durch die Verwendung von zusätlichen Bibliotheken, wie
+Blend Interactivity Features, können Events über Umwege an Commands gebunden werden.
 
 \paragraph{Command}
 
