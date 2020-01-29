@@ -97,7 +97,7 @@ mit denen der Programmcode sinnvoll in Komponenten eingeteilt werden konnte, mit
 Das bekannteste dieser Patterns, welches auch heute noch häufige Verwendung findet, ist das Model-View-Controller (MVC) Pattern.
 Aus diesem entwickelte sich auch das Model-View-Presenter (MVP) Pattern, woraus 2004 wiederum das Presentation-Model (PM) hervorging.
 2005 wurde schließlich vom Microsoft Architekten John Gossmann das Model-View-ViewModel (MVVM) Pattern als Spezialisierung des Presentation Model vorgestellt.
-Seitdem wird es vor allem in C\# im Zusammmenhang mit WPF, aber auch in Delphi, Silverlight und AngularJS angewandt.
+Seitdem wird es vor allem in C\# im Zusammenhang mit WPF, aber auch in Delphi, Silverlight und AngularJS angewandt.
 \\\\
 \noindent
 Alle oben erwähnten Patterns verfolgen denselben Ansatz, den Programmcode sinnvoll aufzuteilen und die Oberflächenbeschreibung der Benutzeroberfläche von der Programmlogik zu trennen. \par
@@ -114,7 +114,7 @@ Komponenten konzentrieren können und nicht das gesamte System im Blick behalten
 von Code steigt durch die Möglichkeit der Abstraktion des User Interfaces. Dadurch erhöht sich auch die Skalierbarkeit.\\
 \\
 Ein weiterer Vorteil ist, dass sich solche eigenständigen Komponenten besser und automatisiert testen lassen können.
-Spefizische Test Cases lassen sich so mit Unit Tests gut umsetzen.
+Spezifische Test Cases lassen sich so mit Unit Tests gut umsetzen.
 \\
 Außerdem können sich Backend Entwickler auf die Programmlogik konzentrieren, währen Frontend Entwickler den Fokus
 auf die Benutzeroberfläche und das Design legen können. Voraussetzung dafür sind klare Definitionen von
@@ -124,7 +124,7 @@ Frameworks, wie MVVMCross ermöglichen die Anwendung von MVVM auf beispielweise 
 
 \chapter{Wie ist MVVM aufgebaut?}
 
-MVVM besteht aus mehreren Komponenten die ineinandergreifen. Die drei 
+MVVM besteht aus mehreren Komponenten, die ineinandergreifen. Die drei 
 größten sind Model, View und ViewModel. Dabei wird das Zusammenspiel 
 der Komponenten in der Abbildung X dargestellt. Während das ViewModel das Model
 nur aufruft, beziehungsweise es verwendet, kommunizieren View und ViewModel über
@@ -158,7 +158,7 @@ entweder in dem ViewModel selbst oder in separaten Klassen implementiert.
 
 Die View ist ausschließlich zur Darstellung der Inhalte und bereitstellen der
 Funktionen über Schaltflächen oder ähnliches gedacht. Dabei wird in der View
-Binding verwendet um Inhalte und Funktionen von dem ViewModel zu verwenden.
+Binding verwendet, um Inhalte und Funktionen von dem ViewModel zu verwenden.
 
 \section{Kommunikation}
 
@@ -184,21 +184,21 @@ ViewModel zugewiesen wird.
 
 \paragraph{Event}
 
-Events sind Ereignisse von UI Komponenten auf die andere Komponenten sich registrieren 
-können um so zusätzlichen Code auszuführen. Es gibt eine breite Menge an Events die
+Events sind Ereignisse von UI Komponenten, auf welche sich andere Komponenten registrieren 
+können, um so zusätzlichen Code auszuführen. Es gibt eine breite Menge an Events die
 von Komponenten zur Verfügung gestellt wird. Beispiele für Events können Hover-Ereignisse
 oder ein Doppelklick auf eine Komponente sein.
 Diese können standardmäßig nicht and das ViewModel
 gebunden werden, sondern rufen eine Funktion in der Code-Behind Datei auf.
 Soll ein Event eine Funktionalität im ViewModel aufrufen, kann dafür in C\# eine Verlinkung in der
-Code-Behind Datei erstellt werden. Durch die Verwendung von zusätlichen Bibliotheken, wie
+Code-Behind Datei erstellt werden. Durch die Verwendung von zusätzlichen Bibliotheken, wie
 Blend Interactivity Features, können Events über Umwege an Commands gebunden werden.
 
 \paragraph{Command}
 
-Commands sind Events die über Binding verwendet werden können. Hierbei ist eine schlecht
-abdeckung gegeben, weshalb häufig auf Events zurückgegriffen werden muss. Ein Command
-beinhält auch keine Informationen, sonder ist nur ein Trigger einer Methode. Ein Beispiel
+Commands sind Events, die über Binding verwendet werden können. Hierbei ist eine schlechte
+Abdeckung gegeben, weshalb häufig auf Events zurückgegriffen werden muss. Ein Command
+beinhält auch keine Informationen, sondern ist nur ein Trigger einer Methode. Ein Beispiel
 ist Button klick.
 
 \section{Wo ordnet sich MVVM in Application Layer ein?}
@@ -222,20 +222,20 @@ wird in dem folgenden Abschnitt ein Beispiel in C\# WPF zur Veranschaulichung vo
 \chapter{Verglich zwischen MVVM und MVC}
 
 In diesem Abschnitt wird beschrieben wie sich MVVM zu MCV (Model View Controller) unterscheidet. 
-Zu beginn wird das MVC Pattern erläutert um daraufhin die Unterschiede hervorzuheben. 
+Zu Beginn wird das MVC Pattern erläutert, um daraufhin die Unterschiede hervorzuheben. 
 
 \paragraph{Was ist MVC?}
 
 Das Model View Controller Pattern ist erstmals im Kontext der Programmiersprache SMART verwendet 
 worden. In diesem Fall sind Komponenten, wie Eingabefelder, mit dem MVC Pattern realisiert worden.
-Mit dem aufkommen von Komplexeren Sprachen ist auch der Scope von MVC gewachsen. Bei TODO(passende Sprache/Framework eingesetzen)
+Mit dem Aufkommen von komplexeren Sprachen ist auch der Scope von MVC gewachsen. Bei TODO(passende Sprache/Framework einsetzen)
 entspricht die View einer Komponente oder Seite.
 
 Jede der drei Bestandteile von MVC hat seine eigene Aufgabe. Das Verhältnis unter den Komponenten
 ist in Abbildung X dargestellt. Die View ist für die Darstellung und
 Animation zuständig. Das Model stellt die Daten zur Verfügung, die in der View dargestellt werden.
 Der Controller verbindet View und Model, da diese sich nicht kennen. Somit steht der Controller 
-über der View und dem Model, wodurch Model und View entkoppelt sind, aber darfür eine starke Bindung
+über der View und dem Model, wodurch Model und View entkoppelt sind, aber dafür eine starke Bindung
 zum Controller besteht. 
 
 ABBILDUNG X - MVC
@@ -243,7 +243,7 @@ ABBILDUNG X - MVC
 \paragraph{Vergleich der beiden Pattern}
 
 Während bei dem MVC Pattern der Controller das Verbinden der Komponenten übernimmt, wird das
-in dem MVVM Pattern über Binding realisiert und ein externes System löst das Binding am ende auf.
+in dem MVVM Pattern über Binding realisiert und ein externes System löst das Binding am Ende auf.
 Bei MVC kennt die View das Model nicht, aber bei MVVM ist der View das ViewModel bekannt.
 Das wird auch in der Abbildung X dargestellt durch die Verbindungen der Komponenten.
 
@@ -251,7 +251,7 @@ TODO vielleicht noch bissel mehr dazu sagen
 
 ABBILDUNG X - MVC vs MVVM
 
-\chapter{Kritische betrachtung des MVVM Patterns}
+\chapter{Kritische Betrachtung des MVVM Patterns}
 
 
 
