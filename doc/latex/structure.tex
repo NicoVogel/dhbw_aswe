@@ -21,6 +21,8 @@
 \usepackage{graphicx}
 \graphicspath{{./../img/}}
 
+\usepackage{listings}
+
 \pgfdeclarelayer{bg}
 \pgfsetlayers{bg,main}
 
@@ -126,13 +128,16 @@ Frameworks, wie MVVMCross ermöglichen die Anwendung von MVVM auf beispielweise 
 
 MVVM besteht aus mehreren Komponenten, die ineinandergreifen. Die drei 
 größten sind Model, View und ViewModel. Dabei wird das Zusammenspiel 
-der Komponenten in der Abbildung X dargestellt. Während das ViewModel das Model
+der Komponenten in der Abbildung 2.1 dargestellt. Während das ViewModel das Model
 nur aufruft, beziehungsweise es verwendet, kommunizieren View und ViewModel über
 Bindings bidirektional. Dabei ist allerdings zu erwähnen, dass die View das ViewModel
 kennt, aber nicht anders herum. Das ViewModel stellt lediglich Daten und Funktionalitäten
 zur Verfügung, weiß aber nicht, wo und wie diese außerhalb der Klasse verwendet werden.
 
-ABBILDUNG X
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{MVVM.png}
+	\caption[]{DataBinding}
+\end{figure}
 
 \section{Komponenten}
 
@@ -141,11 +146,11 @@ ABBILDUNG X
 Das Model umfasst nur Daten und maximal noch Logik für die Daten. 
 Im C\# Umfeld spricht man auch von POCO (Plain old Control Object) 
 oder in Java POJO (Plain old Java Object).
-	
+\\
 Das folgende Beispiel beschreibt eine Schülerklasse die der Definition 
 eines Models entspricht.
 
-CODE BEISPIEL SCHÜLER
+\lstinputlisting{./../code/student.cs}
 
 \paragraph{ViewModel}
 
