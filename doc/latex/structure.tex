@@ -125,10 +125,12 @@ Frameworks, wie MVVMCross ermöglichen die Anwendung von MVVM auf beispielweise 
 \chapter{Wie ist MVVM aufgebaut?}
 
 MVVM besteht aus mehreren Komponenten die ineinandergreifen. Die drei 
-größten sind Model, View und ViewModel. Dabei wir das Zusammenspiel 
-der Komponenten in der Abbildung X dargestellt. Die View und das ViewModel 
-können Bidirektional kommunizieren, während das ViewModel nur das Model
-aufruft beziehungsweise verwendet.
+größten sind Model, View und ViewModel. Dabei wird das Zusammenspiel 
+der Komponenten in der Abbildung X dargestellt. Während das ViewModel das Model
+nur aufruft, beziehungsweise es verwendet, kommunizieren View und ViewModel über
+Bindings bidirektional. Dabei ist allerdings zu erwähnen, dass die View das ViewModel
+kennt, aber nicht anders herum. Das ViewModel stellt lediglich Daten und Funktionalitäten
+zur Verfügung, weiß aber nicht, wo und wie diese außerhalb der Klasse verwendet werden.
 
 ABBILDUNG X
 
