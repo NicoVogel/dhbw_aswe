@@ -104,39 +104,23 @@ Alle oben erwähnten Patterns verfolgen denselben Ansatz, den Programmcode sinnv
 
 \section{Was ist das Problem das MVVM angeht?}
 
-Das MVVM Pattern geht Probleme der klassichen UI Programmierung an und bringt zudem einige Vorteile mit sich:
-\\\\
-\\noindent
-In erster Linie nimmt das Pattern das Problem an, dass UI und Logik stark voneinander abhängig sind, wenn keine klare Trennung vorgenommen wird.
-Dadurch wird die Wartbarkeit des Programmcodes erheblich beschwert,  
-
-ANMERKUNG: Das ist nur reinkopiert und muss noch umgeschrieben werden @Lukas
-
-Wird in der UI Entwicklung eingesetzt und soll folgende Probleme angehen:
-	
-\begin{itemize}
-	\item Starke Abhängigkeit zwischen UI und Logik
-	\item Redesign problematisch
-	\item Cross Platform
-	\item schwer zu testen
-\end{itemize}
-
-\subparagraph{Vorwort}
-
-
-MVVM wird bei der Entwicklung von Applikationen mit UI angewandt.
-Dabei werden einige Probleme angegangen:
-Generell kommt es auf die Ausgangessituation an, wie stark die folgenden punkte gewogen werden.
-
-\begin{itemize}
-	\item UI und Logik ist ein code, was schwer zu warten ist 
-	\item da die UI und die logik viel miteinander zu tun haben kann man nicht einfach das design ändern. dabei zerstört      man wahrscheinlich viele funktionen usw.
-	      Auch ist eine Abstraktion der View in vielen Fällen nicht möglich
-	\item Zudem gibt es Frameworks, wie CrossMVVM, die die Anwendung des Patterns auf Cross Platform ermöglichen
-	\item Außerdem kann man durch die Trennung von UI und Logik die Logik automatisiert testen
-\end{itemize}
-\subparagraph{Schlusswort}
-wenn beispielweise Application Layer angewandt wird, ist punkt 1 schonmal deutlich weniger schlimm, da man bereits eine saubere trennung zwsichen UI und Logik hat.
+Das MVVM Pattern nimmt in erster Linie eine ordnungsgemäße Trennung von Geschäfts- und Präsentationslogik vor und
+behebt somit das Problem der starken Kopplung von User Interface Komponenten und der eigentlichen Programmlogik.
+Dieser Ansatz bringt einige Vorteile mit sich und erleichtert die Arbeit der Entwickler im Vergleich zu klassischen
+Herangehensweisen.\\
+\\
+Die Wartbarkeit der Applikation verbessert sich erheblich, da sich Entwickler auf die Wartung einzelner kleinerer
+Komponenten konzentrieren können und nicht das gesamte System im Blick behalten müssen. Auch die Wiederverwendbarkeit
+von Code steigt durch die Möglichkeit der Abstraktion des User Interfaces. Dadurch erhöht sich auch die Skalierbarkeit.\\
+\\
+Ein weiterer Vorteil ist, dass sich solche eigenständigen Komponenten besser und automatisiert testen lassen können.
+Spefizische Test Cases lassen sich so mit Unit Tests gut umsetzen.
+\\
+Außerdem können sich Backend Entwickler auf die Programmlogik konzentrieren, währen Frontend Entwickler den Fokus
+auf die Benutzeroberfläche und das Design legen können. Voraussetzung dafür sind klare Definitionen von
+Anforderungen und Schnittstellen vor und Beginn der Entwicklung.\\
+\\
+Frameworks, wie MVVMCross ermöglichen die Anwendung von MVVM auf beispielweise mobile Cross-Platform Anwendungen.
 
 \chapter{Wie ist MVVM aufgebaut?}
 
