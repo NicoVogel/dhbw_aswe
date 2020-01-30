@@ -116,7 +116,7 @@ Komponenten konzentrieren können und nicht das gesamte System im Blick behalten
 von Code steigt durch die Möglichkeit der Abstraktion des User Interfaces. Dadurch erhöht sich auch die Skalierbarkeit.\\
 \\
 Ein weiterer Vorteil ist, dass sich solche eigenständigen Komponenten besser und automatisiert testen lassen können.
-Spezifische Test Cases lassen sich so mit Unit Tests gut umsetzen.
+spezifische Test Cases lassen sich so mit Unit Tests gut umsetzen.
 \\
 Außerdem können sich Backend Entwickler auf die Programmlogik konzentrieren, währen Frontend Entwickler den Fokus
 auf die Benutzeroberfläche und das Design legen können. Voraussetzung dafür sind klare Definitionen von
@@ -244,6 +244,19 @@ sein kann. Anders herum hat eine Klasse genau einen Lehrer und eine beliebige An
 Durch die bidirektionale Referenz zwischen Personen und Klassen kann beispielweise von einem Schüler
 auf seine Klasse zugegriffen werden und von dort wiederum auf den Schüler. Dabei existiert zur Laufzeit von einer
 spezifischen Person oder Klasse immer nur eine Instanz.
+
+\section{Komponenten der Applikation}
+Zu Beginn werden als Beispieldaten drei Klassenbücher mit je zehn Schülern aus einer JSON Datei geladen.
+Diese Klassenbücher können dann zur Laufzeit in verschiedenen Ansichten visualisiert und modifiziert werden.\\
+\noindent
+Zu diesen Ansichten gehören eine \textbf{ClassView}, in der eine Klasse mit dem Lehrer und den Schülern
+angezeigt werden, die \textbf{SchoolSummaryView} als Überblick über alle Klassen, sowie die beiden Views
+\textbf{StudentView} und \textbf{TeacherView} für die Darstellung und Bearbeitung von Informationen eines
+Schülers bzw. Lehrers. Zu jeder View existiert ein korrespondierendes ViewModel für die jeweiligen Funktionalitäten.
+Alle Views werden zentral auf einer \textbf{MainView} dargestellt. Zu Programmstart wird jede View zusammen
+mit dem ViewModel initialisiert und im weiteren Verlauf über das \textbf{MainViewModel} in den
+Vordergrund geladen.
+
 
 \chapter{Vergleich zwischen MVVM und MVC}
 
