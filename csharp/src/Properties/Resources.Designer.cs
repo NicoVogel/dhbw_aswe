@@ -98,27 +98,25 @@ namespace mvvm.Properties {
         ///    {
         ///        &quot;name&quot;: &quot;Rene Kuester&quot;,
         ///        &quot;birthday&quot;: &quot;17.07.1998&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot; : [1., 2., 3.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Peter Gottschalk&quot;,
         ///        &quot;birthday&quot;: &quot;23.08.2001&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot; : [3., 2., 3.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Mike Lang&quot;,
         ///        &quot;birthday&quot;: &quot;01.03.1998&quot;,
-        ///        &quot;gender&quot;: 1
+        ///        &quot;gender&quot;: 1,
+        ///        &quot;grades&quot; : [1., 2., 1.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Janina Schwarz&quot;,
         ///        &quot;birthday&quot;: &quot;06.12.2002&quot;,
-        ///        &quot;gender&quot;: 1
-        ///    },
-        ///    {
-        ///        &quot;name&quot;: &quot;Sandra Oster&quot;,
-        ///        &quot;birthday&quot;: &quot;20.09.2000&quot;,
-        ///        &quot;gender [rest of string was truncated]&quot;;.
+        ///        &quot;gender&quot;: [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Students_1 {
             get {
@@ -131,27 +129,26 @@ namespace mvvm.Properties {
         ///    {
         ///        &quot;name&quot;: &quot;Karin Klein&quot;,
         ///        &quot;birthday&quot;: &quot;17.07.1998&quot;,
-        ///        &quot;gender&quot;: 1
+        ///        &quot;gender&quot;: 1,
+        ///        &quot;grades&quot;: [1., 2.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Jessika Weisz&quot;,
         ///        &quot;birthday&quot;: &quot;13.09.2001&quot;,
-        ///        &quot;gender&quot;: 1
+        ///        &quot;gender&quot;: 1,
+        ///        &quot;grades&quot;: [2., 2.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Ralph Kaufmann&quot;,
         ///        &quot;birthday&quot;: &quot;24.12.1998&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot;: [3., 1.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Michelle Fassbinder&quot;,
         ///        &quot;birthday&quot;: &quot;01.03.2002&quot;,
-        ///        &quot;gender&quot;: 1
-        ///    },
-        ///    {
-        ///        &quot;name&quot;: &quot;Andrea Friedman&quot;,
-        ///        &quot;birthday&quot;: &quot;30.06.2000&quot;,
-        ///       [rest of string was truncated]&quot;;.
+        ///        &quot;gender&quot;: 1,
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Students_2 {
             get {
@@ -164,28 +161,27 @@ namespace mvvm.Properties {
         ///    {
         ///        &quot;name&quot;: &quot;Erik Durr&quot;,
         ///        &quot;birthday&quot;: &quot;24.03.1998&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot;: [1.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Mathias Burger&quot;,
         ///        &quot;birthday&quot;: &quot;29.01.2001&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot;: [4.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Tobias Zweig&quot;,
         ///        &quot;birthday&quot;: &quot;05.04.1998&quot;,
-        ///        &quot;gender&quot;: 0
+        ///        &quot;gender&quot;: 0,
+        ///        &quot;grades&quot;: [2.]
         ///    },
         ///    {
         ///        &quot;name&quot;: &quot;Sandra Cole&quot;,
         ///        &quot;birthday&quot;: &quot;21.08.2002&quot;,
-        ///        &quot;gender&quot;: 1
-        ///    },
-        ///    {
-        ///        &quot;name&quot;: &quot;Anna Sommer&quot;,
-        ///        &quot;birthday&quot;: &quot;06.06.2000&quot;,
-        ///        &quot;gender&quot;: 1
-        /// [rest of string was truncated]&quot;;.
+        ///        &quot;gender&quot;: 1,
+        ///        &quot;grades&quot;: [1.]
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Students_3 {
             get {

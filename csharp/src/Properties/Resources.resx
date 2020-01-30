@@ -137,52 +137,62 @@
     {
         "name": "Rene Kuester",
         "birthday": "17.07.1998",
-        "gender": 0
+        "gender": 0,
+        "grades" : [1., 2., 3.]
     },
     {
         "name": "Peter Gottschalk",
         "birthday": "23.08.2001",
-        "gender": 0
+        "gender": 0,
+        "grades" : [3., 2., 3.]
     },
     {
         "name": "Mike Lang",
         "birthday": "01.03.1998",
-        "gender": 1
+        "gender": 1,
+        "grades" : [1., 2., 1.]
     },
     {
         "name": "Janina Schwarz",
         "birthday": "06.12.2002",
-        "gender": 1
+        "gender": 1,
+        "grades" : [1., 3., 3.]
     },
     {
         "name": "Sandra Oster",
         "birthday": "20.09.2000",
-        "gender": 1
+        "gender": 1,
+        "grades" : [4., 2., 1.]
     },
     {
         "name": "Sarah Metzger",
         "birthday": "25.01.2000",
-        "gender": 1
+        "gender": 1,
+        "grades" : [5., 1., 2.]
     },
     {
         "name": "Lea Oster",
         "birthday": "24.11.2000",
-        "gender": 1
+        "gender": 1,
+        "grades" : [4., 4., 2.]
     },
     {
         "name": "Bernd Schultz",
         "birthday": "14.01.2000",
-        "gender": 0
+        "gender": 0,
+        "grades" : [2., 2., 2.]
     },
     {
         "name": "Phillipp Beyer",
         "birthday": "12.06.2002",
-        "gender": 0
+        "gender": 0,
+        "grades" : [1., 1., 1.]
     },
     {
         "name": "Erik Gruenewald",
         "birthday": "28.08.2001",
-        "gender": 0
+        "gender": 0,
+        "grades" : [1., 2., 4.]
     }
 ]</value>
   </data>
@@ -191,52 +201,62 @@
     {
         "name": "Karin Klein",
         "birthday": "17.07.1998",
-        "gender": 1
+        "gender": 1,
+        "grades": [1., 2.]
     },
     {
         "name": "Jessika Weisz",
         "birthday": "13.09.2001",
-        "gender": 1
+        "gender": 1,
+        "grades": [2., 2.]
     },
     {
         "name": "Ralph Kaufmann",
         "birthday": "24.12.1998",
-        "gender": 0
+        "gender": 0,
+        "grades": [3., 1.]
     },
     {
         "name": "Michelle Fassbinder",
         "birthday": "01.03.2002",
-        "gender": 1
+        "gender": 1,
+        "grades": [4., 2.]
     },
     {
         "name": "Andrea Friedman",
         "birthday": "30.06.2000",
-        "gender": 1
+        "gender": 1,
+        "grades": [1., 4.]
     },
     {
         "name": "Matthias Gerste",
         "birthday": "04.08.2000",
-        "gender": 0
+        "gender": 0,
+        "grades": [1., 1.]
     },
     {
         "name": "Diana Weissmuller",
         "birthday": "09.11.2000",
-        "gender": 1
+        "gender": 1,
+        "grades": [3., 2.]
     },
     {
         "name": "Sven Krause",
         "birthday": "12.06.2000",
-        "gender": 0
+        "gender": 0,
+        "grades": [2., 2.]
     },
     {
         "name": "Ulrike Wolf",
         "birthday": "17.04.2002",
-        "gender": 1
+        "gender": 1,
+        "grades": [1., 1.]
     },
     {
         "name": "Christine Goldschmidt",
         "birthday": "04.02.2001",
-        "gender": 1
+        "gender": 1,
+        "grades": [4., 4.]
     }
 ]</value>
   </data>
@@ -245,52 +265,62 @@
     {
         "name": "Erik Durr",
         "birthday": "24.03.1998",
-        "gender": 0
+        "gender": 0,
+        "grades": [1.]
     },
     {
         "name": "Mathias Burger",
         "birthday": "29.01.2001",
-        "gender": 0
+        "gender": 0,
+        "grades": [4.]
     },
     {
         "name": "Tobias Zweig",
         "birthday": "05.04.1998",
-        "gender": 0
+        "gender": 0,
+        "grades": [2.]
     },
     {
         "name": "Sandra Cole",
         "birthday": "21.08.2002",
-        "gender": 1
+        "gender": 1,
+        "grades": [1.]
     },
     {
         "name": "Anna Sommer",
         "birthday": "06.06.2000",
-        "gender": 1
+        "gender": 1,
+        "grades": [3.]
     },
     {
         "name": "Sara Frankfurter",
         "birthday": "06.09.2000",
-        "gender": 1
+        "gender": 1,
+        "grades": [4.]
     },
     {
         "name": "Melanie Theissen",
         "birthday": "30.06.2000",
-        "gender": 1
+        "gender": 1,
+        "grades": [2.]
     },
     {
         "name": "Torsten Gersten",
         "birthday": "07.05.2000",
-        "gender": 0
+        "gender": 0,
+        "grades": [2.]
     },
     {
         "name": "Daniel Bumgarner",
         "birthday": "29.05.2002",
-        "gender": 0
+        "gender": 0,
+        "grades": [3.]
     },
     {
         "name": "Sven Amsel",
         "birthday": "22.02.2001",
-        "gender": 0
+        "gender": 0,
+        "grades": [2.]
     }
 ]</value>
   </data>
