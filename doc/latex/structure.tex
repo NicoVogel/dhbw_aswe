@@ -219,7 +219,7 @@ Business Code ausführt.
 
 ABBILDUNG X - Application layered
 
-\chapter{Beispiel des MVVM Patterns in C\# WPF}
+\chapter{Beispiel mit C\# und WPF}
 
 Das MVVM Pattern findet vor allem in WPF (Windows Presentation Foundation) Applikationen, die in C\#
 implementiert sind, Anwendung.
@@ -228,7 +228,22 @@ grundlegende Funktionalitäten enthält, die zur Veranschaulichung des MVVM Patt
 Neben den Grundlagen der Verwendung des Patterns werden auch Vor- und Nachteile anhand von konkreten
 Beispielen, die bei der Implementierung aufgetreten sind, vorgeführt.
 
+\section{Model}
 
+Im System sollen Schüler und Lehrer repräsentiert werden. Demnach wurden zwei entsprechende
+Klassen für diese Entitäten implementiert. Zusätzlich wurde eine Superklasse Person hinzugefügt.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{SchoolPersonUML.png}
+	\caption[]{Personen Model}
+\end{figure}
+
+\noindent
+Ein Schüler ist genau einer Klasse zugewiesen, während ein Lehrer auch für mehrere Klassen verantwortlich
+sein kann. Anders herum hat eine Klasse genau einen Lehrer und eine beliebige Anzahl an Schülern.
+Durch die bidirektionale Referenz zwischen Personen und Klassen kann beispielweise von einem Schüler
+auf seine Klasse zugegriffen werden und von dort wiederum auf den Schüler. Dabei existiert zur Laufzeit von einer
+spezifischen Person oder Klasse immer nur eine Instanz.
 
 \chapter{Vergleich zwischen MVVM und MVC}
 

@@ -9,7 +9,7 @@ namespace mvvm.Model
     public class Student : Person
     {
 		public ClassBook ClassBook { get; set; }
-		public IList<double> Grades { get; set; }
+		public IList<double> Grades { get; set; } = new List<double>();
 
 		public Student(string name, DateTime birthday, GenderType gender, ClassBook classBook, IList<double> grades) : base(name, birthday, gender)
 		{
@@ -39,9 +39,19 @@ namespace mvvm.Model
 		{
 		}
 
-		public double GetAverageGrade()
+		public double AverageGrade
 		{
-			return this.Grades.Average();
+			get
+			{
+				if(Grades.Count == 0)
+				{
+					return 0;
+				}
+				else
+				{
+					return this.Grades.Average();
+				}
+			}
 		}
 
 		public void AddGrade(double grade)
