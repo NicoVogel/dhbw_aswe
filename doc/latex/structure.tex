@@ -164,22 +164,23 @@ entweder in dem ViewModel selbst oder in separaten Klassen implementiert.
 Die View ist ausschließlich zur Darstellung der Inhalte und Bereitstellen der
 Funktionen über Schaltflächen oder Ähnliches gedacht. Dabei wird in der View
 Binding verwendet, um Inhalte und Funktionen von dem ViewModel zu verwenden.
-In der Regel wird jeder Instaz einer View eine ViewModel Instanz als DataContext
+In der Regel wird jeder Instaz einer View genau eine ViewModel Instanz als DataContext
 Eigenschaft zugewiesen.
 
 \section{Kommunikation}
 
 Nachdem nun die Hauptkomponenten beschrieben sind, fehlt noch wie diese miteinander 
-kommunizieren. Hierbei werden Models zwischen der View und dem ViewModel ausgetauscht.
-Dieser Austausch wird über Binding, Events und Commands realisiert.
+kommunizieren. Hierbei werden Model Instanzen zwischen der View und dem ViewModel ausgetauscht.
+Dieser Austausch und der Aufruf von Funktionalitäten des ViewModels werden über Binding, 
+Events und Commands realisiert.
 
 \paragraph{Binding}
 
-Binding gibt es grundsätzlich in zwei Variationen. Diese sind in Abbildung 2.1 dargestellt. OneWay Binding
+Binding gibt es grundsätzlich in zwei Variationen. Diese sind in Abbildung 2.1 dargestellt. \textbf{OneWay Binding}
 lässt Kommunikation nur in eine Richtung zu, somit von dem ViewModel zur View und umgekehrt.
-Letzteres nennt man in C\# auch OneWayToSource. Die zweite Variante ist TwoWay Binding ermöglicht
+Letzteres nennt man in C\# auch \textbf{OneWayToSource}. Die zweite Variante ist \textbf{TwoWay Binding} ermöglicht
 der View als auch dem ViewModel Informationen an den jeweils anderen zu senden. Zusätzlich ist 
-bei WPF das OneTime Binding vertreten, wobei die Zieleigenschaft nur beim Start der Applikation 
+bei WPF das \textbf{OneTime Binding} vertreten, wobei die Zieleigenschaft nur beim Start der Applikation 
 oder, wenn sich die DataContext Eigenschaft ändert, also wenn der View Komponente ein neues 
 ViewModel zugewiesen wird.
 
