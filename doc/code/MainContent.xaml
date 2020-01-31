@@ -1,0 +1,3 @@
+<ContentControl
+    Content="{Binding CurrentView, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
+</ContentControl>
