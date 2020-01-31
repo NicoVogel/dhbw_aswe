@@ -380,29 +380,37 @@ bescheid und weiß somit auch nicht, wo und wie das Model zur Außenwelt des Sys
 
 \chapter{Kritische Betrachtung des MVVM Patterns}
 
-
-
-Pro
-
-<span class="text-left">
-
-- flexibel
-- steile Lernkurve (OOP, Testing, Binding)
-- gut testbar
-
-</span>
-</div>
-
-<div class="rdiv">
-
-Con
-
-<span class="text-left">
-
-- viel code für wenig resultat
-- XAML Notation umfangreich
-- Binding undurchsichtig
-
-</span>
+Die Verwendung des MVVM Patterns bringt viele Vorteile mit sich.\\
+\\
+\noindent
+Durch die saubere Trennung von Programmlogik und Benutzeroberfläche können Applikationen sehr flexibel sein,
+was Erweiterungen und Wartungsarbeiten sehr angenehm macht. Die Applikation bleibt im Allgemeinen sehr übersichtlich, wodurch
+die Ursachen für Fehlfunktionen oft schnell gefunden werden können.\\
+Ein weiterer Vorteil, der durch diese Trennung kommt, ist, wie bereits erläutert, die gute Testbarkeit der Applikation.\\
+\\
+\noindent
+Entwickler, die Erfahrungaus aus der objektorientierten Programmierung mitbringen, können viele Konzepte und das Binding schnell verstehen.\\
+Bezogen auf WPF hat die XAML Notation viele Parallelen zu anderen Markup Sprachen, wie HTML, XML oder FXML.\\
+\\
+\\
+\noindent
+Neben vielen Vorteilen bringt das Pattern auch einige Nachteile mit sich.\\
+\\
+\noindent
+Zum einen ist es für kleine Applikationen, die "schnell geschrieben" werden müssen, oft eher ungeeignet, da viel Programmcode für die initiale
+Umsetzung der Pattern von Nöten ist. Je größer jedoch die Applikation, umso mehr macht es Sinn, von diesem Pattern Gebrauch zu machen.\\
+\\
+\noindent
+So, wie die XAML Notation zwar Ähnlichkeiten zu vertrautem HTML aufweist, wird diese jedoch sehr schnell sehr umfangreich und unübersichtlich,
+wenn bei einem Kontrollelement viele Attribute belegt und Kindelemente zugewiesen werden. Aus diesem Grund wurden in den XAML Codebeispielen
+dieses Dokuments viele Eigenschaften, wie Abstände, Auswahlmodi oder Modifizierbarkeit der Inhalte eines Kontrollelements weggelassen.
+Vor allem durch Styling werden XAML Tags schnell unübersichtlich, weshalb dazu oft externe XAML Stylesheets implementiert werden.\\
+\\
+\noindent
+Das Datebinding kann durchaus sowohl als größte Stärke, als auch als größte Schwäche angesehen werden. Auf der einen Seite kann dem Entwickler viel
+Arbeit erspart werden, da dieser die View nicht manuell über das ViewModel aktualisieren muss, sondern ein externes System alle Aktualisierungen
+anhand des angegebenen Bindings durchführt. Einfache Bindings funktionieren meistens auch ohne Probleme.\\
+Sobald diese aber komplexer werden, kann das Binding undurchsichtig werden und zu unvorausschaubarem Fehlverhalten führen. Programmfehler
+in Bezug auf Binding zu debuggen und zu beheben, kann (auch aus eigener Erfahrung) sehr zeitintensiv werden und die Geduld des Entwicklers auf die Probe stellen.
 
 \end{document}
