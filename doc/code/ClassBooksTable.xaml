@@ -1,18 +1,22 @@
 <DataGrid
-    ItemsSource="{Binding ClassBooks, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+    ItemsSource="{Binding ClassBooks, UpdateSourceTrigger=PropertyChanged}"
     AutoGenerateColumns="False" IsReadOnly="True">
     <DataGrid.Columns>
         <DataGridTextColumn
             Header="Class Name"
-            Binding="{Binding Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            Binding="{Binding Name, 
+                    UpdateSourceTrigger=PropertyChanged}"/>
         <DataGridTextColumn
             Header="Teacher"
-            Binding="{Binding Teacher.Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            Binding="{Binding Teacher.Name, 
+                    UpdateSourceTrigger=PropertyChanged}"/>
         <DataGridTextColumn
             Header="Num Students"
-            Binding="{Binding Students.Count, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            Binding="{Binding Students.Count, 
+                    UpdateSourceTrigger=PropertyChanged}"/>
         <DataGridTextColumn
             Header="Full Age Students"
-            Binding="{Binding FullAgeStudents.Count, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            Binding="{Binding FullAgeStudents.Count, 
+                    UpdateSourceTrigger=PropertyChanged}"/>
     </DataGrid.Columns>
 </DataGrid>

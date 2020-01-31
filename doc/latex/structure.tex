@@ -42,7 +42,7 @@
 
 \newcommand{\listingsettings}{%
 	\lstset{%
-		language=C++,			% Standardsprache des Quellcodes
+		language=[Sharp]C,			% Standardsprache des Quellcodes
 		%numbers=left,			% Zeilennummern links
 		%stepnumber=1,			% Jede Zeile nummerieren.
 		%numbersep=5pt,			% 5pt Abstand zum Quellcode
@@ -56,7 +56,7 @@
 		showstringspaces=false,	% Leerzeichen auch in Strings ('') nicht anzeigen.
 		extendedchars=true,		% Alle Zeichen vom Latin1 Zeichensatz anzeigen.
 		captionpos=b,			% sets the caption-position to bottom
-		%backgroundcolor=\color{ListingBackground}, % Hintergrundfarbe des Quellcodes setzen.
+		backgroundcolor=\color{lightgray}, % Hintergrundfarbe des Quellcodes setzen.
 		xleftmargin=0pt,		% Rand links
 		xrightmargin=0pt,		% Rand rechts
 		frame=single,			% Rahmen an
@@ -191,7 +191,7 @@ ViewModel zugewiesen wird.
 
 \paragraph{Wann findet das Binding statt?}
 
-Im Kontext von C# und WPF kann beim Angeben des DataBindings die \textbf{UpdateSourceTrigger} Eigenschaft spezifiziert werden,
+Im Kontext von C\# und WPF kann beim Angeben des DataBindings die \textbf{UpdateSourceTrigger} Eigenschaft spezifiziert werden,
 welche angibt, zu welchem Zeitpunkt die gebundene Eigenschaft gelesen bzw. geschrieben werden soll. Zur Auswahl stehen die vier Modi
 \textbf{Default}, \textbf{LostFocus}, \textbf{Explicit} und \textbf{PropertyChanged}.\\
 Wird Default angegeben, so entscheidet sich das Kontrollelement selbst je nach Datentyp für einen Modus (außer Explicit).\\
@@ -237,7 +237,10 @@ ViewModel sowohl in der Presentation, als auch in der Business Layer vertreten i
 daher, dass das ViewModel einerseits Methoden und Properties für die View aggregiert und andererseits
 Business Code ausführt.  
 
-ABBILDUNG X - Application layered
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{MVVM_Layer.png}
+	\caption[]{Personen Model}
+\end{figure}
 
 \chapter{Beispiel mit C\# und WPF}
 
@@ -285,15 +288,15 @@ auch die ViewModels als Attribute und ist primär dafür zuständig, die einzeln
 \section{Laden und Wechseln der verschiedenen Views}
 Das Wechseln der Views ist durch die Verwendung eines \textbf{ContentControl} Elements dargestellt, mit welchem
 im Allgemeinen ein einzelnes Inhaltselement eines beliebigen Typen dargestellt werden kann. Die Eigenschaft \textbf{Content}
-wird dann an die aktive View gebunden, welche im MainViewModel gehalten wird.
-
+wird dann an die aktive View gebunden, welche im MainViewModel gehalten wird.\\
 \lstinputlisting{./../code/MainContent.xaml}
-
+\ 
 \noindent
 Das Wechseln der Views geschieht programmatisch im MainViewModel:
 
 \lstinputlisting{./../code/MainContentSwitch.cs}
 
+\noindent
 Durch das Aufrufen der \textbf{OnPropertyChanged()} weiß die View, dass sich das entsprechende Attribut
 geändert hat und kann dieses erneut in die View laden, wodurch in diesem Fall die Ansicht auf die TeacherView gewechselt wird.
 
@@ -313,14 +316,14 @@ volljährigen Schüler aufgelistet:
 In der View wird das DataGrid dann, wie in der oberen Tabelle der folgenden Grafik dargestellt:
 
 \begin{figure}
-	\includegraphics[width=10cm]{screenshots/SummarView.png}
+	\includegraphics[width=14cm]{screenshots/SummarView.png}
 \end{figure}
 
 \noindent
 Bei der Implementierung dieser Komponente ist man auf ein Problem gestoßen, welches gleichzeitig einen Nachteil von MVVM und DataBinding darstellt:\\
 Wird zur Laufzeit ein Schüler in ein Klassenbuch hinzugefügt oder aus einem Klassenbuch entfernt, müsste sich die Anzahl an Schülern für die entsprechende Klasse
 ändern und die jeweilige Zelle des DataGrids aktualisiert werden. Dies ist allerdings nicht der Fall.\\
-Zwar implementiert die textbf{ObservableCollection}, welche alle Klassenbücher hält, das \textbf{INotifyPropertyChanged} Interface, wodurch sich die View, sobald
+Zwar implementiert die \textbf{ObservableCollection}, welche alle Klassenbücher hält, das \textbf{INotifyPropertyChanged} Interface, wodurch sich die View, sobald
 eine Klasse hinzugefügt oder gelöscht wird, aktualisiert. Aber die Klasse des Klassenbuchs selber implementiert dieses nicht, wodurch sich die einzelnen 
 Werte in einer Zeile nicht aktualisieren, sobald diese modifiziert werden.\\
 \\
@@ -350,10 +353,9 @@ ist in Abbildung X dargestellt. Die View ist für die Darstellung und
 Animation zuständig. Das Model stellt die Daten zur Verfügung, die in der View dargestellt werden.
 Der Controller verbindet View und Model, da diese sich nicht kennen. Somit steht der Controller 
 über der View und dem Model, wodurch Model und View entkoppelt sind, aber dafür eine starke Bindung
-zum Controller besteht. 
-
-\begin{figure}
-	\includegraphics[width=10cm]{MVC_User.png}
+zum Controller besteht.
+\begin{figure}[h!]
+	\includegraphics[width=8cm]{MVC_User.png}
 \end{figure}
 
 \paragraph{Vergleich der beiden Pattern}
@@ -374,8 +376,8 @@ Bei MVVM hält das ViewModel das Model als Attribute und stellt diese zusätzlic
 implementiert sind, für die View zur Verfügung. Das ViewModel weiß dabei allerdings auf Programmcode Ebene nicht über die Existenz der View
 bescheid und weiß somit auch nicht, wo und wie das Model zur Außenwelt des Systems repräsentiert wird.
 
-\begin{figure}
-	\includegraphics[width=10cm]{MVC_vs_MVVM.PNG}
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{MVC_vs_MVVM.PNG}
 \end{figure}
 
 \chapter{Kritische Betrachtung des MVVM Patterns}
@@ -412,5 +414,15 @@ Arbeit erspart werden, da dieser die View nicht manuell über das ViewModel aktu
 anhand des angegebenen Bindings durchführt. Einfache Bindings funktionieren meistens auch ohne Probleme.\\
 Sobald diese aber komplexer werden, kann das Binding undurchsichtig werden und zu nicht vorausschaubarem Fehlverhalten führen. Programmfehler
 in Bezug auf Binding zu debuggen und zu beheben, kann (auch aus eigener Erfahrung) sehr zeitintensiv werden und die Geduld des Entwicklers auf die Probe stellen.
+
+\chapter{Quellen}
+
+\begin{itemize}
+	\item "Patterns - WPF Apps With The Model-View-ViewModel Design Pattern", John Smith, https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern
+	\item "Pro C\# 7", Andrew Troelsen, Philip Japikse, 2017
+	\item "MVVM in Delphi", John Kouraklis, 2016
+	\item "Model-View-ViewModel-Muster", David Britch, 2017, https://docs.microsoft.com/de-de/xamarin/xamarin-forms/enterprise-application-patterns/mvvm
+	\item "Implementing the MVVM Pattern Using the Prism Library 5.0 for WPF", Microsoft Foundation, 2014, https://docs.microsoft.com/en-us/previous-versions/msp-n-p/gg405484(v=pandp.40)?redirectedfrom=MSDN
+\end{itemize}
 
 \end{document}
