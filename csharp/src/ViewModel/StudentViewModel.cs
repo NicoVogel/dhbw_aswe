@@ -17,8 +17,9 @@ namespace mvvm.ViewModel
 			get { return _selectedClass; }
 			set
 			{
+				var oldClass = _selectedClass;
 				_selectedClass = value;
-				SchoolUtil.EnrollStudent(SelectedClass, Student);
+				SchoolUtil.EnrollStudent(_selectedClass, _student);
 				OnPropertyChanged(nameof(SelectedClass));
 			}
 		}
@@ -39,6 +40,8 @@ namespace mvvm.ViewModel
 			set 
 			{ 
 				_student = value;
+				_selectedClass = _student.ClassBook;
+				OnPropertyChanged(nameof(SelectedClass));
 				OnPropertyChanged(nameof(Student));
 			}
 		}

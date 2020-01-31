@@ -20,6 +20,13 @@ namespace mvvm.Utility
             AssignClass(teacher, classBook);
         }
 
+        internal static void ChangeClass(Student student, ClassBook oldClass, ClassBook newClass)
+        {
+            newClass.Students.Add(student);
+            oldClass.Students.Remove(student);
+            student.ClassBook = newClass;
+        }
+
         public static void EnrollStudents(ClassBook classBook, IList<Student> students)
         {
             foreach (Student student in students)
