@@ -352,18 +352,31 @@ Der Controller verbindet View und Model, da diese sich nicht kennen. Somit steht
 über der View und dem Model, wodurch Model und View entkoppelt sind, aber dafür eine starke Bindung
 zum Controller besteht. 
 
-ABBILDUNG X - MVC
+\begin{figure}
+	\includegraphics[width=10cm]{MVC_User.png}
+\end{figure}
 
 \paragraph{Vergleich der beiden Pattern}
 
 Während bei dem MVC Pattern der Controller das Verbinden der Komponenten übernimmt, wird das
 in dem MVVM Pattern über Binding realisiert und ein externes System löst das Binding am Ende auf.
 Bei MVC kennt die View das Model nicht, aber bei MVVM ist der View das ViewModel bekannt.
-Das wird auch in der Abbildung X dargestellt durch die Verbindungen der Komponenten.
+Das wird auch in der Abbildung X dargestellt durch die Verbindungen der Komponenten.\\
+\\
+\noindent
+Das MVC Pattern setzt darauf auf, dass der Controller sowohl das Model als auch die View kennt. Anfragen vom User,
+die über die View ins System kommen, bearbeitet der Controller, verändert das Model und lädt es anschließend selbst
+in die View, sodass der User die Resultate seiner Aktion sieht. Der Controller weiß genau darüber Bescheid, an welcher Stelle
+und in welcher Weise das Model visualisiert wird.\\
+\\
+\noindent
+Bei MVVM hält das ViewModel das Model als Attribute und stellt diese zusätzlich mit Funktionalitäten, die meist in Form von Commands
+implementiert sind, für die View zur Verfügung. Das ViewModel weiß dabei allerdings auf Programmcode Ebene nicht über die Existenz der View
+bescheid und weiß somit auch nicht, wo und wie das Model zur Außenwelt des Systems repräsentiert wird.
 
-TODO vielleicht noch bissel mehr dazu sagen
-
-ABBILDUNG X - MVC vs MVVM
+\begin{figure}
+	\includegraphics[width=10cm]{MVC_vs_MVVM.PNG}
+\end{figure}
 
 \chapter{Kritische Betrachtung des MVVM Patterns}
 
