@@ -317,7 +317,21 @@ In der View wird das DataGrid dann, wie in der oberen Tabelle der folgenden Graf
 \end{figure}
 
 \noindent
-Bei der Implementierung dieser Komponente ist man auf ein Problem gestoßen, welches gleichzeitig einen Nachteil von MVVM und DataBinding darstellt.
+Bei der Implementierung dieser Komponente ist man auf ein Problem gestoßen, welches gleichzeitig einen Nachteil von MVVM und DataBinding darstellt:\\
+Wird zur Laufzeit ein Schüler in ein Klassenbuch hinzugefügt oder aus einem Klassenbuch entfernt, müsste sich die Anzahl an Schülern für die entsprechende Klasse
+ändern und die jeweilige Zelle des DataGrids aktualisiert werden. Dies ist allerdings nicht der Fall.\\
+Zwar implementiert die textbf{ObservableCollection}, welche alle Klassenbücher hält, das \textbf{INotifyPropertyChanged} Interface, wodurch sich die View, sobald
+eine Klasse hinzugefügt oder gelöscht wird, aktualisiert. Aber die Klasse des Klassenbuchs selber implementiert dieses nicht, wodurch sich die einzelnen 
+Werte in einer Zeile nicht aktualisieren, sobald diese modifiziert werden.\\
+\\
+Ein Ansatz, dieses Problem zu lösen, wäre, dass das Model ebenfalls das \textbf{INotifyPropertyChanged} Interface implementiert. Ob dies im Sinne des MVVM
+Patterns eine schöne Lösung ist, ist umstritten, da das Model eigentlich keine Programmlogik beinhalten sollte.\\
+\\
+Ein anderer Ansatz, der ebenso vergeblich nach programmatischer Ästhetik sucht, sich aber mehr an das eigentliche Pattern hält als der erste Ansatz, 
+ist, die ObservableCollection um die Klassenbücher neu anzulegen. Dabei werden die enthaltenen Klassenbücher nicht neu erstellt, sondern nur das Konstrukt
+der Collection um diese herum:
+
+\lstinputlisting{./../code/UglyFix.cs}
 
 \chapter{Vergleich zwischen MVVM und MVC}
 
