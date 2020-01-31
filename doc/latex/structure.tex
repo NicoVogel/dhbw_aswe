@@ -189,6 +189,26 @@ ViewModel zugewiesen wird.
 	\caption[]{DataBinding}
 \end{figure}
 
+\paragraph{Wann findet das Binding statt?}
+
+Im Kontext von C# und WPF kann beim Angeben des DataBindings die \textbf{UpdateSourceTrigger} Eigenschaft spezifiziert werden,
+welche angibt, zu welchem Zeitpunkt die gebundene Eigenschaft gelesen bzw. geschrieben werden soll. Zur Auswahl stehen die vier Modi
+\textbf{Default}, \textbf{LostFocus}, \textbf{Explicit} und \textbf{PropertyChanged}.\\
+Wird Default angegeben, so entscheidet sich das Kontrollelement selbst je nach Datentyp für einen Modus (außer Explicit).\\
+Bei LostFocus wird die Eigenschaft jedes Mal aktualisiert, sobald der User den Fokus mit Maus oder Tastatur vom entsprechenden Element nimmt.
+Dies ist für gewöhnlich bei Texteingaben der Fall.\\
+Mit dem Modus Explicit muss der Entwickler eigene Fälle implementieren, in denen das Element explizit zum Aktualisieren getriggert wird.\\
+Mit PropertyChanged wird die Aktualisierung jedes Mal vorgenommen, wenn das gebundene Attribut in der View oder auch im ViewModel modifiziert wird.
+Dazu muss die Klasse des gebundenen Objekts das \textbf{INotifyPropertyChanged} Interface implementieren, welches einen \textbf{PropertyChangedEventHandler}
+voraussetzt, der auf die Modifizierung eines Attributs aufmerksam macht. Eine gängige Implementierung dieses Interfaces sieht, wie folgt aus:
+
+\lstinputlisting{./../code/PropertyChanged.cs}
+
+\noindent
+ViewModels, die von dieser Klasse erben, implementieren damit das INotifyPropertyChanged Interface und können in Setter Methoden durch das Aufrufen
+der \textbf{OnPropertyChanged()} Methode auf die Änderung des Attributs aufmerksam machen:
+
+\lstinputlisting{./../code/OnPropertyChanged.cs}
 
 \paragraph{Event}
 
