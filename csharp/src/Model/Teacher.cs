@@ -7,9 +7,9 @@ namespace mvvm.Model
 {
     public class Teacher : Person
     {
-        public IList<ClassBook> ClassBooks { get; private set; } = new List<ClassBook>();
+        public ISet<ClassBook> ClassBooks { get; private set; } = new HashSet<ClassBook>();
 
-        public Teacher(string name, DateTime birthday, GenderType gender, IList<ClassBook> classBooks) : base(name, birthday, gender)
+        public Teacher(string name, DateTime birthday, GenderType gender, ISet<ClassBook> classBooks) : base(name, birthday, gender)
         {
             this.ClassBooks = classBooks;
         }
@@ -17,12 +17,12 @@ namespace mvvm.Model
         [JsonConstructor]
         public Teacher(string name, string birthday, GenderType gender) : base(name, birthday, gender)
         {
-            this.ClassBooks = new List<ClassBook>();
+            this.ClassBooks = new HashSet<ClassBook>();
         }
 
         public Teacher()
         {
-            this.ClassBooks = new List<ClassBook>();
+            this.ClassBooks = new HashSet<ClassBook>();
         }
     }
 }
