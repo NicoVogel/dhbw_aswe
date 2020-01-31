@@ -4,6 +4,7 @@ using mvvm.Utility;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
@@ -128,7 +129,11 @@ namespace mvvm.ViewModel
 
         private void OnOpenTeacher(object obj)
         {
-            throw new NotImplementedException();
+            if(SelectedTeacher == null)
+            {
+                return;
+            }
+            MainViewModel.OnTeacherView(SelectedTeacher);
         }
 
         private void OnCancelAddTeacher(object obj)
@@ -171,11 +176,14 @@ namespace mvvm.ViewModel
 
         private void OnSubmitAddClass(object obj)
         {
+            SchoolUtil.HireTeacher(NewClass, NewClass.Teacher);
             ClassBooks.Add(NewClass);
             MainViewModel.ClassBooks.Add(NewClass);
             OnPropertyChanged(nameof(ClassBooks));
             NewClassDialogVisible = false;
             OnPropertyChanged(nameof(NewClassDialogVisible));
+
+            Update();
         }
 
         private void OnCancelAddClass(object obj)
@@ -190,9 +198,15 @@ namespace mvvm.ViewModel
             {
                 return;
             }
-            ClassBooks.Remove(SelectedClass);
+
+            Teachers.Where(x => x.ClassBooks.Contains(SelectedClass)).FirstOrDefault().ClassBooks.Remove(SelectedClass);
+
             MainViewModel.ClassBooks.Remove(SelectedClass);
+            ClassBooks.Remove(SelectedClass);
+
             OnPropertyChanged(nameof(ClassBooks));
+
+            Update();
         }
 
         private void OnOpenClass(object obj)

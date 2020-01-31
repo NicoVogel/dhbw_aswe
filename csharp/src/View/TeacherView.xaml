@@ -63,13 +63,18 @@
             Text="Classes"
             Grid.Row="1" Grid.Column="2" Margin="3"/>
 
-        <ItemsControl
+        <ListView
+            ItemsSource="{Binding ClassBooks, Mode=OneWay}"
+            Grid.Row="2" Grid.Column="3" Grid.RowSpan="3"/>
+
+        <!--<ItemsControl
             ItemsSource="{Binding ClassBooks, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        </ItemsControl>-->
 
 
 

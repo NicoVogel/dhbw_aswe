@@ -87,5 +87,12 @@ namespace mvvm.ViewModel
             CurrentView = ClassView;
             OnPropertyChanged(nameof(CurrentView));
         }
+
+        internal void OnTeacherView(Teacher selectedTeacher)
+        {
+            TeacherViewModel.Teacher = selectedTeacher;
+            CurrentView = TeacherView;
+            OnPropertyChanged(nameof(CurrentView));
+        }
     }
 }
