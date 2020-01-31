@@ -164,7 +164,7 @@ entweder in dem ViewModel selbst oder in separaten Klassen implementiert.
 Die View ist ausschließlich zur Darstellung der Inhalte und Bereitstellen der
 Funktionen über Schaltflächen oder Ähnliches gedacht. Dabei wird in der View
 Binding verwendet, um Inhalte und Funktionen von dem ViewModel zu verwenden.
-In der Regel wird jeder Instaz einer View genau eine ViewModel Instanz als DataContext
+In der Regel wird jeder Instanz einer View genau eine ViewModel Instanz als DataContext
 Eigenschaft zugewiesen.
 
 \section{Kommunikation}
@@ -216,7 +216,7 @@ Events sind Ereignisse von UI Komponenten, auf welche sich andere Komponenten re
 können, um so zusätzlichen Code auszuführen. Es gibt eine breite Menge an Events die
 von Komponenten zur Verfügung gestellt wird. Beispiele für Events können Hover-Ereignisse
 oder ein Doppelklick auf eine Komponente sein.
-Diese können standardmäßig nicht and das ViewModel
+Diese können standardmäßig nicht an das ViewModel
 gebunden werden, sondern rufen eine Funktion in der Code-Behind Datei auf.
 Soll ein Event eine Funktionalität im ViewModel aufrufen, kann dafür in C\# eine Verlinkung in der
 Code-Behind Datei erstellt werden. Durch die Verwendung von zusätzlichen Bibliotheken, wie
@@ -299,7 +299,7 @@ geändert hat und kann dieses erneut in die View laden, wodurch in diesem Fall d
 
 \section{Tabellarische Darstellung von Objekten in DataGrids}
 In der Applikation werden alle Auflistungen von Objekten, wie beispielweise alle Schüler einer Klasse oder alle Klassen einer Schule
-mithilfe von DataGrids visualisiert. Dazu kann man eine Collection an das Attribut \textbf{ItemsSource} eines DataGrids binden(Meist handelt es
+mithilfe von DataGrids visualisiert. Dazu kann man eine Collection an das Attribut \textbf{ItemsSource} eines DataGrids binden (Meist handelt es
 sich um eine \textbf{ObservableCollection}, die immer dann angewandt wird, wenn Elemente der Collection hinzukommen oder gelöscht werden).
 Standardmäßig wird dann für jedes öffentlich zugängliche Attribut eines einzelnen Elements der Collection eine Spalte mit dem 
 entsprechenden Binding an das Attribut erstellt.\\
@@ -389,7 +389,7 @@ die Ursachen für Fehlfunktionen oft schnell gefunden werden können.\\
 Ein weiterer Vorteil, der durch diese Trennung kommt, ist, wie bereits erläutert, die gute Testbarkeit der Applikation.\\
 \\
 \noindent
-Entwickler, die Erfahrungaus aus der objektorientierten Programmierung mitbringen, können viele Konzepte und das Binding schnell verstehen.\\
+Entwickler, die Erfahrung aus aus der objektorientierten Programmierung mitbringen, können viele Konzepte und das Binding schnell verstehen.\\
 Bezogen auf WPF hat die XAML Notation viele Parallelen zu anderen Markup Sprachen, wie HTML, XML oder FXML.\\
 \\
 \\
@@ -398,19 +398,19 @@ Neben vielen Vorteilen bringt das Pattern auch einige Nachteile mit sich.\\
 \\
 \noindent
 Zum einen ist es für kleine Applikationen, die "schnell geschrieben" werden müssen, oft eher ungeeignet, da viel Programmcode für die initiale
-Umsetzung der Pattern von Nöten ist. Je größer jedoch die Applikation, umso mehr macht es Sinn, von diesem Pattern Gebrauch zu machen.\\
+Umsetzung des Patterns von Nöten ist. Je größer jedoch die Applikation, umso mehr macht es Sinn, von diesem Pattern Gebrauch zu machen.\\
 \\
 \noindent
 So, wie die XAML Notation zwar Ähnlichkeiten zu vertrautem HTML aufweist, wird diese jedoch sehr schnell sehr umfangreich und unübersichtlich,
-wenn bei einem Kontrollelement viele Attribute belegt und Kindelemente zugewiesen werden. Aus diesem Grund wurden in den XAML Codebeispielen
+wenn bei einem Kontrollelement viele Attribute belegt und Kind-Elemente zugewiesen werden. Aus diesem Grund wurden in den XAML Codebeispielen
 dieses Dokuments viele Eigenschaften, wie Abstände, Auswahlmodi oder Modifizierbarkeit der Inhalte eines Kontrollelements weggelassen.
 Vor allem durch Styling werden XAML Tags schnell unübersichtlich, weshalb dazu oft externe XAML Stylesheets implementiert werden.\\
 \\
 \noindent
-Das Datebinding kann durchaus sowohl als größte Stärke, als auch als größte Schwäche angesehen werden. Auf der einen Seite kann dem Entwickler viel
+Das Databinding kann durchaus sowohl als größte Stärke, als auch als größte Schwäche angesehen werden. Auf der einen Seite kann dem Entwickler viel
 Arbeit erspart werden, da dieser die View nicht manuell über das ViewModel aktualisieren muss, sondern ein externes System alle Aktualisierungen
 anhand des angegebenen Bindings durchführt. Einfache Bindings funktionieren meistens auch ohne Probleme.\\
-Sobald diese aber komplexer werden, kann das Binding undurchsichtig werden und zu unvorausschaubarem Fehlverhalten führen. Programmfehler
+Sobald diese aber komplexer werden, kann das Binding undurchsichtig werden und zu nicht vorausschaubarem Fehlverhalten führen. Programmfehler
 in Bezug auf Binding zu debuggen und zu beheben, kann (auch aus eigener Erfahrung) sehr zeitintensiv werden und die Geduld des Entwicklers auf die Probe stellen.
 
 \end{document}
