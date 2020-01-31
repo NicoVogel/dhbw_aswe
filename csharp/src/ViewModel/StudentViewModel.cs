@@ -1,8 +1,10 @@
-﻿using mvvm.Model;
+﻿using Microsoft.VisualStudio.PlatformUI;
+using mvvm.Model;
 using mvvm.Utility;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace mvvm.ViewModel
 {
@@ -11,6 +13,35 @@ namespace mvvm.ViewModel
 		private Student _student;
 		private IList<ClassBook> _classBooks;
 		private ClassBook _selectedClass;
+		private double _newGrade;	
+
+		public ICommand AddGradeCommand { get; private set; }
+
+		public StudentViewModel()
+		{
+			AddGradeCommand = new DelegateCommand(OnAddGrade);
+		}
+
+		private void OnAddGrade(object obj)
+		{
+			if(!Double.IsNaN(_newGrade))
+			{
+				_student.Grades.Add(_newGrade);
+				_newGrade = 0;
+				OnPropertyChanged(nameof(Student));
+				OnPropertyChanged(nameof(NewGrade));
+			}
+		}
+
+		public double NewGrade
+		{
+			get { return _newGrade; }
+			set 
+			{ 
+				_newGrade = value;
+				OnPropertyChanged(nameof(NewGrade));
+			}
+		}
 
 		public ClassBook SelectedClass
 		{

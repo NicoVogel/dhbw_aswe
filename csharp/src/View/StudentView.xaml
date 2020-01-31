@@ -18,6 +18,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -79,7 +80,31 @@
             IsReadOnly="True"
             Grid.Row="2" Grid.Column="3" Margin="3"/>
 
+        <TextBlock
+            Text="Average:"
+            Grid.Row="3" Grid.Column="2"
+            HorizontalAlignment="Right" Margin="3"/>
 
+        <TextBox
+            Text="{Binding Student.AverageGrade, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+            IsReadOnly="True"
+            Grid.Row="3" Grid.Column="3" Margin="3"/>
 
+        <Grid
+            Grid.Row="4" Grid.Column="3"
+            Margin="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox
+                Text="{Binding NewGrade, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                Grid.Column="0"/>
+            <Button
+                Content="Add Grade"
+                Command="{Binding AddGradeCommand}"
+                Grid.Column="1"/>
+        </Grid>
     </Grid>
 </UserControl>
