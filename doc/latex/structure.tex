@@ -274,6 +274,31 @@ Das Wechseln der Views geschieht programmatisch im MainViewModel:
 
 \lstinputlisting{./../code/MainContentSwitch.cs}
 
+Durch das Aufrufen der \textbf{OnPropertyChanged()} weiß die View, dass sich das entsprechende Attribut
+geändert hat und kann dieses erneut in die View laden, wodurch in diesem Fall die Ansicht auf die TeacherView gewechselt wird.
+
+\section{Tabellarische Darstellung von Objekten in DataGrids}
+In der Applikation werden alle Auflistungen von Objekten, wie beispielweise alle Schüler einer Klasse oder alle Klassen einer Schule
+mithilfe von DataGrids visualisiert. Dazu kann man eine Collection an das Attribut \textbf{ItemsSource} eines DataGrids binden(Meist handelt es
+sich um eine \textbf{ObservableCollection}, die immer dann angewandt wird, wenn Elemente der Collection hinzukommen oder gelöscht werden).
+Standardmäßig wird dann für jedes öffentlich zugängliche Attribut eines einzelnen Elements der Collection eine Spalte mit dem 
+entsprechenden Binding an das Attribut erstellt.\\
+Es ist auch möglich, das automatische Generieren der Spalten zu deaktivieren und eigene Spalten mit spezifischen Bindings zu definieren.
+In diesem Fall wurden die Auflistung aller Klassen für jede Klasse der Klassenname, der Name des Lehrers, sowie die Anzahl der Schüler und
+volljährigen Schüler aufgelistet:
+
+\lstinputlisting{./../code/ClassBooksTable.xaml}
+
+\noindent
+In der View wird das DataGrid dann, wie in der oberen Tabelle der folgenden Grafik dargestellt:
+
+\begin{figure}
+	\includegraphics[width=10cm]{screenshots/SummarView.png}
+\end{figure}
+
+\noindent
+Bei der Implementierung dieser Komponente ist man auf ein Problem gestoßen, welches gleichzeitig einen Nachteil von MVVM und DataBinding darstellt.
+
 \chapter{Vergleich zwischen MVVM und MVC}
 
 In diesem Abschnitt wird beschrieben wie sich MVVM zu MCV (Model View Controller) unterscheidet. 
