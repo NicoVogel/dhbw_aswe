@@ -32,8 +32,6 @@ namespace mvvm.ViewModel
         public ObservableCollection<Teacher> Teachers { get; set; }
         public ObservableCollection<Student> Students { get; set; }
 
-        private bool isStartup = true;
-
         public MainViewModel()
         {
             SchoolSummaryView = new SchoolSummaryView();
@@ -67,12 +65,8 @@ namespace mvvm.ViewModel
 
         private void OnSchoolSummaryView()
         {
-            if(isStartup)
-            {
-                SchoolSummaryViewModel.ClassBooks = ClassBooks;
-                SchoolSummaryViewModel.Teachers = Teachers;
-                isStartup = false;
-            }
+            SchoolSummaryViewModel.ClassBooks = ClassBooks;
+            SchoolSummaryViewModel.Teachers = Teachers;
             SchoolSummaryViewModel.Update();
             CurrentView = SchoolSummaryView;
             OnPropertyChanged(nameof(CurrentView));

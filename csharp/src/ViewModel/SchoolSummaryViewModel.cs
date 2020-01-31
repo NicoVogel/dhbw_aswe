@@ -114,8 +114,10 @@ namespace mvvm.ViewModel
                 return;
             }
             var classBooks = SelectedTeacher.ClassBooks;
+
             Teachers.Remove(SelectedTeacher);
-            SelectedTeacher = null;
+            MainViewModel.Teachers.Remove(SelectedTeacher);
+
             foreach(var classBook in classBooks)
             {
                 SchoolUtil.HireTeacher(classBook, Teachers[0]);
@@ -138,6 +140,7 @@ namespace mvvm.ViewModel
         private void OnSubmitAddTeacher(object obj)
         {
             Teachers.Add(NewTeacher);
+            MainViewModel.Teachers.Add(NewTeacher);
             OnPropertyChanged(nameof(Teachers));
             NewTeacherDialogVisible = false;
             OnPropertyChanged(nameof(NewTeacherDialogVisible));
@@ -169,6 +172,7 @@ namespace mvvm.ViewModel
         private void OnSubmitAddClass(object obj)
         {
             ClassBooks.Add(NewClass);
+            MainViewModel.ClassBooks.Add(NewClass);
             OnPropertyChanged(nameof(ClassBooks));
             NewClassDialogVisible = false;
             OnPropertyChanged(nameof(NewClassDialogVisible));
@@ -187,6 +191,7 @@ namespace mvvm.ViewModel
                 return;
             }
             ClassBooks.Remove(SelectedClass);
+            MainViewModel.ClassBooks.Remove(SelectedClass);
             OnPropertyChanged(nameof(ClassBooks));
         }
 
