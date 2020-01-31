@@ -28,6 +28,7 @@ namespace mvvm.ViewModel
 			set
 			{
 				_teacher = value;
+				ClassBooks = new ObservableCollection<ClassBook>(_teacher.ClassBooks);
 				OnPropertyChanged(nameof(Teacher));
 			}
 		}
